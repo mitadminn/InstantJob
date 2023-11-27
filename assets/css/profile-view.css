@@ -1,0 +1,16 @@
+.header_searchwork{margin:0 0 0 -44px !important;justify-content: right !important;}
+   .img-cir {display: flex;justify-content: space-between;} 
+   .dream {display: flex;     gap: 14px;}
+   .img-cir-profile {justify-content: initial;} 
+   .title_bio{display: flex;justify-content: space-between;align-items: end;
+}
+p.hobi_skills {
+    border: 1px solid #dfdfdf !important;
+    width: 17% !important;
+    padding: 6px !important;
+}
+@media (min-width:0) and (max-width:567px){
+   .second-mid.col-lg-8.example{ height: 925px !important;}
+   .container-fluid{ padding-right: 5px;  padding-left: 5px; } 
+   body.background-container {background: #fff !important;}
+}

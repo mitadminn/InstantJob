@@ -1,0 +1,42 @@
+
+p.skills {
+    background: #fff !important;
+    padding: 8px !important;
+}
+
+/*.row{    margin-right: 0px !important;}*/
+    .img-cir-profile 
+    {
+        display: flex;justify-content: space-between;
+    }
+nav.d-flex.fr-btn {padding-top: 7px;}
+@media (min-width: 0) and (max-width: 567px){
+.row {
+    flex-direction: row !important;
+}
+}
+a.btn.summary_hire {
+    background: #f5f1f1;
+    border: none;
+    padding: 0;
+}
+button.btn_message {
+    background: #37f737;
+    color:#fff;
+}
+
+.dream {
+   display:flex;
+   gap:10px;
+}
+    img.main-img.profile-in_mid {width: 60px !important; height: 60px !important;}
+   tr.table-row_top {text-align: center;}
+tr.table-row_users td {font-size: 14px;padding: 10px;}
+
+
+.col-lg-8 {padding: 0 !important;padding-right: 32px !important;}
+.col-lg-4 {padding: 0 !important;}
+.bck-white {padding: 32px !important; }
+.dream { margin:0px !important;margin-left: 16px !important;}
+.table_container{margin-top: 46px;width: 100%;}tr.table-row_users {text-align: center;}
+.row.user-info_row {padding-bottom: 32px; border-bottom: 2px solid #e1e1e1;}

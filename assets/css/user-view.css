@@ -1,0 +1,49 @@
+
+   .img-cir {display: flex;justify-content: space-between;} 
+   .dream {display: flex;     gap: 14px;}
+   .img-cir-profile {justify-content: initial;} 
+   .title_bio{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.edit-container a {
+    color: #0090FF;
+}
+@media (min-width:0) and (max-width:567px){
+    .bck-white .col-lg-4 {width: 100% !important;}
+   .second-mid.col-lg-8.example{ height: 925px !important;}
+   .container-fluid{ padding-right: 5px;  padding-left: 5px; } 
+   body.background-container {background: #fff !important;}
+   .row.user-info_row {
+    display: flex !important;
+    flex-direction: column !important;
+}
+}
+p.skills {
+    padding: 8px;
+    background: #F1F3F4;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #323232;
+}
+
+/*.skill_hobbies_{margin-left:2px; gap:10px}*/
+
+    button.btn_message {
+    background: #37f737;
+    color:#fff;
+}
+
+    img.main-img.profile-in_mid {width: 60px !important; height: 60px !important;}
+   tr.table-row_top {text-align: center;}
+tr.table-row_users td {font-size: 14px;padding: 10px;}
+.profile-mid_right_btns button a {color: #fff;}
+.user_view button{ width: 100%;background: #cfcfcf;font-weight: 600;font-size: 15px;padding: 10px;border-radius: 10px;color: #000;}
+.profile-mid_right_btns {display: grid;gap: 12px;margin-right: 15px;}
+.col-lg-8 {padding: 0 !important;padding-right: 32px !important;}
+.col-lg-4 {padding: 0 !important;}
+.bck-white {padding: 32px !important; }
+.dream { margin:0px !important;margin-left: 16px !important;}
+.table_container{margin-top: 46px;width: 100%;}tr.table-row_users {text-align: center;}
+.row.user-info_row {padding-bottom: 32px; border-bottom: 2px solid #e1e1e1;}

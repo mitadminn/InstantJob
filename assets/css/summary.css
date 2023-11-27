@@ -1,0 +1,83 @@
+.header_searchwork{margin:0 0 0 18px !important;justify-content: right !important;}
+/******************************* #SUMMARY CSS************************************************/
+    label.total_cost {
+    font-size: 16px;
+}
+.btn-check:hover{text-decoration:none;}
+.output_RM{
+    text-align: right;
+    position: absolute;
+    right: 2%;
+    margin-top: -22px;
+}
+output#bas-1 {display: none;}
+output#bas-2 {display: none;
+}
+    legend {
+      font-size: 1.3rem;
+    }
+    output#bas-0 {
+    display: none;
+}
+    output,
+    input {
+      display: inline-block;
+      /*text-align: center;*/
+    }
+    
+    [id^=qty] {
+      width: 1.5ch;
+    }
+    
+    [id^=prc] {
+    min-width:3ch;
+    float: right;
+    text-align: right;
+    }
+
+    
+    #cart+label {
+      display: inline-block;
+     
+    }
+    
+    #total::before {
+      content: " RM";
+    }
+/******************************** #SUMMARY CSS***********************************************/
+ 
+    .img-cir-profile {display: flex;justify-content: space-between;
+}
+.col-lg-12 {
+    padding: 0;
+}
+nav.d-flex.fr-btn {padding-top: 7px;}
+.btn_plus_minus  {
+    padding: 0px 8px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    border: 1px solid #c1baba;   
+}
+@media (min-width: 0) and (max-width: 567px){
+.manage-as-lo {
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 600;
+     width: 370px; 
+    overflow: hidden;
+}    
+
+div#one {
+    padding-left: 10px !important;
+}
+.col-lg-9 {
+    padding:0;
+}
+.prof-heigh-wid { float: left;width: 80%;     overflow: hidden;}
+.d-flex.hidn-objct {padding: 22px 10px;}
+}
+
+.summary-table-left   {  padding: 10px; position:relative;}
+.summary-table-left span {float: left;width: 100%;text-align: left !important;}
+.summary-table-right span {float: left;width: 100%;text-align: right !important;}

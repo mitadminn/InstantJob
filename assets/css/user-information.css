@@ -1,0 +1,29 @@
+  .header_searchwork{margin:0 0 0 -44px !important;justify-content: right !important;}
+    button.hire_job_btn {
+    background: #fff !important;
+}
+    button.btn_message {
+    background: #37f737;
+    color:#fff;
+}
+button.sell_servc_btn {
+    background: #0090FF !important;
+     color:#fff !important;
+}
+button.hire_job_btn {
+    border: 1px solid #0090FF !important;
+    color: #0090FF !important;
+     background:#fff;
+}
+    img.main-img.profile-in_mid {width: 60px !important; height: 60px !important;}
+
+
+.profile-mid_right_btns button{    width: 100%;background: #F1F3F4;font-weight: 600;font-size: 15px;padding: 10px;border-radius: 10px;color: #000;}
+.profile-mid_right_btns {display: grid;gap: 12px;margin-right: 15px;}
+.col-lg-8 {padding: 0 !important;padding-right: 32px !important;}
+.col-lg-4 {padding: 0 !important;}
+.bck-white {padding: 32px; }
+.dream { margin:0px !important;margin-left: 16px !important; display: flex;
+    gap: 12px;}
+.table_container{margin-top: 46px;width: 100%;}tr.table-row_users {text-align: center;}
+.row.user-info_row {padding-bottom: 32px; border-bottom: 2px solid #e1e1e1;}

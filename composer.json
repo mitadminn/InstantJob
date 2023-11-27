@@ -1,0 +1,16 @@
+{
+    "require": {
+        "google/apiclient": "^2.0",
+        "razermerchantservices/payment": "dev-main#1.0.1"
+         
+    },
+    "repositories": {
+        "razerms": {
+            "url": "https://github.com/RazerMS/SDK-RazerMS_PHP",
+            "type": "vcs"
+        }
+    }
+}
+
+
+ 

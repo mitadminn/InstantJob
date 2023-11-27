@@ -1,0 +1,110 @@
+:root {
+  --sidebar-width: 320px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f1f3f4;
+  /*padding-top: 60px;*/
+}
+.navbar {
+  padding: 0 1rem 0 0 !important;
+  height: 60px !important;
+}
+.instant-brand {
+  width: var(--sidebar-width);
+  text-align: center;
+  margin-right: 0 !important;
+}
+.instant-brand img {
+    display: block;
+    max-width: 100%;
+    height: 55px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+.instant-sidebar {
+  display: none;
+}
+.instant-main {
+padding: 0; 
+}
+.instant-sidebar-profile {
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}   
+.instant-sidebar-profile-meta {
+    margin-left: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .instant-main {
+    padding-left: calc(var(--sidebar-width) + 20px);
+  }
+  .instant-sidebar {
+    position: sticky;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 16px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #323232;
+    width: var(--sidebar-width);
+    color: #fff;
+  }
+}
+
+.instant-sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.instant-sidebar-menu li {
+  line-height: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      margin: 0;
+}
+
+.instant-sidebar-menu li a {
+  color: #fff;
+  padding: 8px 24px 8px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+.instant-sidebar-menu li img,
+.instant-sidebar-menu li svg {
+  margin-right: 1rem;
+}
+.instant-sidebar-menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.instant-rightbar {
+  position: sticky;
+  top: 70px;
+}
+.instant-sidebar-profile-meta .btn-primary {
+   color: #fff !important;
+    background-color: #10df66 !important;
+    border-color: #10df66 !important;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    margin-top: 6px;
+    width: 75%;
+}

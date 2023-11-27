@@ -1,0 +1,18 @@
+
+.btn-wallet {border-radius: 28px;background: #047e04;padding: 8px 16px;width: 100%;}
+.discussion_title{ margin:0;font-size: 20px; padding:12px 0;}
+span.filename.sender {
+    position: absolute;left: 3px;
+}
+@media (min-width:0) and (max-width:567px){
+    .discussion_title {padding-left: 4px !important;}
+  /*.main_contain_discuss{height:150vh;}*/
+ .time_discuss{padding-left: 10px;}   
+ .items-title{ padding-left: 10px; width: 100%; justify-content: space-between;}
+ .content-para{font-size:11px;}
+ .third-pge-contnt{border-bottom: 1px solid #F1F3F4;border-radius: 0; padding: 8px 10px !important;}
+ .col-lg-9 {background: #fff;}
+ /*.search_inp { width: 100%; background: #d7d7d7; padding: 10px 10px;position: fixed;bottom: 0; left: 0;right: 0;}*/
+ .dropdown-content a{font-size:12px;}
+ .img_p{ height: 50px !important;border: none !important;}
+}

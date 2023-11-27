@@ -1,0 +1,19 @@
+.header_searchwork{margin:0 0 0 -44px !important;justify-content: right !important;}
+.col-lg-9 {background: #fff;}
+section{background:#fff;}
+.cnfrm-amount,.checkout_prize,.checkout_para{text-align:center;}
+.add_coupen_section{text-align: center;}
+.checkout_para {padding: 40px;text-align: center; font-weight:500;}
+.confirm_title {padding: 0 40px;}
+
+@media (min-width: 0) and (max-width: 567px){
+    body.background-container{
+    background:#fff !important;
+}
+    .hidn-objct.sticky.msg-header {padding: 28px;align-items: center;}
+    i.fa-solid.fa-arrow-left {padding: 5px;color: #000;}
+    .prof-heigh-wid {float: left;width: unset;}
+    .checkout-top-title {text-align: center !important;margin-left: 85px !important; font-size:18px;}
+    .confirm_title {    padding: 0 40px;display: grid; gap: 20px; margin-top: 170px;}
+    .confirm_title p{font-size:12px;}
+}

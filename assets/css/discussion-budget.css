@@ -1,0 +1,10 @@
+ 
+
+@media (min-width:0) and (max-width:567px){
+
+.inp_content{padding:20px;}
+.img-p{padding: 22px;}
+.col-lg-9 {background: #fff;}
+.show {display: flex !important; }
+.img_p{height:76px;}
+}

@@ -1,0 +1,22 @@
+.head-mid.refer-head {
+    text-align: left;
+    display: flex;
+}
+.row.row-2 {background: #fff; }
+nav.d-flex.fr-btn {padding-top: 7px;}
+.input-refer button{    position: absolute;
+    right: -16px;
+    top: 39px;
+    background: none;
+    color: gray;
+}
+
+
+@media (min-width: 0) and (max-width: 567px){
+.review-sec-profile, .title-and-para.forth-sm {display: none !important; } 
+.refer_row {background: #fff;}
+body.background-container {background: #fff !important;}
+.col-lg-9{margin-top: 30px !important;padding: 0 !important;}
+.input-refer input {text-align: justify !important;font-size: 10px !important;}
+}
+.refer-cont-p{margin-bottom: 32px; padding:0 !important;}

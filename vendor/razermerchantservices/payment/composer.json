@@ -1,0 +1,42 @@
+{   
+    "name": "razermerchantservices/payment",
+    "type": "library",
+    "description": "A PHP library for Razer Merchant Services payment gateway",
+    "keywords": ["payment","razer","razermerchantservices"],
+    "homepage": "https://merchant.razer.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Safwan Hakim",
+            "email": "hakim.yacob@razer.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/RazerMS/SDK-RazerMS_PHP.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RazerMerchantServices\\": "src/lib"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "1.0.1",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox -c phpunit.xml"
+    }
+}

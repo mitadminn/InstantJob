@@ -1,0 +1,20 @@
+
+.row.row-2 {background: #fff; }
+nav.d-flex.fr-btn {padding-top: 7px;
+}
+.btn.btn-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    margin: 16px 0 0 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.42rem 0.75rem;
+}
+@media (min-width: 0) and (max-width: 567px){
+.review-sec-profile, .title-and-para.forth-sm {
+    display: none !important; 
+}   
+}
