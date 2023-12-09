@@ -63,15 +63,12 @@
                                 <p class="pp2" alt="<?=$post_data['topic'];?>"><?=$post_data['topic'];?> </p>
                                 
                                 <div class="d-flex justify-content-between align-items-center amount_wrap">
-                                    <!--<div class="star">-->
-                                    <!--    <i class="fa-solid fa-star"></i>-->
-                                    <!--    <small>New Member</small>-->
-                                    <!--</div>-->
+           
                                     <div class="wrapper_cash_total">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path>
                                         </svg>
-                                        <!--<img class="cash-img" src="assets/img/cash.svg" >   -->
+                          
                                         <b style="color: green;">RM<?=$formattedPrice;?></b>
                                     </div>
                                 </div>
@@ -93,9 +90,9 @@
                         <input type="hidden" class="form-control" name="stid" value="<?=$_GET['msgid'];?>" aria-label="Text input with dropdown button" style="padding: 19px;">
                         <input type="hidden" class="form-control" name="type" value="<?=$type;?>" aria-label="Text input with dropdown button" style="padding: 19px;">
 
-                        <div class="input-group-append" style=" ">
+                        <div class="input-group-append">
                             <button type="submit" class="btn-wallet btn_budget_confirm bnt-fill-green" style="margin-left: 40px;">Confirm</button> 
-                                <!--<button class="btn btn-outline-secondary dropdown-toggle" style="background: #eaeaea; color: #000; border: none;;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MYR</button>-->
+ 
                         </div>
                     </form>
                 </div>

@@ -58,10 +58,9 @@ $page = 'Message Job';
          <div class="bg-white   main_wrapper-msg">
                <div class="msg-srvc-wrap">
         <div class="img-p">
-            
-                            <!--<a class="name_topic" href="messageservice?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=service">-->
+ 
                                 <div class="hh-1"><img class="hhh" src="admin/assets/img/services/<?=$post_data['photos'];?>" alt=""></div>
-                                        <!--</a>-->
+                                        
                                 <div class="all-cnt">
                                     <div class="inner">
                                         <a href="user-view.php?viewuserid=1">
@@ -76,7 +75,7 @@ $page = 'Message Job';
                                         </a>
                                     </div>
                                     
-                                    <!--<a class="name_topic" href="messageservice?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">-->
+ 
                                     <p class="pp2" alt="<?=$post_data['topic'];?>">
                                         <?=$post_data['topic'];?>                                   
                                     </p>
@@ -95,12 +94,9 @@ $page = 'Message Job';
                                     </a>
                                 </div>
                             </div>
-                            
-                             
          </div>
          
-       
-         
+ 
          <!--Shortlisted section-->
          <div class="Shortlisted_container bg-white">
             <?php if($post_data['user_id'] === $userid && $messages_short->num_rows > 0)  { ?>
@@ -137,8 +133,7 @@ $page = 'Message Job';
                   <div class=" col-md-8 col-8  p-0">
                       <a href="discussion?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">
                       <p class="senders_name"><?=$userinfo['ProfileName'];?></p>
-                      <!--<p class="senders_msg"><?= substr($messageinfo['message'], 0, 40);?>... </p>-->
-                     <!--<p class="notification_time font-weight-bold"><?=$formattedDate;?></p>-->
+ 
                      </a>
                   </div>
                   <div class="position-relative">
@@ -188,8 +183,7 @@ $page = 'Message Job';
                   <div class=" col-md-8 col-8  p-0">
                       <a href="discussion?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">
                       <p class="senders_name"><?=$userinfo['ProfileName'];?></p>
-                      <!--<p class="senders_msg"><?= substr($messageinfo['message'], 0, 40);?>... </p>-->
-                     <!--<p class="notification_time font-weight-bold"><?=$formattedDate;?></p>-->
+ 
                      </a>
                   </div>
                   
@@ -203,7 +197,7 @@ $page = 'Message Job';
                      </div>
                      <div id="<?=$messageinfo['id'];?>"  class="drop_msg_list">
                         <?php if($user_id != $post_data['user_id']) { ?>
-                                                <!--<p class="p-1"><a class="font-weight-bold text-dark" href="payment-release?id=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">Payment Summary</a></p>-->
+ 
 
                         <p class="p-1"><a class="font-weight-bold text-dark" href="propose-quote-budget?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>&msgid=<?php echo $messageinfo['id']; ?>">Propose Quote</a></p>
                         <?php }else{ 
@@ -221,38 +215,7 @@ $page = 'Message Job';
                </div>
                <?php   } ?>
             </div>
-            <!--<div class="Shortlist_title p-2">-->
-            <!--   <h4 class="font-weight-bold">Hidden</h4>-->
-            <!--   <div class="d-flex   align-items-center bg-white position-relative px-0 py-1 hidden__msg-list">-->
-            <!--      <div class="hh-1 img_notif_wrap msg_person_img">-->
-            <!--         <img class="cir-img " src="admin/assets/img/profile/<?=$userinfo["ProfilePic"];?>" alt="">-->
-            <!--         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-            <!--            <path fill="currentColor" d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z" />-->
-            <!--         </svg>-->
-            <!--      </div>-->
-            <!--      <div class=" col-md-8 col-8  p-0">-->
-                     <!--<p class="pp mr-in title-name"><\\?=$userinfo['ProfileName'];?>  </p>-->
-            <!--         <p class="senders_name">john:</p>-->
-                     <!--<p class="content-para p-0"><\\?=$messageinfo['message'];?> </p>-->
-            <!--         <p class="senders_msg">"Good Day Sir, I'd like to ask..."</p>-->
-            <!--         <p class="notification_time font-weight-bold">12 Apr 2022</p>-->
-            <!--      </div>-->
-            <!--      <div class="position-relative">-->
-            <!--         <div class=" col-md-2 p-0" id="myButtonDrop" onclick="toggleDropdownMsgs()">-->
-            <!--            <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-            <!--               <path fill="currentColor" d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"></path>-->
-            <!--            </svg>-->
-            <!--         </div>-->
-            <!--         <div id="myDropdownDropp"  class="drop_msg_list">-->
-            <!--            <p class="p-1"><a class="font-weight-bold text-dark" href="#">Shortlist</a></p>-->
-            <!--            <p class="p-1"><a class="font-weight-bold text-dark" href="propose-quote-budget">Propose Quote</a></p>-->
-            <!--            <p class="p-1"><a class="font-weight-bold text-dark" href="#">Hide User</a></p>-->
-            <!--            <p class="p-1"><a class="font-weight-bold text-dark" href="#">Report User</a></p>-->
-            <!--         </div>-->
-            <!--      </div>-->
-            <!--   </div>-->
-             
-            <!--</div>-->
+            
          </div>
          </div>
          <!----------------------------------------------------------------------------------------------------------------------->
@@ -302,10 +265,7 @@ window.onclick = function(event) {
   }
 }
 
-
-
-
-
+ 
 
     function ExtraMenu(post_id) {
         // var post_id = $(this).data('id');
@@ -313,9 +273,6 @@ window.onclick = function(event) {
       document.getElementById(post_id).classList.toggle("show");
     }
  
-    
-    
-    
     
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {

@@ -55,9 +55,7 @@ if(!empty($total_reviews)) {$rating = $avg_rating.' ('.$total_reviews.')';} else
             <div class="profsnl-servc">
                 
 <!--craousal section-->
-                <!--<div class="big-img-pro">-->
-                <!--    <img class="pro-big-img" src="admin/assets/img/services/<//?=$signle_service['photos'];?>" alt=""> -->
-                <!--</div>-->
+
                 
             <?php 
                 $data_found = false; // Initialize flag variable
@@ -129,7 +127,6 @@ if(!empty($total_reviews)) {$rating = $avg_rating.' ('.$total_reviews.')';} else
                     <ul class="pro-ul">
                         <li>Delivery:<?=$signle_service['fast_complete'];?></li>
                         <li>Preferred Day:<?=$signle_service['prefer_day'];?></li>
-                        <!--<li>Preferred Time: </li>-->
                     </ul>
                 </div>
                 <div class="row user-info_row">
@@ -173,7 +170,6 @@ if(!empty($total_reviews)) {$rating = $avg_rating.' ('.$total_reviews.')';} else
                     <div class="col-lg-4">
                         <div  class="profile-mid_right_btns">
                             <div>
-                                <!--<a href="message"><button class="snd-msg">Send a message</button></a>-->
                                 <a href="discussion?stid=<?=$signle_service["id"];?>&lgn=<?=$_SESSION['Userid'];?>&dis_id=<?=$postuser['id']?>&type=service" ><button class="sell_servc_btn <?=$appcls;?>">Send a message</button></a>
                                     <input type="hidden" name="service-id" id="serviceid" value="<?=$signle_service['id'];?>">
                             </div>
@@ -280,43 +276,7 @@ if(!empty($total_reviews)) {$rating = $avg_rating.' ('.$total_reviews.')';} else
                                 </div>
                             </div>
                         </div>
-                        <!--title & summary 4-->
-                        <!--<div class="profile-mid-cont hidn-aftr-fotr">-->
-                        <!--    <div class="title-and-para forth-sm">-->
-                        <!--        <div class="bio-title fl-sm">-->
-                        <!--            <h3>Job Completed</h3>-->
-                        <!--            <div class="show-all">-->
-                        <!--                <a href="#">Show All</a>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--        <div class="">-->
-                        <!--            <div class="img-p-content">-->
-                        <!--                <div class="img-pro-fl">-->
-                        <!--                    <img class="" src="admin/assets/img/services/photo-1472457897821-70d3819a0e24.avif" alt="">-->
-                        <!--                </div>-->
-                        <!--                <div class="para-profile">-->
-                        <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                        <!--                </div>-->
-                        <!--            </div>-->
-                        <!--            <div class="img-p-content">-->
-                        <!--                <div class="img-pro-fl">-->
-                        <!--                    <img class="" src="	admin/assets/img/services/R0010382.JPG" alt="">-->
-                        <!--                </div>-->
-                        <!--                <div class="para-profile">-->
-                        <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                        <!--                </div>-->
-                        <!--            </div>-->
-                        <!--            <div class="img-p-content">-->
-                        <!--                <div class="img-pro-fl">-->
-                        <!--                    <img class="" src="	admin/assets/img/services/Chrysanthemum.jpg" alt="">-->
-                        <!--                </div>-->
-                        <!--                <div class="para-profile">-->
-                        <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                        <!--                </div>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                        <!--</div>-->
+                       
                         <!--title & summary 4-->
                         <!--reviews-->
  <div class="review-section hidn-aftr-fotr">
@@ -386,9 +346,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
             <!--second job recruiter-->
         </div>
     </div>
-    <!--<div class="plus-sign">-->
-    <!--    <a href="http://instantjobs.bluepearltech.com/create-service"><i class="fa-solid fa-plus"></i></a>  -->
-    <!--</div>-->
+
 </div>
  <?php if($appcls == 'not-approved') {  
              include('approve-popup.php');

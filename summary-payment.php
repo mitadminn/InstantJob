@@ -31,11 +31,7 @@ include('auth.php');
     $service_tax = $taxes['service_tax'];
     $sst_tax = $taxes['sst_tax'];
     $totalprice = $service_tax + $actual_amnt + $sst_tax;  
-            
-            
-                             
-    // $post_data = $obj->GetServiceById($serviceid);
-    
+ 
     $userid = $post_data['user_id'];
     $postuser = $obj->GetUserById($userid);
     
@@ -51,7 +47,6 @@ include('auth.php');
         $message_type = '';
         $attachment = '';
         $data = $obj->SendMessage($sendby,$sendto,$comment,$posttype,$postid,$message_type, $attachment);
-        // $obj->ReserveAmount($user_id,$totalprice,$post_id,$type);
         $obj->AcceptPostProposal($postid,$sendby,$sendto,$posttype);
         $obj->UpdateProposalDataStatus($post_id,$type);
     } else {}
@@ -126,11 +121,11 @@ include('auth.php');
                             <h6><?=$post_data['topic'];?> </h6>
                         </div>
                         <div>
-                            <p>  <?php //echo substr($post_data['description'], 0,50);?></p>
+                 
                         </div>
                     </div>
                 </div>
-                        <div style="">
+                        <div>
                             <p class="">RM<?php echo number_format($getproposal['price'], 2, '.', ',');?></p>
                         </div>
                    

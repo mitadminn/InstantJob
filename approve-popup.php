@@ -66,7 +66,7 @@ button.btn.btn-danger.acnt-btn {
          <p>Your account information has been received, please check the status with admin<br>
         <?php } else { ?>
          <p>Your account has not been verified yet, to start a job or message others, please verify your account.<br>
-         <button type="button" class="btn acnt-btn verify-accnt-clr" style=""> Verify my account now</button>
+         <button type="button" class="btn acnt-btn verify-accnt-clr"> Verify my account now</button>
         <?php } ?>
        
         <?php if(empty($_SESSION['Userid'])) {?>

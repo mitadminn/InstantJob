@@ -1,4 +1,4 @@
-<?php //print_r($_SESSION['gdata']); 
+<?php 
             $allreviews = $obj->GetReviewsById($user_id);
             $totalEarning = $obj->getCreditedBalanceByUser($user_id);
             $isGoogleImage = strpos($user_information['ProfilePic'], 'https://lh3.googleusercontent.com/') === 0;
@@ -40,8 +40,7 @@
             <div class="dream-star">
                 <h6> <?php if(!empty($guser['ProfileName'])) { echo $guser['ProfileName']; } elseif(!empty($_SESSION['Userid'])) { echo $user_information['ProfileName']; } else {}?></h6>
                 <p> <img class="small-img-star " src="assets/img/star-svg.png" alt=""> <?=$rating;?></p>
-                <!--<p>From: <?=$user_information['Country'];?></p>-->
-                <!--<p>Member Since: <?php $datee = date_create($user_information['Created_at']); echo date_format($datee,"M Y"); ?></p>-->
+
                 <p>Level 3 Member </p>
             </div>
         </div>

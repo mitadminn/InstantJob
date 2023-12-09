@@ -43,7 +43,6 @@ $bankdetails = $obj->GetBankDetailsByUserId($user_id);
 
                                                         <input type="file" id="file" name="profilepic" class="form-control upload__inputfile" />
                                                         <input type="hidden" id="files" name="profilepic2" value="<?= $user_information['ProfilePic']; ?>" class="form-control " data-max_length="1" />
-                                                        <!--<input type="file" multiple="" class="form-control upload__inputfile" name="portfolio[]" data-max_length="20" >-->
 
                                                     </label>
                                                 </div>
@@ -120,14 +119,6 @@ $bankdetails = $obj->GetBankDetailsByUserId($user_id);
                                             <input type="text" name="address" class="form-control" value="<?= $user_information['Address']; ?>">
                                         </div>
                                     </div>
-                                    <!--<div class="col-md-6">-->
-                                    <!--    <div class="title-and-para">-->
-                                    <!--        <div class="bio-title">-->
-                                    <!--            <h3 class="mt-0">Email</h3>-->
-                                    <!--        </div>-->
-                                    <!--        <input type="text" name="email" class="form-control" value="<?= $user_information['Email']; ?>">-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
                                 </div>
                             </div>
                             
@@ -161,21 +152,6 @@ $bankdetails = $obj->GetBankDetailsByUserId($user_id);
                                 </div>
                             </div>
 
-
-                                    <!--<table class="table">-->
-                                    <!--    <tr>-->
-                                    <!--        <td>Bank Name</td>-->
-                                    <!--        <td>Acc No.</td>-->
-                                            <!--<td>Country</td>-->
-                                            <!--<td></td>-->
-                                    <!--    </tr>-->
-                                        <?php //while ($row = mysqli_fetch_array($bankdetails)) { ?>
-                                    <!--        <tr>-->
-                                    <!--            <td><?= $bankdetails['BankName']; ?></td>-->
-                                    <!--            <td><?= $bankdetails['AccountNumber']; ?></td>-->
-                                    <!--         </tr>-->
-                                        <?php //} ?>
-                                    <!--</table>-->
                                 </div>
                             </div>
                             <button type="submit" class="btn custom-btn bnt-fill-green">Update Profile</button>

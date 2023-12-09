@@ -37,15 +37,7 @@
         <div class="head-mid people-paid">
                 <h2></h2>
             </div>
-            <!--                            <div class=" hidn-objct sticky msg-header">-->
-            <!--    <div class="backbtn"> -->
-            <!--        <a href="checkout?id=<?=$signle_service['id'];?>"><i class="fa-solid fa-arrow-left"></i></a>-->
-            <!--        <span class="checkout-top-title">Payment</span>-->
-            <!--    </div>-->
-            <!--    <div class="prof-heigh-wid">-->
-            <!--        <div class="manage-as-lo"><?=$signle_service['topic'];?></div>-->
-            <!--    </div>-->
-            <!--</div>-->
+ 
             <Section class="payment_bg">
                 <div class="checkout_titles">
                     <img src="" alt=""> 

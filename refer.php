@@ -9,7 +9,7 @@
     $user_id = $_SESSION['Userid'];
     $refferal = $obj->GetRefferalByUserId($user_id);
     
-    
+    require_once('auth.php');
     
     ?>
 <?php include('inc/sidebar.php'); ?>      
@@ -23,10 +23,8 @@
     <!-- ----------------------Middle one---------------------- -->
     <div class="refer-main">
         <div class="refer-chld">
-            <!--<div class="img-cash-green text-center">-->
-            <!--    <img src="assets/img/cash-multiple copy.png"></img>-->
-            <!--</div>-->
-            <div style=" " class="title-content refer-cont-p">
+ 
+            <div class="title-content refer-cont-p">
                 <p class="">Both you and your friends will receive RM10 when they sign up with your link below and verify their accounts.</p>
             </div>
             <label class="refer-link">
@@ -55,19 +53,12 @@
 
 foreach ($refferal as $refferal_user) {
      $user_id = $refferal_user['Userid'];
-    // print_r($refferal_user);
-    // $singleuser = $obj->GetUsersById($user_id);
-    
+ 
 $originalDate = $refferal_user['Created_at'];
 $formattedDate = date("d F Y", strtotime($originalDate));
-
-       
-   
  
 ?>
-
-
-
+ 
     <tr>
       <td class="font-weight-bold"><?=$formattedDate;?></td>
       <td class="font-weight-bold"><?=$refferal_user['ProfileName']?></td>

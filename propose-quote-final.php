@@ -48,15 +48,12 @@
                                 <p class="pp2" alt="I need help i want social media account manager">I need help i want social media account manager </p>
                                 
                                 <div class="d-flex justify-content-between align-items-center amount_wrap">
-                                    <!--<div class="star">-->
-                                    <!--    <i class="fa-solid fa-star"></i>-->
-                                    <!--    <small>New Member</small>-->
-                                    <!--</div>-->
+ 
                                     <div class="wrapper_cash_total">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path>
                                         </svg>
-                                        <!--<img class="cash-img" src="assets/img/cash.svg" >   -->
+ 
                                         <b style="color: green;">2000 INR</b>
                                     </div>
                                 </div>
@@ -100,15 +97,12 @@
                <a href="#">
                   <p class="pp2" alt="I need help i want social media account manager">I need help i want social media account manager </p>
                   <div class="d-flex justify-content-between align-items-center amount_wrap">
-                     <!--<div class="star">-->
-                     <!--    <i class="fa-solid fa-star"></i>-->
-                     <!--    <small>New Member</small>-->
-                     <!--</div>-->
+ 
                      <div class="wrapper_cash_total">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                            <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path>
                         </svg>
-                        <!--<img class="cash-img" src="assets/img/cash.svg" >   -->
+ 
                         <b style="color: green;">2000 INR</b>
                      </div>
                   </div>

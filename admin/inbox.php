@@ -56,9 +56,7 @@ $Getid = $obj->Inbox($adminid);
                           <th>Image</th>
                           <th>Created Date</th>
                           	<th>Block / Unblock</th>
-                          <!--<th>Action</th>-->
-                           
-                          
+
                         </tr>
                       </thead>
                       <tbody>
@@ -79,7 +77,6 @@ $Getid = $obj->Inbox($adminid);
                           <td><?=$Getuserdta['Qualifications'];?>/<?=$Getuserdta['Year'];?></td>
                            <td><img src="assets/img/profile/<?=$Getuserdta['ProfilePic'];?>" style="width: 42px;height: 42px;border-radius: 30px;"></td>
                           <td><?=$Getuserdta['Created_at'];?></td>   
-                          <!--<td><a href=""></a></td>-->
                           	<td>
 				    <?php  $status =  $Getuserdta['Status']; 
 					if($status == 1){	

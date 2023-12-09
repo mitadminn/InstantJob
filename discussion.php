@@ -273,8 +273,7 @@ label.dropdown.dropdown-up {
                      </div>
                      </div>
                   </div>
-                        
-                                 <!--<a href="messageservice">-->
+ 
                                 <p class="pp2" alt="<?=$post_data['topic'];?>"><?=$post_data['topic'];?> </p>
                                 
                                 <div class="d-flex justify-content-between align-items-center amount_wrap">
@@ -314,7 +313,7 @@ label.dropdown.dropdown-up {
                       $formattedPrice = number_format($price, 0, '.', ',');
                    ?>
                    
-                    <div class="img-p img-discuss  m-0" style="">
+                    <div class="img-p img-discuss  m-0"  >
             <a href="#">
                <div class="hh-1"><img class="hhh" src="admin/assets/img/services/<?=$post_data['photos'];?>" alt="">
                </div>
@@ -415,35 +414,12 @@ label.dropdown.dropdown-up {
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
  
-<!-- Modal for Insufficient Balance-->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-            <div class="modal-body">
-     
-        <p class="mt-2"> Are you ready to start work and proceed?</p>
-      </div> 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="summary-payment?id=<?=$stid;?>&price=<?=$proposaldata['price'];?>&lgn=<?=$to_user;?>&type=<?=$type;?>&dis_id=<?=$from_user;?>&s=yes"><button type="button" class="btn btn-primary btn-go-wallet m-0 text-white">Proceed</button></a>
-      </div>
-
-    </div>
-  </div>
-</div>
 <!--Model for confirmation-->
 <div class="modal fade" id="myModalConfirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

@@ -42,7 +42,7 @@
 <div class="col-lg-12 col-md-12 second-mid example">
 <div class="select_srvc_choice total_budget_wrapper">
 <div class="card_wrapper">
-<div class="main prof-inf-new active" style="">
+<div class="main prof-inf-new active" >
 <a href="service-provider"> 
 <img class="logo_instant_jobss" src="assets/img/new-instant-logo.png" alt="">
 </a>

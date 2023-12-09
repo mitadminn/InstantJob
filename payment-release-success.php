@@ -3,10 +3,7 @@
     include('inc/header.php'); 
     $plan_id = $_GET['id'];
     $signle_plan = $obj->GetPaymentPlanById($plan_id);
-    // $userid = $signle_plan['userid'];
-    // $postuser = $obj->GetUserById($userid);
-    
-    
+ 
     $post_id = $signle_plan['post_id'];
     if($_GET['type'] == 'service'){
     $serviceid = $signle_plan['post_id'];
@@ -47,10 +44,7 @@
                     </div>
                     <p class="cnfrm-amount">Payment to <?=$postuser['ProfileName']?></p>
                     <p class="checkout_prize font-weight-bold">RM<?php echo $formattedPrice;?></p>
-                    <!--<small>Service Fee - RM<?=$servicetaxx;?></small>-->
-                    <!--<small>SST 6% - RM<?=$ssttaxx;?></small>.-->
-                    
-                    
+  
                     <?php
 $milestones = array();
 
@@ -86,7 +80,7 @@ echo '';
                                 <input type="hidden" name="finalpayment" value="<?=$final;?>">
                                 
                     <a  href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>" style="border-radius: 34px;    border: 1px solid #e4e4e4;    padding: 5px;    width: 106px;    float: left;    color: #000;font-weight: 600;   margin-right: 10;">NO</a>
-                    <!--<a  href="payment-success?id=<?=$single_post['id'];?>"><button class="checkout_now pay_check">Pay Now</button></a> -->
+                
                         <button type="submit" class="checkout_now pay_check">Pay Now</button> 
                         </form>
                 </div>

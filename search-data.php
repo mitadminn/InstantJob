@@ -118,7 +118,7 @@
             
             <form id="advance_search" class="form-submit">
             <input type="hidden" class="searchskils" name="searchskils"  value="<?=$searchSkills;?>">
-                    <!--<input type="text" id="tag-input3" name="skills[]" placeholder="Enter more skills">-->
+ 
                 <p class="sk1" style="display:none;">
                 <span class="skills1"></span>
                 <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -143,8 +143,7 @@
          <input id="search-input" class="addsk1" name="addsk1" />
          <input id="search-input2" class="addsk2" name="addsk2" style="display: none;width: fit-content;margin-left: 10px;border: none;height: 25px;"/>
          <button type="submit" id="submitbtn" class="btn btn-primary profile-edit btn_profile_edit addItemBtn" style="display:none;"><span>Add</span></button>
-
-        <!--<button class="btn btn-primary profile-edit btn_profile_edit" type="submit" id="submitbtn">add</button>-->
+ 
         </form>
         
         
@@ -204,8 +203,8 @@
             <p><?=$userdata['ProfileBio'];?></p>
         </div>
         <div class="row skill_hobbies_">
-            <?php  foreach($skills as $skils){
-                //print_r($skils['Skills']);?>
+            <?php  foreach($skills as $skils){ ?>
+           
             <p class="skills"> <?php echo str_replace(",","<p class='skills'>",$skils['Skills']); ?> </p>
             <?php } ?>
         </div>
@@ -289,8 +288,7 @@
                           location.reload();
                       }
                   });
-    
-    
+ 
     
               });
     
@@ -405,8 +403,7 @@
           $('.sk1').css('display','block');
           $('.sk2').css('display','block');
           $('.simpleskillsearch').css('display','none');
-        //   $('#addskillbtn1').css('display','none');
-        //   document.getElementById("addskillbtn1").style.display = "block";
+ 
           document.getElementById("addskillbtn2").style.display = "block";
           document.getElementById("search-input").style.display = "none";
           document.getElementById("search-input2").style.display = "none";
@@ -414,7 +411,7 @@
 
            window.scrollTo(0, 0);
            
-        //   load_skills();
+   
         }
       });
     });

@@ -119,7 +119,7 @@
       </div>
    </div>
    <?php if ($balance < $t_amount) { ?>
-   <Section class="payment_bg p-0">
+   <Section class="payment_bg p-0 h-100">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -249,64 +249,64 @@
          <p class="font-weight-bold guides-title">Please Read: Credit card instructions</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• You can fund the milestone with a credit card,
+         <ul class="guide-detailes text-left py-2">
+            <li>You can fund the milestone with a credit card,
                but please be aware of the following:
-            </p>
-            <p>• To ensure the security of our Hirers and Service
+            </li>
+            <li>To ensure the security of our Hirers and Service
                Providers against potential credit card fraud or
                chargebacks, the funded milestone will be
                locked for a minimum of "4 working days".
-            </p>
-            <p>• The quickest way for you to "Release funds" to
+            </li>
+            <li>The quickest way for you to "Release funds" to
                your service provider, we recommend using
                Bank-in transfer to InstantJob instead.
-            </p>
-         </div>
+            </li>
+         </ul>
       </div>
       <div class="mt-3">
          <p class="font-weight-bold guides-title">More guides you might find useful:</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• If you want the service provider to begin
+         <ul class="guide-detailes text-left py-2">
+            <li>If you want the service provider to begin
                work, you are required to fund the milestone
                for that specific task or stage.
-            </p>
-            <p>• Your funds will be securely held in our escrow
+            </li>
+            <li>Your funds will be securely held in our escrow
                system until you choose to release them,
                giving you peace of mind and service providers to start their work with confidence.
-            </p>
-            <p>• You should only release the funds when you
+            </li>
+            <li>You should only release the funds when you
                are satisfied with the work.
-            </p>
-            <p>• In certain cases, you have the option to
+            </li>
+            <li>In certain cases, you have the option to
                release funds in advance if your service
                providers need money to purchase raw
                materials on your behalf.
             </p>
-            <p>• Releasing funds in advance carries a possible
+            <li>Releasing funds in advance carries a possible
                risk, similar to real-life situations, and is an
                arrangement solely between you and the
                service providers.
-            </p>
-            <p>• For each project, InstantJob applies a service
+            </li>
+            <li>For each project, InstantJob applies a service
                fee of 10% or up to RM1,000 (max). This fee
                plays a crucial role in supporting our platform
                services, empowering our dedicated staff,
                and reinforcing the security of our escrow
                system, all aimed at prioritizing your
                protection.
-            </p>
-            <p>• If you have any questions or concerns, please
+            </li>
+            <li>If you have any questions or concerns, please
                reach out to our support team.
-            </p>
-         </div>
+            </li>
+         </ul>
       </div>
    </Section>
    <?php } else { 
                 ?>
-                <Section class="payment_bg p-0">
+                <Section class="payment_bg p-0 h-100">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -355,68 +355,70 @@
                                 <input type="hidden" name="milestone" value="<?=$signle_plan['plan'];?>">
                             <a class="fund-back-btn"  href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>"><button type="submit" class="no-btn">Back</button></a> 
             <button type="submit" class="proceed-btn">Proceed</button>
-            
  
-                        <button type="submit" class="proceed-btn">Proceed</button> 
                         </form>
        </div>
       <div class="mt-5">
          <p class="font-weight-bold guides-title">Please Read: Credit card instructions</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• You can fund the milestone with a credit card,
+          <ul class="guide-detailes text-left py-2">
+            <li>You can fund the milestone with a credit card,
                but please be aware of the following:
-            </p>
-            <p>• To ensure the security of our Hirers and Service
+            </li>
+            <li>To ensure the security of our Hirers and Service
                Providers against potential credit card fraud or
                chargebacks, the funded milestone will be
                locked for a minimum of "4 working days".
-            </p>
-            <p>• The quickest way for you to "Release funds" to
+            </li>
+            <li>The quickest way for you to "Release funds" to
+               your service provider, we recommend using
+               Bank-in transfer to InstantJob instead.
+            </li>
+            <p style="visibility:hidden;">The quickest way for you to "Release funds" to
                your service provider, we recommend using
                Bank-in transfer to InstantJob instead.
             </p>
-         </div>
+         </ul>
       </div>
       <div class="mt-3">
          <p class="font-weight-bold guides-title">More guides you might find useful:</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• If you want the service provider to begin
+         <ul class="guide-detailes text-left py-2">
+            <li>If you want the service provider to begin
                work, you are required to fund the milestone
                for that specific task or stage.
-            </p>
-            <p>• Your funds will be securely held in our escrow
+            </li>
+            <li>Your funds will be securely held in our escrow
                system until you choose to release them,
                giving you peace of mind and service providers to start their work with confidence.
-            </p>
-            <p>• You should only release the funds when you
+            </li>
+            <li>You should only release the funds when you
                are satisfied with the work.
-            </p>
-            <p>• In certain cases, you have the option to
+            </li>
+            <li>In certain cases, you have the option to
                release funds in advance if your service
                providers need money to purchase raw
                materials on your behalf.
-            </p>
-            <p>• Releasing funds in advance carries a possible
+            </li>
+            <li>Releasing funds in advance carries a possible
                risk, similar to real-life situations, and is an
                arrangement solely between you and the
                service providers.
-            </p>
-            <p>• For each project, InstantJob applies a service
+            </li>
+            <li>For each project, InstantJob applies a service
                fee of 10% or up to RM1,000 (max). This fee
                plays a crucial role in supporting our platform
                services, empowering our dedicated staff,
                and reinforcing the security of our escrow
                system, all aimed at prioritizing your
                protection.
-            </p>
-            <p>• If you have any questions or concerns, please
+            </li>
+            <li>If you have any questions or concerns, please
                reach out to our support team.
-            </p>
-         </div>
+            </li>
+         </ul>
       </div>
    </Section>
                 <?php } ?>

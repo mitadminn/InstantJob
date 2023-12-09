@@ -32,7 +32,6 @@ form#cart div {margin: 10px 0 0 0;}
     <div class="service_provider_contain post_prev_top_wrap" style="position:relative;">
                        
                              <div class="img-p preview_post_job">
-                                  <!--<a class="name_topic" href="professional-service?t=<?=$signle_service['id'];?>&service=<?=$topic;?>">-->
                                 <div class="hh-1"><img class="hhh" src="admin/assets/img/services/<?=$signle_service['photos'];?>"
                                         alt=""></div>
                                         <!--</a>-->
@@ -62,16 +61,13 @@ form#cart div {margin: 10px 0 0 0;}
 
                                         <p><small>From </small> <b>
                                                 RM<?=$formattedPrice;?>
-                                                <?//=$signle_service['price_type'];?>
+                                               
                                             </b> </p>
                                     </div>
                                      
                                 </div> 
                             </div>
-                        
-                        
-                        
-                        
+ 
                     </div>
     
     <div class="mid-pro">
@@ -125,17 +121,12 @@ form#cart div {margin: 10px 0 0 0;}
     <!--<hr style="margin:0;">-->
     <div class="summary-table-left align-center" style="display: flex;justify-content: space-between; align-items:center;">
         <div>
-            <!--<p>5% Service Fee</p>-->
-            <!--<p>6% SST</p>-->
-            <!--<label class="total_cost">-->
-            <!--<b>Total:</b> -->
-            <!--</label>-->
+ 
         </div>
         <div class="summary-table-right">
-            <!--<p>RM<?//=$servicetax = $signle_service['price']*5/100;?></p>-->
-            <!--<p>RM<?//=$ssttax = $signle_service['price']*6/100;?></p>-->
-            <output id='total' form='cart'><?//=$total = $servicetax + $signle_service['price']+ $ssttax + $addonstotal['addontotal'];?></output>
-            <!--<output id='total' form='cart'>RM</output>-->
+ 
+            <output id='total' form='cart'></output>
+ 
             <?php $total = $signle_service['price'];?>
             
         </div>

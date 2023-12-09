@@ -12,14 +12,7 @@ $alljobs = $obj->GetAllJobadmin();
               </div>
 
               <div class="title_right">
-                <!--<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">-->
-                <!--  <div class="input-group">-->
-                <!--    <input type="text" class="form-control" placeholder="Search for...">-->
-                <!--    <span class="input-group-btn">-->
-                <!--      <button class="btn btn-secondary" type="button">Go!</button>-->
-                <!--    </span>-->
-                <!--  </div>-->
-                <!--</div>-->
+
               </div>
             </div>
 
@@ -85,13 +78,6 @@ $alljobs = $obj->GetAllJobadmin();
       <input style="padding:4px;" type="date" class="form-control" name="couponedate">
      </div>
     </div>
-    
-    <!-- <div class="form-group">-->
-    <!--    <div class="col-md-12 col-sm-12 mb-3">-->
-    <!--  <label for="text" class="m-0">Number of Days</label>-->
-    <!--  <input style="padding:4px;" type="text" class="form-control" name="coupondays">-->
-    <!-- </div>-->
-    <!--</div>-->
 
     <div class="col-md-12 col-sm-12" style="margin-top:15px;">
     <button type="submit" class="btn btn-primary" style="background:#00C853; border:none;">Submit</button>

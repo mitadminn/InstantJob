@@ -1,8 +1,8 @@
 <?php
 define('DbHost', 'localhost');
-define('DbUser', 'mit_instantjob');
-define('DbPass', '[PFC[mUGwBp4'); 
-define('DbName', 'mit_instantjobs');
+define('DbUser', 'u515501775_instantjob');
+define('DbPass', 'XSl?~StkQ=3'); 
+define('DbName', 'u515501775_instantjob');
  
 class Instantjobs{
 
@@ -21,8 +21,11 @@ class Instantjobs{
         return $sqlquery;
     }
 
-    function query($q) {
+    function query($q) { 
         $sqlquery = mysqli_query($this->con, $q);
+        if (!$sqlquery) {
+         die('Query failed: ' . mysqli_error($this->con));
+     }
         return $sqlquery;
     }
 
@@ -526,7 +529,7 @@ class Instantjobs{
 
              /* Get Search Skills */
      public function AdvanceSkillSearch($arrays) {
-       echo $t = "SELECT DISTINCT(`Post_id`) FROM `Skills` WHERE `Skills` IN('".$arrays."') GROUP BY `Skills` DESC";
+         $t = "SELECT DISTINCT(`Post_id`) FROM `Skills` WHERE `Skills` IN('".$arrays."') GROUP BY `Skills` DESC";
         $sqlquery = $this->query($t);
         // $user_data = $this->fetch_array($sqlquery);
         return $sqlquery;
@@ -1463,7 +1466,7 @@ public function getRows($conditions = array()){
       
       /* Get Message By Order*/
     public function GetInvitationMessagePopped($userid) {
-        $t = "SELECT * FROM `Invitation` WHERE `popped` = '1' AND `to_user` = '$userid'";
+        $t = "SELECT * FROM `InvitationMessage` WHERE `popped` = '1' AND `to_user` = '$userid'";
         $sqlquery = $this->query($t);
         return $sqlquery;
       }  
@@ -1517,7 +1520,7 @@ public function getRows($conditions = array()){
       
       
       public function GetUserChatService($reciever,$sender,$post_id,$post_type) {
-          $t = "SELECT * FROM `Message` WHERE (`to_user`= '$reciever' AND `from_user` = '$sender') OR (`to_user`= '$sender' AND `from_user` = '$reciever') AND `post_id` = '$post_id' AND `post_type` = '$post_type";
+           $t = "SELECT * FROM `Message` WHERE (`to_user`= '$reciever' AND `from_user` = '$sender') OR (`to_user`= '$sender' AND `from_user` = '$reciever') AND `post_id` = '$post_id' AND `post_type` = '$post_type'";
         $sqlquery = $this->query($t);
         return $sqlquery;
       }  
@@ -2167,8 +2170,39 @@ WHERE sendto = '$userid'
         $user_data = $this->fetch_array($sqlquery);
          return $user_data;
       }
+      
+      
+      public function GetGoogleApiKeys() {
+        $t = "SELECT * FROM `apis` WHERE `api` = 'google-key'";
+        $sqlquery = $this->query($t);
+         $user_data = $this->fetch_array($sqlquery);
+         return $user_data;
+      }
        
+       
+       
+       /*Add Years */
+        public function AddYears($years) {
+        $t = "INSERT INTO `Year` SET `Year`='$years'";
+        $sqlquery = $this->query($t);
+        return $sqlquery;
+      }
 
+        /*Get Years */
+        public function GetYears() {
+        $t = "SELECT * FROM `Year`";
+        $sqlquery = $this->query($t);
+        return $sqlquery;
+      }
+      
+      
+      /* Delete Year */
+	 public function DeleteYearByID($id) {
+         $t = "DELETE FROM `Year` WHERE `id`='$id'";
+           $sqlquery = $this->query($t);
+        return $sqlquery;
+    }  
+       
 }
 
 ?>

@@ -3,21 +3,16 @@
 
 include('admin/inc/function.php');
 require_once('wallett/assets/php/functions.php');
+require_once('inc/db.php');
 
 $obj = new Instantjobs();
-// Connect to the database (replace with your credentials)
-$conn = mysqli_connect('localhost', 'mit_instantjob', '[PFC[mUGwBp4', 'mit_instantjobs'); 
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+ 
 
 // Retrieve the selected year from the AJAX request
 $selectedYear = $_POST['year'];
 $user_id = $_POST['user'];
 if($selectedYear == 'Show All') {
- echo   $query = "SELECT * FROM Transaction WHERE `from_user_id` = '$user_id' OR `to_user_id` = '$user_id' ORDER BY id DESC";
+     $query = "SELECT * FROM Transaction WHERE `from_user_id` = '$user_id' OR `to_user_id` = '$user_id' ORDER BY id DESC";
 
 }elseif(!empty($selectedYear)) {
 // Retrieve data for the selected year
@@ -26,10 +21,10 @@ if($selectedYear == 'Show All') {
 }else{}
 // Retrieve data for the selected year
 // $query = "SELECT * FROM Transaction WHERE YEAR(created_at) = '$selectedYear' AND `from_user_id` = '$user_id' OR `to_user_id` = '$user_id' ORDER BY id DESC";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($connect, $query);
 
 if (!$result) {
-    die("Query failed: " . mysqli_error($conn));
+    die("Query failed: " . mysqli_error($connect));
 }
 
 // Build the table with the retrieved data

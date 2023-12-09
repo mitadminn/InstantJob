@@ -34,14 +34,7 @@
                                 <input type="hidden" name="userid" value="<?=$userid;?>">
                                 <input type="hidden" name="payment_for" value="<?=$type;?>">
                                 <input type="hidden" name="postid" value="<?=$jobid;?>">
-            
-            <!--<div class=" hidn-objct sticky msg-header">-->
-            <!--    <div class="backbtn"> -->
-            <!--        <a href="checkout?id=<?=$signle_service['id'];?>"><i class="fa-solid fa-arrow-left"></i></a>-->
-            <!--        <span class="checkout-top-title">Withdrawal</span>-->
-            <!--    </div>-->
-               
-            <!--</div>-->
+ 
             <Section class="payment_bg">
                 <div class="checkout_titles">
                     <img src="" alt=""> 

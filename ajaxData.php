@@ -3,22 +3,13 @@
 // Fetch the input parameter from the AJAX request
 $input = $_GET['input'];
 $city = $_GET['city'];
-
-// Connect to your database (modify this according to your database configuration)
-$servername = "localhost";
-$username = "mit_instantjob";
-$password = "[PFC[mUGwBp4";
-$dbname = "mit_instantjobs"; 
-
-// $conn = mysqli_connect('localhost', 'mit_instantjob', '[PFC[mUGwBp4', 'mit_instantjobs'); 
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+ 
+require_once('inc/db.php');
+ 
 // Perform the database query to retrieve matching states
 if(!empty($input)){
 $sql = "SELECT DISTINCT(`state_name`) FROM cities WHERE state_name LIKE '$input%'";
-$result = $conn->query($sql);
+$result = $connect->query($sql);
 
 // Generate the HTML list of matching states with clickable options
 if ($result->num_rows > 0) {
@@ -31,7 +22,7 @@ if ($result->num_rows > 0) {
 
 }elseif(!empty($city)){
    $sql = "SELECT DISTINCT(`city_name`) FROM cities WHERE city_name LIKE '$city%'";
-$result = $conn->query($sql);
+$result = $connect->query($sql);
 
 // Generate the HTML list of matching states with clickable options
 if ($result->num_rows > 0) {
@@ -43,6 +34,6 @@ if ($result->num_rows > 0) {
 } 
 }else{}
 
-$conn->close();
+$connect->close();
 ?>
 

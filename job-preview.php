@@ -3,9 +3,7 @@
     include('inc/header.php'); 
   
      $job = $_GET['job'];
-//   $job =  $obj->myUrlEncode($val);
-    
-    //$job = $_GET['job'];
+ 
     $signle_job = $obj->GetJobByTopic($job);
     $userid = $signle_job['user_id'];
     $postuser = $obj->GetUserById($userid);
@@ -34,7 +32,6 @@ button.rounded.btn-sucs.btnm-frst.w-100 {background: #0090FF !important;}
     <div class="service_provider_contain post_prev_top_wrap" style="position:relative;">
                        
                              <div class="img-p">
-                                  <!--<a class="name_topic" href="professional-service?t=<?=$signle_job['id'];?>&service=<?=$topic;?>">-->
                                 <div class="hh-1"><img class="hhh" src="admin/assets/img/services/<?=$signle_job['photos'];?>"
                                         alt=""></div>
                                         <!--</a>-->
@@ -77,10 +74,7 @@ button.rounded.btn-sucs.btnm-frst.w-100 {background: #0090FF !important;}
                                      
                                 </div> 
                             </div>
-                        
-                        
-                        
-                        
+ 
                     </div>
     
     <div class="mid-pro">
@@ -104,11 +98,11 @@ button.rounded.btn-sucs.btnm-frst.w-100 {background: #0090FF !important;}
                             <h6><?=$signle_job['topic'];?> </h6>
                         </div>
                         <div>
-                            <p>  <?php echo $signle_job['description']; //substr($signle_job['description'], 0,500);?></p>
+                            <p> <?php echo $signle_job['description']; ?></p>
                         </div>
                     </div>
                 </div>
-                        <div style="">
+                        <div >
                             <p class="">RM<?=$formattedPrice;?></p>
                         </div>
                    
@@ -131,20 +125,12 @@ button.rounded.btn-sucs.btnm-frst.w-100 {background: #0090FF !important;}
             </div>
         </div>
     </div>
-    <!--<hr style="margin:0;">-->
     <div class="summary-table-left align-center" style="display: flex;justify-content: space-between; align-items:center;">
         <div>
-            <!--<p>5% Service Fee</p>-->
-            <!--<p>6% SST</p>-->
             <label class="total_cost">
-            <!--<b>Total:</b> -->
             </label>
         </div>
         <div class="summary-table-right">
-            <!--<p>RM<?//=$servicetax = $signle_job['price']*5/100;?></p>-->
-            <!--<p>RM<?//=$ssttax = $signle_job['price']*6/100;?></p>-->
-            <!--<output id='total' form='cart'>RM<?=$total = $servicetax + $signle_job['price']+ $ssttax;?></output>-->
-            
         </div>
     </div>
      </div>

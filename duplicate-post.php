@@ -19,7 +19,7 @@ $remove = "I need help";
 <div class="middle_container" id="myTabContent">
     <div class="tab-pane fade show active wrap_content_mid" id="one" role="tabpanel" aria-labelledby="one-tab">
         <div class="head-mid">
-            <h2>Create a Job Offer (Duplicate)  <?//=$_SESSION['Country'];?><b class="create-offr-heading"></b></h2>
+            <h2>Create a Job Offer (Duplicate)</h2>
         </div>
         <form action="admin/inc/process.php?action=CreateJob" method="post" id="duplicateform" class="service-form example" enctype="multipart/form-data">
             <input type="hidden" class="form-control" placeholder="Name" value="<?=$_SESSION['Userid'];?>" name="userid" required>

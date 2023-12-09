@@ -175,7 +175,7 @@ button#showMoreButton {
          					                <div class="col">
          					                    <div class="user-details">
          					                        <h3 class="text-white"><?=$user_information['ProfileName'];?></h3>
-         					                        <!--<p class="text-white">Owner & Founder</p>-->
+ 
          					                    </div>
          					                    <div class="hstack text-white-50 d-flex gap-3">
                                         <div class="mr-2 icon-user-detail">
@@ -183,12 +183,7 @@ button#showMoreButton {
                                                 <path fill="currentColor" d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7C14.1,7.7 15.8,9.4 15.8,11.5C15.8,14.5 12,18 12,18C12,18 8.2,14.5 8.2,11.5C8.2,9.4 9.9,7.7 12,7.7M12,10A1.5,1.5 0 0,0 10.5,11.5A1.5,1.5 0 0,0 12,13A1.5,1.5 0 0,0 13.5,11.5A1.5,1.5 0 0,0 12,10Z" />
                                             </svg>
                                             <?=$user_information['Country'];?></div>
-                                        <!--<div class="icon-user-detail">-->
-                                        <!--    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-                                        <!--        <path fill="currentColor" d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H20M10,7H8V5H10M10,11H8V9H10M10,15H8V13H10M10,19H8V17H10M6,7H4V5H6M6,11H4V9H6M6,15H4V13H6M6,19H4V17H6M12,7V3H2V21H22V7H12Z" />-->
-                                        <!--    </svg>-->
-                                        <!--    Themesbrand-->
-                                        <!--</div>-->
+ 
                                     </div>
          					                </div>
          					                <div class="col-12 col-lg-auto order-last order-lg-0">
@@ -220,7 +215,7 @@ button#showMoreButton {
     <a class="nav-link text-white font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Overview</a>
   </li>
   <li class="nav-item">
-    <!--<a class="nav-link text-white font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Projects</a>-->
+ 
   </li>
   <li class="nav-item">
     <a class="nav-link text-white font-weight-bold" id="pills-contact-tab" data-toggle="pill" href="#pills-professional" role="tab" aria-controls="pills-professional" aria-selected="false">Professional Service</a>
@@ -318,228 +313,7 @@ button#showMoreButton {
                 </div>
   </div>
 </div>
-  <!--<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">-->
-  <!--    <div class="row">-->
-  <!--      <div class="col-12">-->
-  <!--          <div class="bg-white p-4 rounded">-->
-  <!--             <div class="card border-0">-->
-  <!--          <div class="card-body">-->
-  <!--              <div class="row">-->
-  <!--                  <div class="col-xxl-3 col-sm-6 mb-2">-->
-  <!--                      <div class="card profile-project-card shadow-none profile-project-warning inprogress-border">-->
-  <!--                          <div class="card-body p-4">-->
-  <!--                              <div class="d-flex">-->
-  <!--                                  <div class="flex-grow-1 text-muted overflow-hidden">-->
-  <!--                                      <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-  <!--                                      <p class="text-muted text-truncate mb-0">Last Update : <span class="fw-semibold text-body">2 year Ago</span></p>-->
-  <!--                                  </div>-->
-  <!--                                  <div class="flex-shrink-0 ms-2">-->
-  <!--                                      <div class="badge bg-warning-subtle text-warning fs-10">Inprogress</div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-
-  <!--                              <div class="d-flex mt-4">-->
-  <!--                                  <div class="flex-grow-1">-->
-  <!--                                      <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-  <!--                                          <div>-->
-  <!--                                              <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-  <!--                                          </div>-->
-  <!--                                         <div class="avatars">-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                          </div>-->
-  <!--                                      </div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-  <!--                          </div>-->
-                            <!-- end card body -->
-  <!--                      </div>-->
-                        <!-- end card -->
-  <!--                  </div>-->
-                    <!--end col-->
-  <!--                  <div class="col-xxl-3 col-sm-6 mb-2">-->
-  <!--                      <div class="card profile-project-card shadow-none profile-project-warning progess-border">-->
-  <!--                          <div class="card-body p-4">-->
-  <!--                              <div class="d-flex">-->
-  <!--                                  <div class="flex-grow-1 text-muted overflow-hidden">-->
-  <!--                                      <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-  <!--                                      <p class="text-muted text-truncate mb-0">Last Update : <span class="fw-semibold text-body">2 year Ago</span></p>-->
-  <!--                                  </div>-->
-  <!--                                  <div class="flex-shrink-0 ms-2">-->
-  <!--                                      <div class="badge bg-warning-subtle text-warning fs-10 progess-badge">Progress</div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-
-  <!--                              <div class="d-flex mt-4">-->
-  <!--                                  <div class="flex-grow-1">-->
-  <!--                                      <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-  <!--                                          <div>-->
-  <!--                                              <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-  <!--                                          </div>-->
-  <!--                                         <div class="avatars">-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                          </div>-->
- 
-                                            
-  <!--                                      </div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-  <!--                          </div>-->
-                            <!-- end card body -->
-  <!--                      </div>-->
-                        <!-- end card -->
-  <!--                  </div>-->
-                    <!--end col-->
-  <!--                  <div class="col-xxl-3 col-sm-6 mb-2">-->
-  <!--                      <div class="card profile-project-card shadow-none profile-project-warning New-border">-->
-  <!--                          <div class="card-body p-4">-->
-  <!--                              <div class="d-flex">-->
-  <!--                                  <div class="flex-grow-1 text-muted overflow-hidden">-->
-  <!--                                      <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-  <!--                                      <p class="text-muted text-truncate mb-0">Last Update : <span class="fw-semibold text-body">2 year Ago</span></p>-->
-  <!--                                  </div>-->
-  <!--                                  <div class="flex-shrink-0 ms-2">-->
-  <!--                                      <div class="badge bg-warning-subtle text-warning fs-10 new-badge">New</div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-
-  <!--                              <div class="d-flex mt-4">-->
-  <!--                                  <div class="flex-grow-1">-->
-  <!--                                      <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-  <!--                                          <div>-->
-  <!--                                              <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-  <!--                                          </div>-->
-  <!--                                         <div class="avatars">-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                          </div>-->
-       
-  <!--                                      </div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-  <!--                          </div>-->
-                            <!-- end card body -->
-  <!--                      </div>-->
-                        <!-- end card -->
-  <!--                  </div>-->
-                    <!--end col-->
-  <!--                  <div class="col-xxl-3 col-sm-6 mb-2">-->
-  <!--                      <div class="card profile-project-card shadow-none profile-project-warning completed-border">-->
-  <!--                          <div class="card-body p-4">-->
-  <!--                              <div class="d-flex">-->
-  <!--                                  <div class="flex-grow-1 text-muted overflow-hidden">-->
-  <!--                                      <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-  <!--                                      <p class="text-muted text-truncate mb-0">Last Update : <span class="fw-semibold text-body">2 year Ago</span></p>-->
-  <!--                                  </div>-->
-  <!--                                  <div class="flex-shrink-0 ms-2">-->
-  <!--                                      <div class="badge bg-warning-subtle text-warning fs-10 completed-badge">Completed</div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-
-  <!--                              <div class="d-flex mt-4">-->
-  <!--                                  <div class="flex-grow-1">-->
-  <!--                                      <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-  <!--                                          <div>-->
-  <!--                                              <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-  <!--                                          </div>-->
-  <!--                                         <div class="avatars">-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                            <a href="#" class="avatar">-->
-  <!--                                                  <img src="assets/img/profile/testimonials-4.jpg">-->
-  <!--                                              </a>-->
-  <!--                                          </div>-->
-                                                <!--<div class="avatar-group-item">-->
-                                                <!--    <div class="avatar-xs">-->
-                                                <!--        <img src="assets/img/profile/testimonials-4.jpg" alt="" class="rounded-circle img-fluid">-->
-                                                <!--    </div>-->
-                                                <!--</div>-->
-                                                <!--<div class="avatar-group-item">-->
-                                                <!--    <div class="avatar-xs">-->
-                                                <!--        <img src="assets/img/profile/testimonials-4.jpg" alt="" class="rounded-circle img-fluid">-->
-                                                <!--    </div>-->
-                                                <!--</div>-->
-                                                <!--<div class="avatar-group-item">-->
-                                                <!--    <div class="avatar-xs">-->
-                                                <!--        <div class="avatar-title rounded-circle bg-light text-primary">-->
-                                                <!--            <img src="assets/img/profile/testimonials-4.jpg" alt="" class="rounded-circle img-fluid">-->
-                                                <!--        </div>-->
-                                                <!--    </div>-->
-                                                <!--</div>-->
-                                            
-  <!--                                      </div>-->
-  <!--                                  </div>-->
-  <!--                              </div>-->
-  <!--                          </div>-->
-                            <!-- end card body -->
-  <!--                      </div>-->
-                        <!-- end card -->
-  <!--                  </div>-->
-                    <!--end col-->
-      
-                    <!--end col-->
-  <!--                  <div class="col-lg-12">-->
-  <!--                      <div class="mt-4">-->
-  <!--                          <ul class="pagination pagination-separated justify-content-center mb-0">-->
-  <!--                              <li class="page-item disabled">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item active">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link">1</a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link">2</a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link">3</a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link">4</a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link">5</a>-->
-  <!--                              </li>-->
-  <!--                              <li class="page-item">-->
-  <!--                                  <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>-->
-  <!--                              </li>-->
-  <!--                          </ul>-->
-  <!--                      </div>-->
-  <!--                  </div>-->
-  <!--              </div>-->
-                <!--end row-->
-  <!--          </div>-->
-            <!--end card-body-->
-  <!--      </div>-->
-  <!--          </div>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--</div>-->
+  
   <div class="tab-pane fade" id="pills-professional" role="tabpanel" aria-labelledby="pills-professional-tab">
       <div class="row">
         <div class="col-12">
@@ -559,7 +333,7 @@ button#showMoreButton {
                                 <div class="d-flex">
                                     <div class="flex-grow-1 text-muted overflow-hidden">
                                         <h5 class="fs-14 text-truncate"><a href="#" class="text-body"><?=$services['topic'];?></a></h5>
-                                        <!--<h4 class="text-muted text-truncate mb-0">Name:<span class="fw-semibold text-body">John</span></h4>-->
+ 
                                     </div>
                                     <div class="flex-shrink-0 ms-2">
                                         <div class="badge bg-warning-subtle text-warning fs-10">Inprogress</div>
@@ -587,14 +361,7 @@ button#showMoreButton {
                                                 </div>
 
                                             </div>
-                                           <!--<div class="avatars">-->
-                                              
-                                                <!--<a href="service-chat?stid=<//?=$post_id;?>&lgn=<//?=$uid;?>&dis_id=<//?=$userid;?>&type=service" class="avatar">-->
-                                                    <!--<img src="assets/img/profile/<//?=$user_information['ProfilePic'];?>">-->
-                                                <!--</a>-->
-                                                
-                                                
-                                            <!--</div>-->
+                                         
                                         </div>
                                     </div>
                                 </div>
@@ -605,161 +372,7 @@ button#showMoreButton {
                     </div>
                     <!--end col-->
                     <?php } ?>
-<!--                    <div class="col-xxl-3 col-sm-6 mb-2">-->
-<!--                        <div class="card profile-project-card shadow-none profile-project-warning progess-border">-->
-<!--                            <div class="card-body p-4">-->
-<!--                                <div class="d-flex">-->
-<!--                                    <div class="flex-grow-1 text-muted overflow-hidden">-->
-<!--                                        <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-<!--                                         <h4 class="text-muted text-truncate mb-0">Name:<span class="fw-semibold text-body">John</span></h4>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex-shrink-0 ms-2">-->
-<!--                                        <div class="badge bg-warning-subtle text-warning fs-10 progess-badge">Progress</div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                               <br>-->
-<!--<div class="">-->
-<!--    <h4>Title: <span class="text-dark">I will help to increase Google Ranking of your website</span></h4>-->
-<!--</div>-->
-<!--                              <div class="d-flex mt-4">-->
-<!--                                    <div class="flex-grow-1">-->
-<!--                                        <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-<!--                                            </div>-->
-<!--                                           <div class="avatars">-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <!-- end card body -->
-<!--                        </div>-->
-                        <!-- end card -->
-<!--                    </div>-->
-                    <!--end col-->
-<!--                    <div class="col-xxl-3 col-sm-6 mb-2">-->
-<!--                        <div class="card profile-project-card shadow-none profile-project-warning New-border">-->
-<!--                            <div class="card-body p-4">-->
-<!--                                <div class="d-flex">-->
-<!--                                    <div class="flex-grow-1 text-muted overflow-hidden">-->
-<!--                                        <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-<!--                                         <h4 class="text-muted text-truncate mb-0">Name:<span class="fw-semibold text-body">John</span></h4>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex-shrink-0 ms-2">-->
-<!--                                        <div class="badge bg-warning-subtle text-warning fs-10 new-badge">New</div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                               <br>-->
-<!--<div class="">-->
-<!--    <h4>Title: <span class="text-dark">I will help to increase Google Ranking of your website</span></h4>-->
-<!--</div>-->
-<!--                               <div class="d-flex mt-4">-->
-<!--                                    <div class="flex-grow-1">-->
-<!--                                        <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-<!--                                            </div>-->
-<!--                                           <div class="avatars">-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <!-- end card body -->
-<!--                        </div>-->
-                        <!-- end card -->
-<!--                    </div>-->
-                    <!--end col-->
-<!--                    <div class="col-xxl-3 col-sm-6 mb-2">-->
-<!--                        <div class="card profile-project-card shadow-none profile-project-warning completed-border">-->
-<!--                            <div class="card-body p-4">-->
-<!--                                <div class="d-flex">-->
-<!--                                    <div class="flex-grow-1 text-muted overflow-hidden">-->
-<!--                                        <h5 class="fs-14 text-truncate"><a href="#" class="text-body">Chat App Update</a></h5>-->
-<!--                                         <h4 class="text-muted text-truncate mb-0">Name:<span class="fw-semibold text-body">John</span></h4>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex-shrink-0 ms-2">-->
-<!--                                        <div class="badge bg-warning-subtle text-warning fs-10 completed-badge">Completed</div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                               <br>-->
-<!--<div class="">-->
-<!--    <h4>Title: <span class="text-dark">I will help to increase Google Ranking of your website</span></h4>-->
-<!--</div>-->
-<!--                                     <div class="d-flex mt-4">-->
-<!--                                    <div class="flex-grow-1">-->
-<!--                                        <div class="d-flex align-items-center gap-2" style="gap:2px">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="fs-12 text-muted mb-0">Members :</h5>-->
-<!--                                            </div>-->
-<!--                                           <div class="avatars">-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                              <a href="#" class="avatar">-->
-<!--                                                    <img src="assets/img/profile/testimonials-4.jpg">-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <!-- end card body -->
-<!--                        </div>-->
-                        <!-- end card -->
-<!--                    </div>-->
-                    <!--end col-->
-      
-                    <!--end col-->
-                    <!--<div class="col-lg-12">-->
-                    <!--    <div class="mt-4">-->
-                    <!--        <ul class="pagination pagination-separated justify-content-center mb-0">-->
-                    <!--            <li class="page-item disabled">-->
-                    <!--                <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item active">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">1</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">2</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">3</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">4</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">5</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
+ 
                 </div>
                 <!--end row-->
             </div>
@@ -815,14 +428,7 @@ button#showMoreButton {
                                                 </div>
 
                                             </div>
-                                           <!--<div class="avatars">-->
-                                              
-                                                <!--<a href="service-chat?stid=<//?=$post_id;?>&lgn=<//?=$uid;?>&dis_id=<//?=$userid;?>&type=service" class="avatar">-->
-                                                    <!--<img src="assets/img/profile/<//?=$user_information['ProfilePic'];?>">-->
-                                                <!--</a>-->
-                                                
-                                                
-                                            <!--</div>-->
+ 
                                         </div>
                                     </div>
                                 </div>
@@ -834,33 +440,7 @@ button#showMoreButton {
                     <!--end col-->
       <?php } ?>
                     <!--end col-->
-                    <!--<div class="col-lg-12">-->
-                    <!--    <div class="mt-4">-->
-                    <!--        <ul class="pagination pagination-separated justify-content-center mb-0">-->
-                    <!--            <li class="page-item disabled">-->
-                    <!--                <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item active">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">1</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">2</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">3</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">4</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link">5</a>-->
-                    <!--            </li>-->
-                    <!--            <li class="page-item">-->
-                    <!--                <a href="javascript:void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>-->
-                    <!--            </li>-->
-                    <!--        </ul>-->
-                    <!--    </div>-->
-                    <!--</div>-->
+  
                 </div>
                 <!--end row-->
             </div>

@@ -43,7 +43,6 @@ $bankdetails = $obj->GetBankDetailById();
 
 
                     <!-- Smart Wizard -->
-                    <!--<p>This will show sponsorship page</p>-->
                     <div id="wizard" class="form_wizard wizard_horizontal">
                         
                          <form action="inc/process.php?action=UpdateBankDetails" method="post" class="service-form example" enctype="multipart/form-data">

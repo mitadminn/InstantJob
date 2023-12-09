@@ -66,9 +66,7 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                     <?php if ($is_new_member) { ?>
                                         <p><img class="small-img-star" src="assets/img/star-svg.png" alt=""> New Member</p>
                                     <?php } ?>
-                                    <!--<p>From: <?= $view_user_info['Country']; ?></p>-->
-                                    <!--<p>Member Since: <?php $datee = date_create($view_user_info['Created_at']);
-                                                            echo date_format($datee, "M Y"); ?></p>-->
+
                                     <p>Level 3 Member</p>
                                 </div>
                             </div>
@@ -96,9 +94,7 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                         <div class="col-lg-4">
                             <div class="profile-mid_right_btns user_view">
                                 
-                                <!--<div>-->
-                                <!--    <a href="discussion?stid=<?//=$row["id"];?>&lgn=<?//=$user_id;?>&dis_id=<?//=$view_user_info['id']?>" ><button class="sell_servc_btn" <?//=$dsb;?>>Send a message</button></a>-->
-                                <!--</div>-->
+
                                 <div>
                                      <?php if($appcls == 'not-approved') { ?>
                                   <button class="invt-job-intrvw <?=$appcls;?>" >Invite for job interview</button>
@@ -126,7 +122,7 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                             <h3>Profile Bio</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="profile-edit">Edit</a></p>-->
+
                                         </div>
                                     </div>
                                     <p><?= $view_user_info['ProfileBio']; ?></p>
@@ -140,7 +136,6 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                             <h3>Skills</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="profile-edit">Edit</a></p>-->
                                         </div>
                                     </div>
                                     <div class="row skill_hobbies_">
@@ -160,7 +155,6 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                             <h3>Hobbies</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="profile-edit">Edit</a></p>-->
                                         </div>
                                     </div>
                                     <!-- NOTE from Rayson: Please name the css style properly. skill-hobbies -->
@@ -192,7 +186,7 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                             <h3>Qualification / Awards</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="profile-edit">Edit</a></p>-->
+ 
                                         </div>
                                     </div>
                                     <div class="bio-quali">
@@ -207,7 +201,7 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                             <h3>Portfolio</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="portfolio">Edit</a></p>-->
+                       
                                         </div>
                                     </div>
                                     <div class="bio-img">
@@ -220,45 +214,6 @@ $msg = $obj->GetUserChatOneByOne($reciever,$sender);
                                 </div>
                             </div>
                             <!--title & summary 3-->
-
-                            <!--title & summary 4-->
-                            <!--<div class="profile-mid-cont hidn-aftr-fotr">-->
-                            <!--    <div class="title-and-para forth-sm">-->
-                            <!--        <div class="bio-title fl-sm">-->
-                            <!--            <h3>Job Completed</h3>-->
-                            <!--            <div class="show-all">-->
-                            <!--                <a href="#">Show All</a>-->
-                            <!--            </div>-->
-                            <!--        </div>-->
-                            <!--        <div class="">-->
-                            <!--            <div class="img-p-content">-->
-                            <!--                <div class="img-pro-fl">-->
-                            <!--                    <img class="" src="admin/assets/img/services/photo-1472457897821-70d3819a0e24.avif" alt="">-->
-                            <!--                </div>-->
-                            <!--                <div class="para-profile">-->
-                            <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                            <!--                </div>-->
-                            <!--            </div>-->
-                            <!--            <div class="img-p-content">-->
-                            <!--                <div class="img-pro-fl">-->
-                            <!--                    <img class="" src="	admin/assets/img/services/R0010382.JPG" alt="">-->
-                            <!--                </div>-->
-                            <!--                <div class="para-profile">-->
-                            <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                            <!--                </div>-->
-                            <!--            </div>-->
-                            <!--            <div class="img-p-content">-->
-                            <!--                <div class="img-pro-fl">-->
-                            <!--                    <img class="" src="	admin/assets/img/services/Chrysanthemum.jpg" alt="">-->
-                            <!--                </div>-->
-                            <!--                <div class="para-profile">-->
-                            <!--                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>-->
-                            <!--                </div>-->
-                            <!--            </div>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                            <!--title & summary 4-->
 
                             <!--reviews-->
                              <?php include('user-reviews.php'); ?>

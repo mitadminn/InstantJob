@@ -1,9 +1,5 @@
 <?php 
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-
     $page = 'Status Coupon';
     include('inc/header.php'); 
     $userid = $user_id;
@@ -44,7 +40,6 @@
                     <a href="add-coupon.php">
                     <button type="button" class="rounded btn-success btn-sucs btnm-frst">Ok</button>
                     </a>
-                    <!--<p class="text-center">You can  get back to add more!</p>-->
                 </div>
                 
              </Section>
@@ -64,8 +59,7 @@
                     </a>
                     <p class="text-center">You can  get back to add more!</p>
                 </div>
-                
-                <!--</form>-->
+
             </Section>
             <?php } elseif ($msg =='w') { ?>
             <Section class="add_coupen_section bg-white p-4">
@@ -87,6 +81,5 @@
              </Section>
             <?php } else{} ?>
         </div>
-    <!--</div>-->
-<!--</div>-->
+
 <?php include('inc/footer.php'); ?>

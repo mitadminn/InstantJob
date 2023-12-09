@@ -2,8 +2,6 @@
  
 $allreviews = $obj->GetReviewsById($user_id);
 
-// $totalRating = 0; // Variable to store the sum of all rating values
-// $overallRating = '';
     global $totalRating, $averageRating, $roundedRating, $overallRating,$overallRating;
     $totalRating = 0;
     while ($row = mysqli_fetch_array($allreviews)) {

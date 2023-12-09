@@ -29,13 +29,7 @@
                                 <input type="hidden" class="form-control topup_input" placeholder="Amount" value="<?=$withdawal_amount;?>" name="withdawal_amount">
                                 <input type="hidden" name="userid" value="<?=$userid;?>">
             
-            <!--<div class=" hidn-objct sticky msg-header">-->
-            <!--    <div class="backbtn"> -->
-            <!--        <a href="checkout?id=<?=$signle_service['id'];?>"><i class="fa-solid fa-arrow-left"></i></a>-->
-            <!--        <span class="checkout-top-title">Withdrawal</span>-->
-            <!--    </div>-->
-               
-            <!--</div>-->
+            
             <Section class="payment_bg">
                 <div class="checkout_titles">
                     <img src="" alt=""> 

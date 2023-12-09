@@ -198,12 +198,10 @@
     
     <?php } if($page == 'Wallet') { ?>
     <div class="top-rt-h head-mid">
-        <!--<h2>Wallet</h2>-->
+ 
     </div>
     <div class="li-rt new-li-profl" id="panel">
-        <!--<div class="button-hist">-->
-        <!--    <a href="https://mitdevelop.com/instajobs/transaction"><button type="button" class="btn-round">View Transaction History</button>   </a>-->
-        <!--</div>-->
+ 
     </div>
     <?php } if($page == 'Manage Post') { ?>
     <div class="top-rt-h head-mid">

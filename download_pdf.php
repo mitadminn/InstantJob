@@ -1,21 +1,16 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-// Include the TCPDF library (assuming you have it installed)
+ 
 require_once('tcpdf/tcpdf.php');
 include('admin/inc/function.php');
 require_once('wallett/assets/php/functions.php');
 
 $obj = new Instantjobs();
 // Connect to the database (replace with your credentials)
-$conn = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require_once('inc/db.php');
 
+
+ 
 // Retrieve the selected year from the query string
 $selectedYear = $_GET['year'];
 $user_id = $_GET['user'];
@@ -29,10 +24,10 @@ else{
 $query = "SELECT * FROM Transaction WHERE (YEAR(created_at) = '$selectedYear') AND (`from_user_id` = '$user_id' OR `to_user_id` = '$user_id') ORDER BY id DESC";
 
 }
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($connect, $query);
 
 if (!$result) {
-    die("Query failed: " . mysqli_error($conn));
+    die("Query failed: " . mysqli_error($connect));
 }
 
 // Extend the TCPDF class to create custom Header and Footer
@@ -54,11 +49,11 @@ class MYPDF extends TCPDF {
         // Example: Replace the following lines with actual database or data retrieval code
         $selectedYear = $_GET['year'];
         $user_ids = $_GET['user'];
-        $conn = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
+        $connect = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
         $query = "SELECT * FROM users WHERE `id` = '$user_ids'";
-        $user_information = mysqli_query($conn, $query);
+        $user_information = mysqli_query($connect, $query);
         //$user_information = $obj->GetUsersById($user_id);
-        $user_information = mysqli_query($conn, $query);
+        $user_information = mysqli_query($connect, $query);
 
     // Check if the query executed successfully
     if ($user_information) {
@@ -206,15 +201,14 @@ $html .= '
 
 // output the HTML content
 
-      
  
-
 // create some HTML content
      
 }
 $html .='</table>'; 
-$html .='<p style="width:70%; text-align:center;">InstantJob Sd.Bhd. No. B-07-3 Block B, plaza Glomac,No.6 jalan S7/19 kelana jaya,Petaling Jaya, selangoor 47301, malaysia.
-Eamil: support@instajob.org</p>'; 
+                                                  
+$html .='<p style="width:70%; text-align:center;">Instantjob Sdn. Bhd. B-07-3, Block B, Plaza Glomac, No.6 Jalan SS7/19, Kelana Jaya, Petaling Jaya, 47301 Selangor, Malaysia
+Eamil: support@instantjob.org</p>'; 
   $pdf->writeHTML($html, true, false, true, false, '');
 
 // Output the PDF as a download

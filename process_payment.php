@@ -1,20 +1,14 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ 
 
 require_once 'vendor/autoload.php';
 require_once 'SDK-RazerMS_PHP/src/lib/Payment.php';
 
-
-
+ 
 // use RazerMerchantServices\Client;
 use RazerMerchantServices\Payment;
 // use RazerMerchantServices\Payment;
  
-
-
-
 // Get form input values
 $orderid = 'ID78899';
 $bill_name =$_POST['Name'];
@@ -29,21 +23,10 @@ $payment = new Payment('SB_honestunicorn', '8c4dbcb34f8a43fea669ae0cd8eed6df', '
  
         $paymentUrl = $payment->getPaymentUrl($orderid, $amount, $bill_name, $bill_email, $bill_mobile);
 
-
-
-// $payment->setAmount($amount);
-// $payment->setCurrency($currency);
-// $payment->setTransactionReference($reference);
-
  
-// $payment->setCallbackUrl('https://example.com/pay/ment/callback'); // Replace with your callback URL
-
-// Initialize the Rezerpay client
-// $client = new Client('SB_honestunicorn', '8c4dbcb34f8a43fea669ae0cd8eed6df'); // Replace with your API credentials
-
 try {
     // Generate the payment URL
-    // $paymentUrl = $payment->generatePaymentUrl($payment);
+ 
 
     // Redirect the user to the payment page
     header('Location: ' . $paymentUrl);

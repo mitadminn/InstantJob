@@ -102,10 +102,7 @@
             <div class="field_wrapper">
                 <div class="d-flex justify-content-between">
                     <label>Add-on tasks</label>
-                    <div class="words_counter">
-                        <span style="color: #495057;" id=charcounter>0</span>
-                        <span style="color: #495057;" id=charcounter>/ 80</span>
-                    </div>
+                  
                 </div>
                 <label class="lst-plus">
                 <input onkeyup="countupdate(this.value)" type="text" id="field_name" class="bg-white font-weight-bold" value="" placeholder="Click here to add more task" maxlength="80"/ disabled>
@@ -151,18 +148,13 @@
             var lngr = String.length;
             document.getElementById("charcoun").innerHTML = lngr;
             }
-            // Add on task script
-            function countupdate(Strings) {
-            var lngth = Strings.length;
-            document.getElementById("charcounter").innerHTML = lngth;
-            }
+           
                                      
         </script>
         <!--character count discription-->
     </div>
 </div>
 <?php include('inc/footer.php'); ?> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
 <script>
     $(document).ready(function(){

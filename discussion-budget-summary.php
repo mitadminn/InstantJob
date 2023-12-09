@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                        <div style="">
+                        <div >
                             <p class="">RM<?=$_GET['price'];?></p>
                         </div>
                    

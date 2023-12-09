@@ -1,4 +1,7 @@
-<?php $page = 'Search result';
+<?php 
+ 
+
+$page = 'Search result';
    include('inc/header.php'); 
    $ads = $obj->GetServiceByAds();
    $jobads = $obj->GetJobsByAds();
@@ -8,7 +11,7 @@
    $searchSkills = $_GET['Skills'];
    $searchInterest = $_GET['Interest'];
    if(!empty($searchvalue)) {
-   $searchresult = $obj->SearchDataValues($searchvalue);
+        $searchresult = $obj->SearchDataValues($searchvalue);
    } elseif(!empty($searchjobs)) {
        $searchresult = $obj->SearchJobs($searchjobs);
    }
@@ -28,6 +31,7 @@
 <div class="row" id="row_main">
 <div class="middle_container">
    <div id="servicedata">
+          <?php if(!empty($searchresult)){ ?>
       <?php 
          while($row=mysqli_fetch_array($searchresult)){ 
              $userid = $row['user_id'];
@@ -111,7 +115,10 @@
          </div>
       </div>
       <?php } ?>
+        <?php } ?>
    </div>
+   
+ 
    <?php if(!empty($searchSkills)){ ?>
    <div class="head-mid people-paid d-flex align-items-center search_result_row">
       <h2>Search results:</h2>
@@ -127,7 +134,7 @@
          <?php } ?>
          <form id="advance_search" class="form-submit">
             <input type="hidden" class="searchskils" name="searchskils"  value="<?=$searchSkills;?>">
-            <!--<input type="text" id="tag-input3" name="skills[]" placeholder="Enter more skills">-->
+ 
             <p class="sk1" style="display:none;">
                <span class="skills1"></span>
                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -165,7 +172,7 @@
             <input id="search-input3" class="addsk3" name="addsk3" style="display: none;width: fit-content;margin-left: 10px;border: none;height: 25px; width:12%;"/>
             <input id="search-input4" class="addsk4" name="addsk4" style="display: none;width: fit-content;margin-left: 10px;border: none;height: 25px; width:12%;"/>
             <button type="submit" id="submitbtn" class="btn btn-primary profile-edit btn_profile_edit addItemBtn" style="display:none;"><span>Add</span></button>
-            <!--<button class="btn btn-primary profile-edit btn_profile_edit" type="submit" id="submitbtn">add</button>-->
+ 
          </form>
       </div>
    </div>
@@ -232,8 +239,7 @@
          <p><?=$userdata['ProfileBio'];?></p>
       </div>
       <div class="row skill_hobbies_">
-         <?php  foreach($skills as $skils){
-            //print_r($skils['Skills']);?>
+         <?php  foreach($skills as $skils){ ?>
          <p class="skills"> <?php echo str_replace(",","<p class='skills'>",$skils['Skills']); ?> </p>
          <?php } ?>
       </div>
@@ -255,7 +261,7 @@
          <?php } ?>
          <form id="advance_search" class="form-submit">
             <input type="hidden" class="searchskils" name="searchskils"  value="<?=$searchInterest;?>">
-            <!--<input type="text" id="tag-input3" name="skills[]" placeholder="Enter more skills">-->
+ 
             <p class="sk1" style="display:none;">
                <span class="skills1"></span>
                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -293,7 +299,7 @@
             <input id="search-input3" class="addsk3" name="addsk3" style="display: none;width: fit-content;margin-left: 10px;border: none;height: 25px; width:12%;"/>
             <input id="search-input4" class="addsk4" name="addsk4" style="display: none;width: fit-content;margin-left: 10px;border: none;height: 25px; width:12%;"/>
             <button type="submit" id="submitbtn" class="btn btn-primary profile-edit btn_profile_edit addItemBtn" style="display:none;"><span>Add</span></button>
-            <!--<button class="btn btn-primary profile-edit btn_profile_edit" type="submit" id="submitbtn">add</button>-->
+ 
          </form>
       </div>
    </div>
@@ -557,21 +563,13 @@
                document.getElementById("search-input4").style.display = "none";
                document.getElementById("addskillbtn4").style.display = "none";
            }
-           
-         //   $('.sk2').css('display','block');
-         //   $('.sk3').css('display','block');
-         //   $('.sk4').css('display','block');
+ 
          <?php if(!empty($searchInterest)) {?>
          $('.simpleintrestsearch').css('display','none');
           <?php } else {?>
            $('.simpleskillsearch').css('display','none');
             <?php }  ?>
-        
-           
-         //   document.getElementById("addskillbtn3").style.display = "block";
-         //   document.getElementById("addskillbtn4").style.display = "block";
-         //   document.getElementById("search-input").style.display = "block";
-           
+ 
            document.getElementById("submitbtn").style.display = "none";
            window.scrollTo(0, 0);
             

@@ -46,7 +46,7 @@ $page = 'Message Service';
          <div class="bg-white   main_wrapper-msg">
                <div class="msg-srvc-wrap">
         <div class="img-p">
-                            <!--<a class="name_topic" href="messageservice?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=service">-->
+ 
                                 <div class="hh-1"><img class="hhh" src="admin/assets/img/services/<?=$post_data['photos'];?>" alt=""></div>
                                         <!--</a>-->
                                 <div class="all-cnt">
@@ -62,8 +62,7 @@ $page = 'Message Service';
                                             </div>
                                         </a>
                                     </div>
-                                    
-                                    <!--<a class="name_topic" href="messageservice?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">-->
+ 
                                     <p class="pp2" alt="<?=$post_data['topic'];?>">
                                         <?=$post_data['topic'];?>                                   
                                     </p>
@@ -82,12 +81,9 @@ $page = 'Message Service';
                                     </a>
                                 </div>
                             </div>
-                            
-                             
          </div>
          
-       
-         
+ 
          <!--Shortlisted section-->
          <div class="Shortlisted_container bg-white">
              <?php 
@@ -125,8 +121,7 @@ $page = 'Message Service';
                   <div class=" col-md-8 col-8  p-0">
                       <a href="discussion?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">
                       <p class="senders_name"><?=$userinfo['ProfileName'];?></p>
-                      <!--<p class="senders_msg"><?= substr($messageinfo['message'], 0, 40);?>... </p>-->
-                     <!--<p class="notification_time font-weight-bold"><?=$formattedDate;?></p>-->
+ 
                      </a>
                   </div>
                   <div class="position-relative">
@@ -177,7 +172,6 @@ $page = 'Message Service';
                   <div class=" col-md-8 col-8  p-0">
                       <a href="discussion?stid=<?=$post_id;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">
                       <p class="senders_name"><?=$userinfo['ProfileName'];?>:</p>
-                      <!--<p class="senders_msg"><?//= substr($messageinfo['message'], 0, 40);?>... </p>-->
                      <p class="notification_time font-weight-bold"><?=$formattedDate;?></p>
                      </a>
                   </div>
@@ -256,11 +250,7 @@ window.onclick = function(event) {
   }
 }
 
-
-
-
-
-
+ 
     function ExtraMenu(post_id) {
         // var post_id = $(this).data('id');
         
@@ -273,12 +263,7 @@ window.onclick = function(event) {
     
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
-            //   var $this = $(this);
-    // var $dropdown = $this.next('.dropdown-contentt');
-
-    // Close all other dropdowns
-    // $('.dropdown-contentt').not($dropdown).slideUp();
-    // $dropdown.slideToggle();
+ 
       if (!event.target.matches('.dropbtn')) {
     
         var dropdowns = document.getElementsByClassName("drop_msg_list");
@@ -362,7 +347,7 @@ function CrossOut(userId) {
         }
     };
     // Send the user ID and action type to the server
-    // xhr.send("userId=" + userId + "&action=crossOut");
+ 
      xhr.send("userId=" + userId + "&senderId=" + senderId  + "&postid=" + PostId + "&posttype=" + Posttype);
 }
 

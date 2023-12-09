@@ -1,13 +1,6 @@
 <?php
 ob_start();
-// include('auth.php'); 
-
-//   ini_set('display_errors', 1);
-//   ini_set('display_startup_errors', 1);
-//   error_reporting(E_ALL);
-// 1.Content Security Policy (CSP):
-// header("Content-Security-Policy: default-src 'self';");
-// header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self';");
+ 
 
 // 2.Strict-Transport-Security (HSTS)
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
@@ -29,25 +22,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
     session_start();
     include('admin/inc/function.php');
     $obj = new Instantjobs();
-    
-     
-// // Function to check if the user is logged in
-// function checkLoggedIn() {
-//     if (!isset($_SESSION['Userid'])) {
-//         header("Location: signin");
-//         exit();
-//     }
-// }
-
-// // Function to check if the user is already logged in, redirect to main page if true
-// function checkAlreadyLoggedIn() {
-//     if (isset($_SESSION['Userid'])) {
-//         header("Location: service-provider");
-//         exit();
-//     }
-// }
-
-
+ 
     //Include Google Configuration File
     include('gconfig.php');
      //This $_GET["code"] variable value received after user has login into their Google Account redirct to PHP script then this variable value has been received
@@ -125,14 +100,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
     $user_id = $_SESSION['Userid'];
     $user_information = $obj->GetUsersById($user_id);
     $user_verifyn = $obj->GetVerifyAccount($user_id);
-    
-    
-    //  if (!empty($_SESSION['Userid']) && empty($user_information['ProfileName'])) {
-    //             header("Location: profile-info");
-    //             //die();
-    //         } else {}
-            
-            
+ 
     $useridd  = $obj->GetUserrById($user_id);
     $services = $obj->GetAllServices();
     $jobs     = $obj->GetAllJobs();
@@ -144,6 +112,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
     $skills              = $obj->GetSkillsByUserId($user_id);
     $intrest             = $obj->GetIntrestByUserId($user_id);
     $states             = $obj->GetAllStates();
+    $googlekey             = $obj->GetGoogleApiKeys();
     $all_job_user = $obj->GetAllJobByUser($user_id);
 
     // $script_skilss = array();
@@ -398,12 +367,7 @@ if($user_information['Approval'] == 1) {
                 <div class="col-md-3 p-0">
                     <div class="right-btns dropdownn">
                         <div class="icon-menu">
-    <!--                       <ul class="nav navbar-nav navbar-right">-->
-    <!-- <li class="dropdown">-->
-    <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>-->
-    <!--  <ul class="dropdown-menu"></ul>-->
-    <!-- </li>-->
-    <!--</ul>-->
+ 
                       <ul class="nav navbar-nav navbar-right">
     
      <li class="dropdown">
@@ -422,10 +386,7 @@ if($user_information['Approval'] == 1) {
      </li>
      
     </ul>
-                            <!--<i class="fa fa-bell" aria-hidden ="true"> 5</i>-->
-                            <!--<svg  class="dropbtn notification_pop_up"   viewBox="0 0 24 24">-->
-                            <!--    <path fill="currentColor" d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" />-->
-                            <!--</svg>-->
+                          
                         </div>
                         <div class="icon-menu" onclick="myDropFunction()">
                             <svg class="dropbtn"  viewBox="0 0 24 24">

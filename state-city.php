@@ -4,7 +4,7 @@
                     <label>State:</label>
                      <input type="text" class="form-control" id="state-input" value="<?=$state;?>" onkeyup="fetchStates()">
                     <div id="state-list" class="state-list-wrapper p-2 position-absolute rounded border bg-white" style="display:none;"></div>
-                    <!--<input type="text" placeholder="State" name="state">-->
+
                 </div>
                 <div class="col-lg-6 col-6 wrapper_city">
                     <label>City:</label>
@@ -45,7 +45,6 @@ function fetchStates() {
 }
 
 
-
 function selectState(state) {
   document.getElementById('state-input').value = state;
   document.getElementById('state-list').style.display = 'none';
@@ -84,22 +83,4 @@ function selectCity(state) {
   document.getElementById('city-list').style.display = 'none';
 }
 
-        // $(document).ready(function() {
-        //     // When the state dropdown menu changes
-        //     $('#state').change(function() {
-        //         // Get the selected state
-        //         var state = $(this).val();
-
-        //         // Send an AJAX request to get the list of cities
-        //         $.ajax({
-        //             type: 'POST',
-        //             url: 'get_cities.php',
-        //             data: { state: state },
-        //             success: function(cities) {
-        //                 // Update the city dropdown menu with the list of cities
-        //                 $('#city').html(cities);
-        //             }
-        //         });
-        //     });
-        // });
     </script>     

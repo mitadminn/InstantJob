@@ -12,11 +12,11 @@
 <div class="col-lg-12 col-md-12 second-mid example">
 <div class="container select_srvc_choice">
 <div class="card">
-<div class="main prof-inf-new active" style="">
+<div class="main prof-inf-new active" >
 <a href="service-provider"> 
 <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
 </a>
-<p class="text-center lets sevices_topic_">Wheather you're an employer looking to offer someone a job or someone looking to sell your professional
+<p class="text-center lets sevices_topic_">Whether you're an employer looking to offer someone a job or someone looking to sell your professional
     services on part-time or full-time basis , you've come to the right place!
 </p>
 <div class="card_for_services services_parent_container d-flex">

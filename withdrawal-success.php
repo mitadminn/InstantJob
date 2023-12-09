@@ -15,19 +15,7 @@
         <div class="head-mid people-paid">
                 <h2></h2>
             </div>
-            
-            
-            <!--<div class=" hidn-objct sticky msg-header">-->
-            <!--    <div class="backbtn"> -->
-            <!--        <a href="checkout?id=<?//=$signle_service['id'];?>"><i class="fa-solid fa-arrow-left"></i></a>-->
-            <!--        <span class="checkout-top-title">Withdrawal</span>-->
-            <!--    </div>-->
-            <!--    <div class="prof-heigh-wid">-->
-            <!--        <div class="manage-as-lo"><?//=$signle_service['topic'];?></div>-->
-            <!--    </div>-->
-            <!--</div>-->
-            
-            
+
             <Section class="payment_bg">
                 <div class="checkout_titles">
                     <img src="" alt=""> 
@@ -38,7 +26,6 @@
                     
                     <p class="cnfrm-amount">Payment Success</p>
                     <p class="checkout_prize"><strong>RM<?=$amount;?></strong></p>
-                    <!--<p>It'll take to 1 to 3 days for the amount to appear in your bank account.</p>-->
                     
                     <?php }else{?>
                     <p class="cnfrm-amount">Withdrawal Success</p>

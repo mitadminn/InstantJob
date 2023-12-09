@@ -6,11 +6,9 @@
    
 if (!empty($_SESSION['Userid'])) {
     header("location: profile");
-    // echo 'Not Login';
-    // exit();
+ 
 }
-   
-     
+ 
     
     ?>
 <?php include('inc/sidebar.php'); ?>    
@@ -49,10 +47,10 @@ if (!empty($_SESSION['Userid'])) {
                                 </div>
                             </div>
                         </div>
-                        <!---------------------------------------term ands conditions ----------------------------->
+                       
                 </form>
                 </div>
-<!--first tab row start-->
+ 
 <div class="col-sm-12 instant-main">
 <div class="row" style="margin-right: 0;margin-left: 0;">
 <div class="col-lg-12 col-md-12" style="width: 100%; background:#fff;">
@@ -61,9 +59,9 @@ if (!empty($_SESSION['Userid'])) {
             <div class="parent">
             </div>
             <div class="main <?php if($_GET['msg'] == 'already') {  } else { echo 'active'; }?>">
-                <!--<a href="service-provider"> -->
+            
                 <img class="logo_new_instant" src="assets/img/new-instant-logo.png" alt="">
-                <!--</a>-->
+              
                 <div class="content">
                     <p>Sign in to your account</p>
                 </div>
@@ -90,13 +88,13 @@ if (!empty($_SESSION['Userid'])) {
                 </form>
             </div>
             <div class="main <?php if($_GET['msg'] == 'already') { echo 'active'; }?>">
-                <!--<a href="service-provider"> -->
+                
                 <img class="blck-logo" src="assets/img/new-instant-logo.png" alt="">
-                <!--</a>-->
+           
                 <form method="post" action="admin/inc/process.php?action=SignUpUser">
-                    <!--<a href="service-provider"> -->
+             
                     <img class="logo_new_instant" src="assets/img/new-instant-logo.png" alt="">
-                    <!--</a>-->
+              
                     <div class="content">
                         <p class="text-center">Create your account</p>
                     </div>
@@ -110,31 +108,23 @@ if (!empty($_SESSION['Userid'])) {
                     <p id="result" style="color:red;"></p>
                     <label  class="label-email" for="Email address">Password</label>
                     <p class="inp-cret-accnt"><input placeholder="Password"   name="password" type="password" class="confirmation-code" required></p>
-                    <!--<p class="email-new-p position-relative"><input placeholder="Password" oninput="this.className = ''" name="password" id="password" type="password" class="form-control" required>-->
-                    <!--<span id="showPass">-->
-                    <!--          <i class="fa fa-eye-slash" aria-hidden="true"></i>-->
-                    <!--          <i class="fa fa-eye" aria-hidden="true" style="display:none;"></i>-->
-                    <!--</span>-->
                     </p>
                     <button class="btn_sign_in mobile-btn-paddng"  type="submit" id="nextBtn8" >Next</button>
                     <div class="position-relative">
                         <div class="agree-term-privacy">
                             <input type="checkbox" class="form-check-input value signin_inp" id="checkbox-1" required name="agree">
-                        <label for="checkbox-1" class="insta" style="cusrsor:pointer; text-align:center;">I understand and agree to InstantJob's</label>
-                        <button type="button" class="btn btn-primary btn_term_services" data-toggle="modal" data-target="#exampleModalLong" style="">
+                        <label for="checkbox-1" class="insta" style="cursor:pointer; text-align:center;">I understand and agree to InstantJob's</label>
+                        <button type="button" class="btn btn-primary btn_term_services" data-toggle="modal" data-target="#exampleModalLong" >
                     <span class="service">Terms of Service</span><span class="service-and">&</span><span class="service">Privacy Policy.</span>
                     </button>
                         </div>
                     </div>
-                    <!-----------------------------------term ands conditions---------------------------------->
-                    <!-- Button trigger modal  (MODAL IS ON THE TOP OF THE PAGE ^^^ ) -->
-                    
-                  
+ 
             </div>
         </div>
     </div>
 </div>
-<?php //include('inc/footer.php'); ?> 
+ 
 <script src="inc/js/instantjob.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>

@@ -3,10 +3,7 @@
     include('inc/header.php'); 
     $plan_id = $_GET['id'];
     $signle_plan = $obj->GetPaymentPlanById($plan_id);
-    // $userid = $signle_plan['userid'];
-    // $postuser = $obj->GetUserById($userid);
-    
-    
+
     $post_id = $signle_plan['post_id'];
     if( $_GET['type'] == 'service'){
     $serviceid = $signle_plan['post_id'];

@@ -96,17 +96,14 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                                                     <div class="bio-title edit_profile_bio_wrap">
                                                                         <h3>Skills</h3>
                                                                     </div>
-                                                                    <input type="text" id="tag-input1" name="skills[]" value="<?php //foreach ($skills as $skils) {
-                                                                                                                                   // echo $skils['Skills'];
-                                                                                                                               // } ?>">
+                                                                    <input type="text" id="tag-input1" name="skills[]" >
                                                                     <input type="hidden" name="userid" value="<?= $user_information['id']; ?>">
                                                                 </div>
                                                                 <div class="title-and-para ">
                                                                     <div class="bio-title edit_profile_bio_wrap">
                                                                         <h3>Interest</h3>
                                                                     </div>
-                                                                    <input type="text" id="tag-input2" name="intrest[]" value="<? //=$intrest['Interest'];
-                                                                                                                                ?>">
+                                                                    <input type="text" id="tag-input2" name="intrest[]">
                                                                 </div>
 
 
@@ -148,7 +145,6 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                             <h3 class="hobbies_wrap">Interest</h3>
                                         </div>
                                         <div class="edit-container">
-                                            <!--<p><a href="profile-edit">Edit</a></p>-->
                                         </div>
                                     </div>
                                     <div class="row skill_hobbies_">
@@ -192,7 +188,7 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                                                     <h3>Qualification</h3>
                                                                 </div>
                                                                 <textarea  name="qualification" class="form-control skills_wrap_inp" rows="3"><?=$user_information['Qualifications']; ?></textarea>
-                                                                <!--<input type="text" name="qualification" class="form-control skills_wrap_inp" value="<?//=$user_information['Qualifications']; ?>">-->
+
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -207,7 +203,7 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                         </div>
                                     </div>
                                     <div class="bio-quali">
-                                        <p><?= $user_information['Qualifications']; ?> <?//= $user_information['Year']; ?></p>
+                                        <p><?= $user_information['Qualifications']; ?> </p>
                                     </div>
                                 </div>
                             </div>
@@ -238,13 +234,7 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                                                                 <input type="hidden" name="id" value="<?=$user_id;?>">
                                                                                 <input type="file" multiple="" class="form-control upload__inputfile" name="portfolio[]" data-max_length="20">
                                                                             </label>
-                        
-                        
-                                                                            <!--<label class="upload__btn">-->
-                                                                            <!--    <p>Upload images</p>-->
-                                                                            <!--    <input type="hidden" name="id" value="<?=$user_id;?>">-->
-                                                                            <!--    <input type="file" multiple="" class="form-control upload__inputfile" name="portfolio[]" data-max_length="20">-->
-                                                                            <!--</label>-->
+
                                                                             <div class="all-images profile_all_img-wrap">
                                                                                 <?php 
                                                                                      $i=0;
@@ -261,19 +251,7 @@ $portfolios = $obj->GetPortfolioByUserId($user_id);
                                                                                         </div>
                                                                                      </div>
                                                                                     <?php $i++; } ?>
-                        
-                                                                                <!--<div class="img-wrap add-img-container  slide">-->
-                                                                                <!--    <img class="add-img photo" src="admin/assets/img/portfolio/mid.png" alt="">-->
-                                                                                <!--    <span id="del" class="close">&times;</span>-->
-                                                                                <!--</div>-->
-                                                                                <!--<div class="img-wrap add-img-container slide">-->
-                                                                                <!--    <img class="add-img photo" src="admin/assets/img/portfolio/photo-1472457897821-70d3819a0e24.avif" alt="">-->
-                                                                                <!--     <span id="del" class="close">&times;</span>-->
-                                                                                <!--</div>-->
-                                                                                <!--<div class="img-wrap add-img-container slide">-->
-                                                                                <!--    <img class="add-img photo" src="admin/assets/img/portfolio/photo-1495195129352-aeb325a55b65.avif" alt="">-->
-                                                                                <!--     <span id="del" class="close">&times;</span>-->
-                                                                                <!--</div>-->
+
                                                                         <div class="upload__img-wrap d-flex flex-wrap"></div>
                                                                             </div>
                                                                         </div>

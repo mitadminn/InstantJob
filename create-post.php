@@ -123,7 +123,7 @@
    
 </script>
 <!--places search script start-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiKmRh2vEg2hiV1ZIVeyNlxPjVegpChvE&amp;libraries=places&amp;callback=initPlaces" async="" defer=""></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?=$googlekey['value'];?>&amp;libraries=places&amp;callback=initPlaces" async="" defer=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>  
 <script>
    let autocomplete;

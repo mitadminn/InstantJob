@@ -29,28 +29,27 @@
             <input type="hidden" class="form-control" placeholder="Name" value="<?=$_SESSION['Userid'];?>" name="userid" id="id" required>
             <div class="d-flex justify-content-between">
                 <label>Give your service a topic</label>
-                <div class="words_counter">
-                    <span style="color: #495057;" id=charcount>0</span>
-                    <span style="color: #495057;" id=charcount>/ 80</span> 
-                </div>
+                <!-- Topic Textarea -->
+<div class="words_counter">
+    <span style="color: #495057;" id="charcount">0</span>
+    <span style="color: #495057;">/ 80</span>
+</div>
             </div>
-            
-            <textarea id="myTextarea"  rows="2" placeholder="Write" name="topic"  onkeyup="charcount(this.value)" maxlength="80" required>I will help<?php echo $newtopic; ?></textarea>
-
-
-
+<textarea id="myTextarea" rows="2" placeholder="Write" name="topic" onkeyup="charcount('myTextarea', 'charcount', 80)" maxlength="80" required>I will help<?php echo $newtopic; ?></textarea>
                 <div class="form-text">
       <input type="hidden" name="serviceid" value="<?=$editservice['id'];?>">
     </div> 
             
             <div class="d-flex justify-content-between">
                 <label>Description</label>
-                <div class="words_counter">     
-                    <span style="color: #495057;" id=charcoun>0</span>
-                    <span style="color: #495057;" id=charcoun>/ 2000 </span>
-                </div>
+               <div class="words_counter">
+    <span style="color: #495057;" id="charcoun">0</span>
+    <span style="color: #495057;">/ 2000 </span>
+</div>
             </div>
-            <textarea class="form-control" name="description" rows="5" placeholder="Write something here..." id="textbox" onkeyup="charcountupdate(this.value)" maxlength="2000" required><?=$editservice['description'];?></textarea>
+
+            <textarea class="form-control" name="description" rows="5" placeholder="Write something here..." id="textbox" onkeyup="charcount('textbox', 'charcoun', 2000)" maxlength="2000" required><?=$editservice['description'];?></textarea>
+
             <div class="row select_budget">
                 <div class="col-lg-4 col-6 prize_service_controller wrapper_price">
                     <label>Price</label>
@@ -65,9 +64,7 @@
 
                     </div>
                 </div>
-                <!--<div class="change-box">-->
-                <!--      <p class="rate-box">0.00</p>-->
-                <!--    </div>-->
+
                 <div class="col-md-12 p-0">
                     <label>My service will only be available </label>
                     <select class="form-control" name="area" required>
@@ -259,19 +256,20 @@
     
 </script>
 <!--currency convertor end-->
-<!--character count discription-->
+ 
 <script>
-    // topic script
-    function charcount(str) {
-    var lng = str.length ;
-    document.getElementById("charcount").innerHTML = lng;
-    }
-    // discription script
-    function charcountupdate(String) {
-    var lngr = String.length;
-    document.getElementById("charcoun").innerHTML = lngr;
+    function charcount(inputId, outputId, maxChars) {
+        var inputStr = document.getElementById(inputId).value;
+        var charCount = inputStr.length;
+        var remainingChars = maxChars - charCount;
+
+        // Update character count
+        document.getElementById(outputId).innerHTML = charCount;
+ 
     }
 </script>
+
+
 
 <script>
 		// Function to set cookie

@@ -1,7 +1,5 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ 
     $page = 'Service Sponsorship';
     include('inc/header.php');  
     include('inc/sidebar.php');  
@@ -45,7 +43,7 @@ $total_reviews = $reviews_avg['total_reviews'];
 <div class="col-lg-12 col-md-12 second-mid example">
 <div class="select_srvc_choice total_budget_wrapper">
 <div class="card_wrapper">
-<div class="main prof-inf-new active" style="">
+<div class="main prof-inf-new active"  >
 <a href="service-provider"> 
 <img class="logo_instant_jobss" src="assets/img/new-instant-logo.png" alt="">
 </a>
@@ -143,7 +141,7 @@ echo "<p class='text-center lets sevices_topic_'>Your ad is running until " . da
                                                  <small><?=$avg_rating;?> (<?=$total_reviews;?>)</small>
                                             </div>
     
-                                            <p class="text-right"><small>From </small> <b>RM<?=$formattedPrice;?><?//=$signle_service['price_type'];?>
+                                            <p class="text-right"><small>From </small> <b>RM<?=$formattedPrice;?>
                                                 </b> </p>
                                         </div>
                                     </a>
@@ -208,9 +206,7 @@ echo "<p class='text-center lets sevices_topic_'>Your ad is running until " . da
            }
        });
        
-       
-       
-        
+ 
     }
     </script>
                     

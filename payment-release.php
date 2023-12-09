@@ -105,10 +105,7 @@
                     </div>
                     <?php } ?>
                  </div>
-                 
-                  <!--<a href="public-reviews?id=<?//=$postid;?>&price=<?//=$row['plan_price']?>&type=<?=$type;?>&lgn=<?//=$_SESSION['Userid']?>&dis_id=<?//=$_GET['dis_id']?>"  style="<?//=$review;?>"> Make Review </a>-->
- 
-                  
+
                   <!--Add button to open (Choose how you want to pay)-->
             <div class="text-right" id="showHidePayBtn" style="<?=$review;?>">
                 <button class="btn add-pay-btn text-white mt-2">Add New Milestone</button>
@@ -141,7 +138,6 @@
         <div class="last_title" >
             <button type="submit" class="rounded btn-success btn-sucs btnm-frst w-100 mt-2" id="myButton">Submit</button>
             <br>
-            <!--<p style="text-align:center !important;width: 100%;  font-size: 13px;">Always pay through Instantjob to protect yourself. You can release the payment anytime.</p>-->
         </div>
     </div>
 </form>

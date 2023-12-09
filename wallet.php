@@ -25,7 +25,7 @@ $formattedPrice = number_format($balance, 2, '.', ',');
 <div class="row">
 <div class="refer_middle_container">
     <div class="head-mid">
-        <h2>Wallet  <?//=$credit_balance['credit'];?> <?//=$debit_balance['debit'];?><b style="color: #ff0000;"></b></h2>
+        <h2>Wallet </h2>
     </div>
     <!-- ----------------------middle one---------------------- -->
     <div class="wallet-container">
@@ -58,14 +58,7 @@ $formattedPrice = number_format($balance, 2, '.', ',');
                 <button type="button" class="btn-wallet custom-btn invite-jop-post btn_widra_coupons">Withdrawal</button>
                 </a>
             </div>
-         
-            <!--<div class=" wallet-blnc">-->
-            <!--    <div class="wallet_blance">-->
-            <!--        <h3>Send Money</h3>-->
-                    <p><?//=$user_information['ProfileName'];?></p>
-            <!--    </div>-->
-            <!--     <button type="button" class="btn-wallet custom-btn bnt-fill-green" data-toggle="modal" data-target="#staticBackdrop">Send Money</button>-->
-            <!-- </div>-->
+ 
        
         <div class="transaction-contain frst-trans">
             <h2>Recent Transactions</h2>
@@ -120,7 +113,7 @@ $formattedPrice = number_format($balance, 2, '.', ',');
     
     else if ($trans['from_user_id'] == $user_id && $trans['to_user_id'] != 0 && $trans['to_user_id'] != 'rsrv') { 
       $color = 'danger';
-    //   $suffix = getUserById($trans['to_user_id'])['ProfileName'] . ' (' . getUserById($trans['to_user_id'])['Phone'] . ')';
+ 
           $suffix = 'Milestone Released';
             $amnt = $trans['amount'];
             $ww = getUserById($trans['to_user_id'])['ProfileName'];
@@ -189,9 +182,7 @@ $ssttaxxx = $actualAmount * 0.06;
 		  <?php if($suffix == 'Milestone Funded') { ?>
 		  <div class="icon-menus"  onclick="ExtraMenu(<?=$trans['id'];?>)" data-id="<?=$trans['id'];?>">
 			  <svg viewBox="0 0 24 24"   class="dropbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"/></svg>
-								  <!--<svg style="position: absolute; right: 0; top: -15px;" class="dropbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> -->
-								  <!--<path fill="currentColor" d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" />-->
-								<!--</svg>-->
+ 
 								<div id="<?=$trans['id'];?>" class="text-left dropdown-contentt dropDown_links_post px-1 py-2">
 									   <strong>Total:</strong> RM<?php echo number_format($amnt, 2, '.', ',');?>
 									    <hr class="my-1">

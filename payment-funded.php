@@ -3,8 +3,7 @@
    include('inc/header.php'); 
    $plan_id = $_GET['id'];
    $signle_plan = $obj->GetPaymentPlanById($plan_id);
-   // $userid = $signle_plan['userid'];
-   // $postuser = $obj->GetUserById($userid);
+
    $actual_amnt = $signle_plan['plan_price'];
    
     
@@ -61,7 +60,7 @@
    width: 500px;
    margin: 0 auto;
    }
-   .guide-detailes p {
+   .guide-detailes li {
    font-size: 15px;
    }
    img.logo_instant_jobs {
@@ -122,7 +121,7 @@
    <?php
     
    if ($balance < $t_amount) { ?>
-   <Section class="payment_bg p-0">
+   <section class="payment_bg p-0">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -134,7 +133,7 @@
          </p>
          <form class="text-left" >
             <div>
-               <!--<input type="radio" name="content" value="content1" onclick="changeContent()" style="width:unset;" checked> <label for="html"> Wallet (RM2,000.00)</label><br>-->
+           
                <input type="radio" name="content" value="content2" onclick="changeContent()" style="width:unset;" checked> <label for="css"> Credit Card</label><br>
                <input type="radio" name="content" value="content3" onclick="changeContent()" style="width:unset;"> <label for="javascript"> Bank-in transfer</label>
             </div>
@@ -172,13 +171,10 @@
                                                  <a  href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>"><button type="button" class="no-btn">Back</button></a> 
 
                     <button type="submit" class="proceed-btn">Proceed</button>
-                     <!--<button type="submit" class="rounded btn-success btn-sucs btnm-frst   sell_servc_btn"> Confirm</button>-->
+                   
                  </div>
                 </form>  
-                          
-                          
-                           
-
+ 
        </div>
          </div>
          <div id="content2" class="hidden">
@@ -189,11 +185,7 @@
                <p>Milestone - RM<?=$actual_amnt;?></p>
             <p>Service fee - RM<?=$service_tax;?></p>
             <p><?=$sst;?>% SST - RM<?=$sst_tax;?></p>
-             <!--<div class="mt-3">-->
-                             <!--<a  href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>"><button type="button" class="no-btn">Back</button></a> -->
-                              <!--<a  href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>"><button type="submit" class="proceed-btn">Proceed</button></a> -->
 
-       <!--</div>-->
          </div>
          <!--Bank-in transfer details-->
          <div id="content3" class="hidden">
@@ -290,48 +282,52 @@
          <p class="font-weight-bold guides-title">Please Read: Credit card instructions</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• You can fund the milestone with a credit card,
+         <ul class="guide-detailes text-left py-2">
+            <li> You can fund the milestone with a credit card,
                but please be aware of the following:
-            </p>
-            <p>• To ensure the security of our Hirers and Service
+            </li>
+            <li> To ensure the security of our Hirers and Service
                Providers against potential credit card fraud or
                chargebacks, the funded milestone will be
                locked for a minimum of "4 working days".
-            </p>
-            <p>• The quickest way for you to "Release funds" to
+            </li>
+            <li> The quickest way for you to "Release funds" to
+               your service provider, we recommend using
+               Bank-in transfer to InstantJob instead.
+            </li>
+            <p class="visibilty:hidden;"> The quickest way for you to "Release funds" to
                your service provider, we recommend using
                Bank-in transfer to InstantJob instead.
             </p>
-         </div>
+         </ul>
       </div>
       <div class="mt-3">
          <p class="font-weight-bold guides-title">More guides you might find useful:</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• If you want the service provider to begin
+         <ul class="guide-detailes text-left py-2">
+            <p> If you want the service provider to begin
                work, you are required to fund the milestone
                for that specific task or stage.
             </p>
-            <p>• Your funds will be securely held in our escrow
+            <p> Your funds will be securely held in our escrow
                system until you choose to release them,
                giving you peace of mind and service providers to start their work with confidence.
             </p>
-            <p>• You should only release the funds when you
+            <p> You should only release the funds when you
                are satisfied with the work.
             </p>
-            <p>• In certain cases, you have the option to
+            <p> In certain cases, you have the option to
                release funds in advance if your service
                providers need money to purchase raw
                materials on your behalf.
             </p>
-            <p>• Releasing funds in advance carries a possible
+            <p> Releasing funds in advance carries a possible
                risk, similar to real-life situations, and is an
                arrangement solely between you and the
                service providers.
             </p>
-            <p>• For each project, InstantJob applies a service
+            <p> For each project, InstantJob applies a service
                fee of 10% or up to RM1,000 (max). This fee
                plays a crucial role in supporting our platform
                services, empowering our dedicated staff,
@@ -339,18 +335,16 @@
                system, all aimed at prioritizing your
                protection.
             </p>
-            <p>• If you have any questions or concerns, please
+            <p> If you have any questions or concerns, please
                reach out to our support team.
             </p>
-         </div>
+         </ul>
       </div>
-   </Section>
+   </section>
    <?php } else { 
-                // Sufficient balance, proceed with the transaction
-                // $balance -= $t_amount; // Deduct the transaction amount from the balance
-                // echo "Transaction successful! Your updated balance is: $balance";
+
                 ?>
-                <Section class="payment_bg p-0">
+                <section class="payment_bg p-0">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -359,10 +353,7 @@
          
          <div>
          </div>
-         <!--Credit card details-->
-         
-         
-         
+
       </div>
        <form action="admin/inc/process.php?action=FundPayment" method="post">
          <div id="content1" class="hidden">
@@ -392,11 +383,7 @@
                                 <a href="payment-release?id=<?=$single_post['id'];?>&price=<?=$signle_plan['plan_price'];?>&lgn=<?=$_SESSION['Userid'];?>&type=<?=$_GET['type'];?>&dis_id=<?=$userid;?>">
                                 <button type="button" class="no-btn">Back</button></a> 
                                 <button type="submit" class="proceed-btn">Proceed</button>
-            
-            
-                         <!--<button type="submit" class="checkout_now pay_check">Pay Now</button> -->
-                        <!--<button type="submit" class="proceed-btn">Proceed</button> -->
-                       
+    
        </div>
         </form>
        
@@ -404,61 +391,68 @@
          <p class="font-weight-bold guides-title">Please Read: Credit card instructions</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• You can fund the milestone with a credit card,
+          <ul class="guide-detailes text-left py-2">
+            <li> You can fund the milestone with a credit card,
                but please be aware of the following:
-            </p>
-            <p>• To ensure the security of our Hirers and Service
+            </li>
+            <li> To ensure the security of our Hirers and Service
                Providers against potential credit card fraud or
                chargebacks, the funded milestone will be
                locked for a minimum of "4 working days".
-            </p>
-            <p>• The quickest way for you to "Release funds" to
+            </li>
+            <li> The quickest way for you to "Release funds" to
+               your service provider, we recommend using
+               Bank-in transfer to InstantJob instead.
+            </li>
+            <p style="visibility:hidden;"> The quickest way for you to "Release funds" to
                your service provider, we recommend using
                Bank-in transfer to InstantJob instead.
             </p>
-         </div>
+         </ul>
       </div>
       <div class="mt-3">
          <p class="font-weight-bold guides-title">More guides you might find useful:</p>
       </div>
       <div class="guide-wrap ">
-         <div class="guide-detailes text-left py-2">
-            <p>• If you want the service provider to begin
+         <ul class="guide-detailes text-left py-2">
+            <li> If you want the service provider to begin
                work, you are required to fund the milestone
                for that specific task or stage.
-            </p>
-            <p>• Your funds will be securely held in our escrow
+            </li>
+            <li> Your funds will be securely held in our escrow
                system until you choose to release them,
                giving you peace of mind and service providers to start their work with confidence.
-            </p>
-            <p>• You should only release the funds when you
+            </li>
+            <li> You should only release the funds when you
                are satisfied with the work.
-            </p>
-            <p>• In certain cases, you have the option to
+            </li>
+            <li> In certain cases, you have the option to
                release funds in advance if your service
                providers need money to purchase raw
                materials on your behalf.
-            </p>
-            <p>• Releasing funds in advance carries a possible
+            </li>
+            <li> Releasing funds in advance carries a possible
                risk, similar to real-life situations, and is an
                arrangement solely between you and the
                service providers.
-            </p>
-            <p>• For each project, InstantJob applies a service
+            </li>
+            <li> For each project, InstantJob applies a service
                fee of 10% or up to RM1,000 (max). This fee
                plays a crucial role in supporting our platform
                services, empowering our dedicated staff,
                and reinforcing the security of our escrow
                system, all aimed at prioritizing your
                protection.
-            </p>
-            <p>• If you have any questions or concerns, please
+            </li>
+            <li> If you have any questions or concerns, please
+               reach out to our support team.
+            </li>
+            <p style="visibility: hidden;"> If you have any questions or concerns, please
                reach out to our support team.
             </p>
-         </div>
+         </ul>
       </div>
-   </Section>
+   </section>
                 <?php } ?>
    
 </div>

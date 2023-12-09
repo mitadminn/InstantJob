@@ -97,15 +97,10 @@
                                     
                                     <input type="hidden" id="reciever_id" name="reciever" class="form-control" value="<?=$_GET['viewuserid'];?>">
                                     <textarea name="message" rows="4" cols="67" id="message" placeholder="Write message" id="textbox"></textarea>
-                                    <!--<input type="hidden" id="serviceid" name="service" class="form-control" value="service-<?//=$_GET['t'];?>">-->
-                                    <!--<input type="hidden" id="jobid" name="job" class="form-control" value="job-<?//=$_GET['j'];?>">-->
-
+   
                                     <div class="count_msg">
                                         <p>Note:You can only send this invite and message once </p>
-                                        <!--<div class="letter_counter">-->
-                                        <!--    <span style="color: #495057;" id=charcount>0</span>-->
-                                        <!--    <span style="color: #495057;" id=charcount>/ 1000</span>-->
-                                        <!--</div>-->
+ 
                                     </div>
                                 </div>
                                 
@@ -623,13 +618,7 @@ function mySearch() {
             event.preventDefault();
         }
     });
-
-    // Function to handle click event on list items (temporarily closed)
-    // $(document).on('click', 'li', function(){
-    //     $('#user').val($(this).text());
-    //     $('#userList').fadeOut();
-    // });
-
+ 
     // Function to perform the AJAX request and update the results
     function fetchResults(query, category) {
         $.ajax({
@@ -725,17 +714,7 @@ function mySearch() {
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 <script>
-    // $(function() {
-    //     $("#skill_input").autocomplete({
-    //         source: "admin/inc/process.php?autosearch",
-    //         select: function( event, ui ) {
-    //             event.preventDefault();
-    //             $("#skill_input").val(ui.item.id);
-    //         }
-    //     });
-    // });
-    
-    
+ 
     /*  Job Search for Job mArket place */
     
     function showJobResult(str) {
@@ -830,11 +809,7 @@ function mySearch() {
       });
     });
 </script>
-
-
-
- <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
- <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+ 
 <script>
     
   $(document).ready(function(){
@@ -866,9 +841,7 @@ $('#invite_formforJob').on('submit', function(event){
     //  alert('You Invition is successfully Sent!!')
      $('#msg-suc').html('You invitation is successfully Sent!!');
      setTimeout(function() {
-        // document.getElementById("exampleModalCenter").classList.toggle("show");
-        // location.reload();
-        //window.location.href= 'message'; // the redirect goes here
+ 
     }, 1800);
      
      load_unseen_notification();
@@ -887,8 +860,7 @@ $('#invite_formforJob').on('submit', function(event){
 });
 $('#invite_form').on('submit', function(event){
  event.preventDefault();
-// $('#serviceid').val();
- // $('#jobid').val();
+
  if($('#sender_idd').val() != '' && $('#reciever_idd').val() != '' && $('#messagee').val() != '')
   {
        var form_data = $(this).serialize();
@@ -902,9 +874,9 @@ $('#invite_form').on('submit', function(event){
     //  alert('You Invition is successfully Sent!!')
      $('#msg-suc').html('You invitation is successfully Sent!!');
      setTimeout(function() {
-        // document.getElementById("exampleModalCenter").classList.toggle("show");
+    
         location.reload();
-        //window.location.href= 'message'; // the redirect goes here
+      
     }, 1800);
      
      load_unseen_notification();
@@ -947,14 +919,7 @@ function load_unseen_notification(view = '')
 }
 
 load_unseen_notification();  
-
-// load new notifications
-// $(document).on('click', '.dropdown-toggle', function(){
-//     // alert('Clicked');
-//  $('.count').html('');
-//  load_unseen_notification('yes');
-// });
-// load_unseen_notification('yes');
+ 
 setInterval(function(){
  load_unseen_notification();
 }, 5000);
@@ -965,7 +930,6 @@ setInterval(function(){
  
 </script>
  
-<!---->
 <script>
                 // delete images
                 
@@ -1020,22 +984,7 @@ function selectOption(event) {
   // Save the selected option to local storage
   localStorage.setItem("selectedOption", selectedOption);
 }
-
-// Event listener to the body to close the drop-down
-// document.body.addEventListener("click", function(event) {
-//   if (
-//     event.target !== dropdownButton &&
-//     event.target !== dropdownMenu &&
-//     !dropdownMenu.contains(event.target)
-//   ) {
-//     dropdownMenu.style.display = "none";
-//   }
-// });
-
-
-
-
-
+ 
 // when local storage store the data and we want to erase data if we go anywhere on the page , the drop down referesh and gets to its original form
 // Add click event listener to the button
 var clearButton = document.getElementById('clearButton');
@@ -1061,15 +1010,7 @@ clearButtonss.addEventListener('click', function() {
 var dropdown = document.getElementById('dropdownButtoonn');
 var selectedOption = localStorage.getItem('selectedOption');
 dropdown.value = selectedOption;
-
-
-// Reset the dropdown and clear local storage when the reset button is clicked
-// var resetButton = document.getElementById('resetButton');
-// resetButton.addEventListener('click', function() {
-//   localStorage.removeItem('selectedOption');
-//   dropdown.selectedIndex = 0; // Set the default option as selected
-// });
-
+ 
 // Clear local storage and reset the dropdown on page refresh
 window.addEventListener('beforeunload', function(event) {
   var keyCombination = event.ctrlKey || event.metaKey;

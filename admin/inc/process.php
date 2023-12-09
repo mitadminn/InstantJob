@@ -7,7 +7,7 @@ session_start();
 include('function.php');
 $users = new instantjobs(); 
 $con = mysqli_connect(DbHost, DbUser, DbPass, DbName) or die('Could not connect:' . mysqli_connect_error());
-define('BASE_URL', 'https://mitdevelop.com/instantjob');
+define('BASE_URL', 'https://rpc.instantjob.org');
 /* Login */ 
     require_once '../../vendor/autoload.php';
     require_once '../../SDK-RazerMS_PHP/src/lib/Payment.php';        
@@ -2640,7 +2640,7 @@ if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == UPLOAD_ERR
      
      
      $output = '';
- if(mysqli_num_rows($datax) > 0) {
+ if(mysqli_num_rows($datax) > 0 && $userid) {
             while($row = mysqli_fetch_array($datax))
             {
                  $viewuserid = $row["from_user"];
@@ -2758,7 +2758,8 @@ if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == UPLOAD_ERR
     $output .= '<li><a href="#" class="text-bold text-italic">No Notification Found</a></li>';
    }
 
-         $count = mysqli_num_rows($popped);    
+         $count = mysqli_num_rows($popped);   
+         if(!empty($userid)) {
             $data = array(
                'notification' => $output,
                'unseen_notification'  => $count
@@ -2766,7 +2767,7 @@ if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == UPLOAD_ERR
             
               echo json_encode($data);
 
-    
+         }
 }
     /* Get User Chat */ 
     elseif (isset($_REQUEST['action']) && $_REQUEST['action'] == 'GetUserChat') {
@@ -3298,30 +3299,7 @@ echo json_encode($data);
     $conditions = array();
 // 	  $area = $filter1;
     $sortVal = $poststatus; 
-    // $sortArr = array( 
-    //     'pending' => array( 
-    //         'status' => 0 
-    //     ), 
-    //     'active' => array( 
-    //         'status' => 1 
-    //     ), 
-    //     'inactive'=>array( 
-    //         'status'=> 2
-    //     ), 
-    //     'completed'=>array( 
-    //         'status'=> 3
-    //     )
-    //     // 'active'=>array( 
-    //     //     'where'=>array('status' => 1) 
-    //     // ), 
-    //     // 'inactive'=>array( 
-    //     //     'where'=>array('status' => 0) 
-    //     // ) 
-    // ); 
-    // $sortKey = key($sortArr[$sortVal]);
-    // $conditions[$sortKey] = $sortArr[$sortVal][$sortKey];
-    // $orderby =  $conditions['status'];
-  
+ 
         $user_id =  $_SESSION['Userid'];
     
    if($postfilter == 'ALL') {
@@ -3345,7 +3323,7 @@ echo json_encode($data);
      $price = $dataarea['price'];
 $formattedPrice = number_format($price, 0, '.', ',');
  $reviews_avg = $users->GetReviewAvgByUser($userid);
-                                        // Calculate the average rating and total number of reviews
+// Calculate the average rating and total number of reviews
 $avg_rating = number_format($reviews_avg['avg_communication_rating'], 1);
 $total_reviews = $reviews_avg['total_reviews'];
   if(!empty($total_reviews)) {$rating = $avg_rating.' ('.$total_reviews.')';} else {$rating = 'New Member';}        
@@ -3443,16 +3421,7 @@ $total_reviews = $reviews_avg['total_reviews'];
     /* Propose Budget */ 
     elseif (isset($_REQUEST['action']) && $_REQUEST['action'] == 'ProposedBudget') {
      extract($_REQUEST);
- 
-        // $replacedString = preg_replace('/-[\d]+/', '', $postid);
-        // if($replacedString == 'service') { 
-        //     $post_id =  str_replace("service-", "", $postid);
-             
-            
-        //  } elseif($replacedString == 'job'){ 
-        //       $post_id = str_replace("job-", "", $postid);
-             
-        //  }else{}
+
           $post_id = $postid;
          
     $data = $users->ProposedBudget($proposed_price,$post_id,$userid,$msgid,$dis_id,$type);
@@ -3507,13 +3476,6 @@ if ($adonss):
         
         
          $data = $users->PublicReview($sendby,$sendto,$postid,$posttype,$communicationRating, $serviceDeliveredRating, $priceBudgetRating, $repeatHireRating, $publicReview,$toUserReview);
-
-//   if ($data):
-//           header('location:../../review-only');
-//     else:
-//       header('location:../../public-review');
-//     endif; 
-    
 
 }
     /* ShortList */
@@ -3595,7 +3557,7 @@ if ($adonss):
       $withdawal_amount = $totalprice;
       $payment_for = $type;
       $cp_checked = 'bank';
-        //  $users->FundPayment($userid,$withdawal_amount,$payment_for,$postid,$reciever,$planid);
+    
          $users->FundPayment($userid,$amount,$payment_for,$postid,$reciever,$planid,$cp_checked);
 
             
@@ -3673,25 +3635,57 @@ if ($couponCode === $couponcodes) {
     if ($currentDate >= $startDate && $currentDate <= $endDate) {
         // Coupon is valid and within the date range
           $data = $users->GetCouponReedem($userid, $amount,$couponCode);
-            header('location:../../status-coupon.php?msg=suc&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
+            header('location:../../status-coupon?msg=suc&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
         echo 'Coupon successfully redeemed!';
     } else {
         // Coupon has expired
-        header('location:../../status-coupon.php?msg=e&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
+        header('location:../../status-coupon?msg=e&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
         echo 'Coupon has expired.';
         
     }
 } else {
     // Coupon code is invalid
     echo 'Invalid coupon code.';
-    header('location:../../status-coupon.php?msg=w&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
+    header('location:../../status-coupon?msg=w&c='.$couponCode.'&s='.$startDate.'&e='.$endDate.'&cc='.$couponcodes);
 }
          
-         
-
-     
+      
 
 }
+  /* Add Years */ 
+    elseif (isset($_REQUEST['action']) && $_REQUEST['action'] == 'AddYears') {
+     extract($_REQUEST);
+    
+    $data = $users->AddYears($years);
+   
+  
+  if ($data):
+          header('location:../years.php');
+    else:
+       header('location:../years.php');
+    endif; 
+
+}
+
+
+ /* Delete Year */ 
+    elseif(isset($_REQUEST['deleteyear'])) {
+        extract($_REQUEST);
+        $id = $deleteyear;
+            $data = $users->DeleteYearByID($id);
+     	if($data): 
+            header('location:../years.php');
+         else:
+            header('location:../years.php');
+        endif;
+        
+    } 
+
+
+
+
+
+
 
 
     

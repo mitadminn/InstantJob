@@ -1,7 +1,5 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1); 
-// error_reporting(E_ALL);
+ 
 include('auth.php'); 
     $page = 'Transaction';
     include('inc/header.php');  
@@ -10,6 +8,7 @@ include('auth.php');
 
     $user_id = $_SESSION['Userid'];
     $history = $obj->getTransHistory($user_id);
+    $years = $obj->GetYears();
 
 
 ?>     
@@ -31,11 +30,10 @@ include('auth.php');
         <div class="d-flex justify-content-between">
     <select class=" year_options" id="myDropdaown">
     <option value="all">Show All</option>
-    <option value="2023">2023</option>
-    <option value="2024">2024</option>
-    <option value="2025">2025</option>
-    <option value="2026">2026</option>
-
+    <?php foreach($years as $year) { ?>
+    <option value="<?=$year['Year'];?>"><?=$year['Year'];?></option>
+    <?php } ?>
+     
   </select>
   <div>
       <button class="btn btn_download_wrap sell_servc_btn" id="downloadPDF"><i class="fa fa-download"></i> Download</button>
@@ -95,7 +93,6 @@ include('auth.php');
     
     else if ($trans['from_user_id'] == $user_id && $trans['to_user_id'] != 0 && $trans['to_user_id'] != 'rsrv') { 
       $color = 'danger';
-    //   $suffix = getUserById($trans['to_user_id'])['ProfileName'] . ' (' . getUserById($trans['to_user_id'])['Phone'] . ')';
           $suffix = 'Milestone Released';
             $amnt = $trans['amount'];
             $ww = getUserById($trans['to_user_id'])['ProfileName'];
@@ -157,16 +154,10 @@ $ssttaxxx = $actualAmount * 0.06;
     <tr> 
          <td colspan="2"><?php echo date_format($date, "d M Y"); ?> - <?=$ud;?> <?=$suffix?><?php if($suffix == 'Milestone Released'){ ?> To <?=$ww;?> (RM<?php echo number_format($amnt, 2, '.', ',');?>) <?php }elseif($suffix == 'Top Up Coupon'){ ?>(RM<?php echo number_format($amnt, 2, '.', ',');?> <?=$ww;?>) <?php } else{}?></td>
         <td class="btn btn-primary toggle<?=$trans['id'];?> <?=$color;?>"><?php if($suffix != 'Milestone Released'){ ?><?=$color == 'danger' ? '-' : '+'?> RM<?php echo number_format($amnt, 2, '.', ',');?> <?=$ww;?> <?php } else{}?>
-		 
-   <!--   <td colspan="2"><?php echo date_format($date, "d M Y"); ?> - <?=$ud;?> <?=$suffix?><?php if($suffix == 'Milestone Released'){ ?>(RM<?php echo number_format($amnt, 2, '.', ',');?> <?=$ww;?>) <?php } else{}?></td>-->
-   <!--     <td class="btn btn-primary toggle<?=$trans['id'];?> <?=$color;?>"><?php if($suffix != 'Milestone Released'){ ?><?=$color == 'danger' ? '-' : '+'?> RM<?php echo number_format($amnt, 2, '.', ',');?> <?=$ww;?> <?php } else{}?>-->
-		 <!---->
+  
 		  <?php if($suffix == 'Milestone Funded') { ?>
 		  <div class="icon-menus"  onclick="ExtraMenu(<?=$trans['id'];?>)" data-id="<?=$trans['id'];?>">
 			  <svg viewBox="0 0 24 24"   class="dropbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"/></svg>
-								  <!--<svg style="position: absolute; right: 0; top: -15px;" class="dropbtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> -->
-								  <!--<path fill="currentColor" d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" />-->
-								<!--</svg>-->
 								<div id="<?=$trans['id'];?>" class="text-left dropdown-contentt dropDown_links_post px-1 py-2">
 									   <strong>Total:</strong> RM<?php echo number_format($amnt, 2, '.', ',');?>
 									    <hr class="my-1">
@@ -201,40 +192,9 @@ $ssttaxxx = $actualAmount * 0.06;
 <!---------------------- middle one end -------------------------->
 <?php include('inc/footer.php'); ?>
 
-  <!--<script>-->
-  <!--  function displaySelected() {-->
-  <!--    var droppdown = document.getElementById("myDropdaown");-->
-  <!--    var selectedOption = droppdown.options[dropdown.selectedIndex].text;-->
-  <!--    var button = document.getElementById("myButtton");-->
-  <!--    button.innerHTML = selectedOption;-->
-  <!--  }-->
-  <!--</script>-->
-  
-  <!--toggle to show amount -->
-  <!--toggle to show amount -->
+ 
 	   <script>
-		
-// 		 function ExtraMenu(post_id) {
-// 			// var post_id = $(this).data('id');
-			
-// 		  document.getElementById(post_id).classList.toggle("show");
-// 		}
-	  
-// 		// Close the dropdown if the user clicks outside of it
-// 	 window.onclick = function(event) {
-//   // Check if the clicked element is not a dropdown button or its child
-//   if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-contentt')) {
-//     var dropdowns = document.getElementsByClassName("dropdown-contentt");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
-
+ 
 var openMenu = null; // Track the currently open menu
 
 function ExtraMenu(post_id) {

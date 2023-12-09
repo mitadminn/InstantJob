@@ -35,10 +35,6 @@ $state = $editjob['State'];
             
                      <div class="form-text">
               <textarea id="myTextarea"  rows="2" placeholder="Write" name="topic"  onkeyup="charcount(this.value)" maxlength="80" required>I need help<?php echo $newtopic; ?></textarea>
-                   <!--<textarea id="myTextarea"   rows="2" placeholder="Write" name="topic"  onkeyup="charcount(this.value)" maxlength="80" required>I need help<//?//php echo $newtopic; ?></textarea>-->
-                          <!--<label style="font-size: 16px;font-weight: normal;color: #323232;" for="youridhere" class="static-value">i need help</label>-->
-
-            <!--<textarea class="form-control static-textarea" name="topic" rows="4" placeholder="Write something here..." id="textbox" onkeyup="charcount(this.value)" maxlength="80" required><?//=$newtopic;?></textarea>-->
       <input type=hidden name="postid" value="<?=$editjob['id'];?>">
      
     </div> 
@@ -58,11 +54,7 @@ $state = $editjob['State'];
                         <input type="text" class="form-control cur-input-1" name="price" value="<?=$editjob['price'];?>" required>
                    
                     </div>
-                    <!--<div class="change-box">-->
-                    <!--    <p class="rate-box">0.00</p>-->
-                    <!--</div>-->
                     <div class="input-group cur-box">
-                        <!--<input type="text" class="form-control cur-input-2" name="price" aria-label="Text input with dropdown button" style="border: unset; background: transparent;">-->
                         <input type="hidden" class="form-control cur-item-2" name="currency" value="<?=$geoLocationData['currency_code'];?>" aria-label="Text input with dropdown button" required>
                         <input type="hidden" class="form-control cur-item-2" name="country" value="<?=$geoLocationData['country'];?>" aria-label="Text input with dropdown button" required>
                     </div>
@@ -87,10 +79,6 @@ $state = $editjob['State'];
             <br>
             <label>Deadline -How soon you need this?</label> 
             <input type="text" name="how_fast" class="form-control" value="<?=$editjob['fast_complete'];?>" placeholder="Time to complete the job" required>
-            <!--<label>Location</label>-->
-            <!--<input type="text"id="autocomplete-address" name="location" value="<?//=$editjob['location'];?>" class="form-control" placeholder="Enter your location" required>-->
-            <!--<label>want to make it an advertisement?</label>-->
-            <!--<input type="checkbox" name="ads" id="ads" value="yes" class="form-control" style="width: auto;" required>-->
             <label>Upload Photos</label>
             <div class="bio-img-portfolio">
                 <div class="upload__box">
@@ -99,7 +87,6 @@ $state = $editjob['State'];
                              <p class="plus_btn_upload">+</p>
                             <input type="hidden" name="id" value="<?=$user_id;?>">
                             <input type="file" multiple="" class="form-control upload__inputfile" name="image[]" data-max_length="20">
-                            <!--<input type="hidden" multiple="" class="form-control upload__inputfile" name="editimage[]" value="<?//=$editjob['photos'];?>">-->
                         </label>
                    <div class="all-images profile_all_img-wrap">
                         <?php  $i=0;
@@ -154,7 +141,7 @@ $state = $editjob['State'];
     });
 </script>
 <?php include('inc/footer.php'); ?> 
-<script src="inc/js/instantjob.js"></script>
+<script src="assets/js/instantjob.js"></script>
 <script>
     $(document).ready(function(){
         
@@ -174,9 +161,8 @@ $state = $editjob['State'];
     
 </script>
 <!--places search script start-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiKmRh2vEg2hiV1ZIVeyNlxPjVegpChvE&amp;libraries=places&amp;callback=initPlaces" async="" defer=""></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?=$googlekey['value'];?>&amp;libraries=places&amp;callback=initPlaces" async="" defer=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>  
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0-rc.1/css/foundation.css">-->
 <script>
     let autocomplete;
     let placeSearch;
@@ -200,12 +186,10 @@ $state = $editjob['State'];
     };
     
     function fillInAddress() {
-    
-      // Get the place details from the autocomplete object.
+ 
       let place = autocomplete.getPlace();
     
-      // Get each component of the address from the place details
-      // and fill the corresponding field on the form.
+ 
       for ( let i = 0; i < place.address_components.length; i++ ) {
         let addressType = place.address_components[i].types[0];
         if ( componentForm[addressType]) {
@@ -377,7 +361,7 @@ $state = $editjob['State'];
 var textarea = document.getElementById("myTextarea");
 textarea.addEventListener("input", function() {
   var prefix = "I need help ";
-  if (textarea.value.substr(0, prefix.length) !=== prefix) {
+  if (textarea.value.substr(0, prefix.length) !== prefix) {
     textarea.value = prefix;
   }
 });

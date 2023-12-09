@@ -15,7 +15,7 @@ include('auth.php');
             <div class="container">
                 <div class="card">
                     <form action="admin/inc/process.php?action=ProfileInfo" method="post">
-                        <div class="main prof-inf-new active" style="">
+                        <div class="main prof-inf-new active"  >
                             <a href="#"> 
                             <img class="logo_new_instant" src="assets/img/new-instant-logo.png" alt="">
                             </a>
@@ -27,13 +27,11 @@ include('auth.php');
                                     <select class="ddll-select" id="lists" name="list" class="">
                                         <option value="0" class="lang_optn" hidden>Choose language</option>
                                         <option value="1" class="lang_optn">English</option>
-                                        <!--<option value="2" class="lang_optn">Bahasa Melayu</option>-->
-                                        <!--<option value="3" class="lang_optn">中文</option>-->
                                     </select>
                                 </div>
                             </div>
                             <button type="button" class="create-workspace btn-inactive"  id="nextBtn" disabled >Next</button>
-                            <!--<button type="button" class="btn "  id=" "   >Later</button>-->
+
                         </div>
                         <div class="main" >
                             <!--<a href="#"> -->
@@ -56,7 +54,7 @@ include('auth.php');
                             <input  type="button" name="name" id="nextBtn10" class="next-click name btn-inactive"  value="Next" disabled/>
                         </div>
                         <div class="main main_1"  >
-                            <!--<a href="#"> -->
+                           
                             <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
                             <!--</a>-->
                             <p class="text-center lets">Where are you from?</p>
@@ -64,14 +62,11 @@ include('auth.php');
                             <input  type="button" id="nextBtn8" class="next-click country btn-inactive"  value="Next" disabled/>
                         </div>
                         <div class="main" >
-                            <!--<a href="#"> -->
+                          
                             <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
-                            <!--</a>-->
-
-
-
+                            
                             <p class="text-center lets">What skills are you good at? We'll send you emails when there's a job that matches your skills.</p>
-                            <!--<p class="text-center">Prefilled text: accountant, music, cooking</p>-->
+                          
                              <input type="text" id="tag-input3" name="skills[]">
                             <input  type="button" id="nextBtn9" class="next-click btn-inactive bnt-fill-green mt-3"  value="Next" />
                         </div>
@@ -79,15 +74,12 @@ include('auth.php');
 
     
 
-                        <div class="main last-form" style="">
-                            <!--<a href="#"> -->
+                        <div class="main last-form"  >
+                             
                             <img class="logo_new_instant last_pg_logo" src="assets/img/new-instant-logo.png" alt="">
-                            <!--</a>-->
+                            
                             <p class="text-center lets verify">Verify your account to start selling your skills as services in the professional marketplace.</p>
-                            <!--<p class="govt">Unlock the ability to recieve payments on your platform, and enhances repulation and credibility among follow members<p>-->
-                            
-                            
-                                                   
+ 
     <div class="d-flex  align-items-center gap-3" style="gap:10px;">
        <input style="width:unset;" type="radio" id="tab1" name="usertype" value="Individual" checked>
        <label class="label_tabs" for="tab1">Individual (I am a part-timer)</label>

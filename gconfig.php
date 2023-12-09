@@ -13,7 +13,7 @@ $google_client->setClientId('298593531702-bho5si03pq2ff2fj100q9ounodckc8aj.apps.
 $google_client->setClientSecret('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');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('https://mitdevelop.com/instantjob/profile');
+$google_client->setRedirectUri('https://rpc.instantjob.org/profile');
 
 //
 $google_client->addScope('email');

@@ -106,13 +106,7 @@
          <a href="manage-post?f1=all"><button class="btn btn-round btn-default <?php if($_GET['f1'] == 'all') { echo 'active';}?>" value="Local" id="showData" style="">All</button></a>
          <a href="manage-post?f1=services"><button class="btn btn-round btn-default <?php if($_GET['f1'] == 'services') { echo 'active';}?>" value="Overseas" id="showData" style="">Professionals Services</button></a>
          <a href="manage-post?f1=jobs"><button class="btn btn-round btn-default <?php if($_GET['f1'] == 'jobs') { echo 'active';}?>" value="Near Me" id="showData" style="">Jobs Marketplace</button></a>
-        
-                <!--<a href="manage-post?f1=all"><label class="btn-round postfilter-all <?php if($_GET['f1'] == 'all') { echo 'active';}?>" data="ALL"><input type="radio" class="btn btn-default btnn2"  value="ALL" id="post-filter">ALL</label></a>-->
-                <!--<a href="manage-post?f1=services"><label class="btn-round postfilter-ps <?php if($_GET['f1'] == 'services') { echo 'active';}    ?>" data="Professional Services"><input type="radio" class="btn btn-default btnn2 "  value="Professional Services" id="post-filter">Professional Services</label></a>-->
-                <!--<a href="manage-post?f1=jobs"><label class="btn-round postfilter-jm <?php if($_GET['f1'] == 'jobs') { echo 'active';}    ?>" data="Jobs Marketplace"><input type="radio" class="btn btn-default btnn2 "   value="Jobs Marketplace" id="post-filter">Jobs Marketplace</label></a>-->
-                
-                
-                
+    
     </div>
     <?php  } elseif($page == 'Account'){ ?>
     <div class="d-flex hidn-objct">
@@ -283,10 +277,7 @@
             <div class="wallet-cls manage-as-lo">Transaction History</div>
         </div>
         <div class="rightsidemenu">
-            <!--<svg  class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-            <!--    <title>dots-vertical</title>-->
-            <!--    <path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />-->
-            <!--</svg>-->
+ 
         </div>
         <!----------------three dot menu mobila view START--------------------->
         <div class="dropdown">
@@ -340,14 +331,7 @@
     </div>
     <?php  } elseif($page == 'Message'){ ?>
     <div class="d-flex hidn-objct sticky">
-        <!--<div class="backbtn">-->
-        <!--    <a href="account">-->
-        <!--        <svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-        <!--            <title>arrow-left</title>-->
-        <!--            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />-->
-        <!--        </svg>-->
-        <!--    </a>-->
-        <!--</div>-->
+ 
         <div class="prof-heigh-wid">
             <div>Messages</div>
         </div>
@@ -361,14 +345,7 @@
     </div>
     <?php  } elseif($page == 'Discussion'){ ?>
     <div class="d-flex hidn-objct sticky">
-        <!--<div class="backbtn">-->
-        <!--    <a href="account">-->
-        <!--        <svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-        <!--            <title>arrow-left</title>-->
-        <!--            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />-->
-        <!--        </svg>-->
-        <!--    </a>-->
-        <!--</div>-->
+ 
         <div class="prof-heigh-wid">
             <div>Messages</div>
         </div>
@@ -452,9 +429,7 @@
         <a href="message?tab=msg"><button class=" btn-round lbl-2 manage_post_wrap">MESSAGES</button></a>
         <a href="message?tab=msg-professional"><button class=" btn-round lbl-2 manage_post_wrap">PROFESSIONAL SERVICES</button></a>
         <a href="message?tab=msg-job"><button class=" btn-round lbl-2 manage_post_wrap">JOB MARKETPLACE</button></a>
-        <!--<a href="#message"><button class=" btn-round lbl-2 manage_post_wrap">MESSAGES</button></a>-->
-        <!--<a href="#professional"><button class=" btn-round lbl-2 manage_post_wrap">PROFESSIONAL SERVICES</button></a>-->
-        <!--<a href="#job"><button class=" btn-round lbl-2 manage_post_wrap">JOB MARKETPLACE</button></a>-->
+ 
     </div>
     <?php  } elseif($page == 'Propose Quote'){ ?>
     <div class="d-flex hidn-objct sticky">
@@ -585,10 +560,7 @@
     <?php  } elseif($page == 'Job Marketplace'){ ?>
     <div class="d-flex hidn-objct sticky msg-header" id="msg-header">
         <div class="backbtn">
-            <!--<svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-            <!--    <title>home</title>-->
-            <!--    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />-->
-            <!--</svg>-->
+ 
               <button class="search-button" onclick="mySearch()" id="fncn_btn_search">
                     <svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
@@ -602,9 +574,7 @@
         </div>
         <div class="rightsidemenu ">
             <div class="two_btn_head">
-                <!--<svg class="dropbtn" viewBox="0 0 24 24">-->
-                <!--    <path fill="currentColor" d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z"></path>-->
-                <!--</svg>-->
+ 
                 <ul class="nav navbar-nav navbar-right">
                          <li class="dropdown">
                           <a href="message.php" class="dropdown-toggle" data-toggle="dropdown"><div data-cy="dot" class="nav-dot" style="display:none"></div> <span class="fa fa-bell dropbtn" style="font-size:18px;"></span>
@@ -642,10 +612,7 @@
     <?php  } elseif($page == 'Service Provider' || $page == 'Job Marketplace' || $page == 'Job Details'){ ?>
     <div class="d-flex hidn-objct sticky msg-header" id="msg-header">
         <div class="backbtn" >
-            <!--<svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-            <!--    <title>home</title>-->
-            <!--    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />-->
-            <!--</svg>-->
+ 
              <button class="search-button" onclick="mySearch()" id="fncn_btn_search">
                     <svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
@@ -812,11 +779,7 @@
         </div>
         <div class="rightsidemenu ">
             <div class="two_btn_head">
-                <!--<button class="search-button" onclick="mySearch()" id="fncn_btn_search">-->
-                <!--    <svg class="dropbtn" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-                <!--        <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />-->
-                <!--    </svg>-->
-                <!--</button>-->
+ 
                 <ul class="nav navbar-nav navbar-right">
                          <li class="dropdown">
                           <a href="message.php" class="dropdown-toggle" data-toggle="dropdown"><div data-cy="dot" class="nav-dot" style="display:none"></div> <span class="fa fa-bell dropbtn" style="font-size:18px;"></span>
@@ -919,14 +882,7 @@
         <div class="prof-heigh-wid">
             <div>Post Preview</div>
         </div>
-        <!--   <div class="backbtn">-->
-        <!--    <a href="account">-->
-        <!--        <svg class="dropbtn" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-        <!--            <title>close</title>-->
-        <!--            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />-->
-        <!--        </svg>-->
-        <!--    </a>-->
-        <!--</div>-->
+ 
     </div>
     <?php  } elseif($page == 'job Preview'){ ?>
     <div class="d-flex hidn-objct sticky msg-header" id="msg-header">
@@ -941,14 +897,7 @@
         <div class="prof-heigh-wid">
             <div>Job Preview</div>
         </div>
-        <!--   <div class="backbtn">-->
-        <!--    <a href="account">-->
-        <!--        <svg class="dropbtn" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
-        <!--            <title>close</title>-->
-        <!--            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />-->
-        <!--        </svg>-->
-        <!--    </a>-->
-        <!--</div>-->
+   
     </div>
     <!----------------three dot menu mobila view START--------------------->
     <div class="dropdown">
@@ -974,7 +923,7 @@
                 <p><a href="">Edit profile</a></p>
             </div>
         </div>
-        <?php //print_r($_SESSION['user_image']); ?>
+        <?php   ?>
         <div class="instant-sidebar-profile">
             <div class="instant-sidebar-profile-image">
                 <?php if(!empty($_SESSION['user_image'])) { ?>
@@ -1112,7 +1061,7 @@
                 </a>
             </li>
             <?php if(!empty($guser['ProfileName'] || !empty($_SESSION['Userid']))) { ?>
-            <?php //if(!empty($guser['ProfileName'] || !empty($user_information['ProfileName']))) { ?>
+            <?php  ?>
             <li>
                 <a href="logout" class="logout-hidden-desk">
                     <svg  viewBox="0 0 24 24">

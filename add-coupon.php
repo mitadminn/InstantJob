@@ -19,7 +19,7 @@
    <div class="head-mid people-paid">
       <h2></h2>
    </div>
-   <Section class="add_coupen_section bg-white p-4">
+   <section class="add_coupen_section bg-white p-4">
       <form action="admin/inc/process.php?action=GetCoupons" method="post">
          <div class="checkout_titles">
             <p class="checkout_para">Enter coupon code you want to redeem the credit  </p>

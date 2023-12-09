@@ -19,8 +19,7 @@ include('auth.php');
              $post_id = $post_data['id'];
          }else{}
          
-         
-    // $post_data = $obj->GetServiceById($serviceid);
+
     $userid = $post_data['user_id'];
     $postuser = $obj->GetUserById($userid);
     
@@ -84,26 +83,12 @@ include('auth.php');
                         </div>
                     </div>
                 </div>
-                        <div style="">
+                        <div>
                             <p class="">RM<?=$_GET['price'];?></p>
                         </div>
                    
                 </div>
-                <!--<div class="d-flex" style="justify-content: space-between; margin-top: 10px;">-->
-                <!--    <div class="d-flex">-->
-                <!--        <form id='cart'></form>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="d-flex" style="justify-content: space-between; margin-top: 10px;">-->
-                <!--    <div class="d-flex">-->
-                <!--        <form id='cart'></form>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="d-flex" style="justify-content: space-between;margin-top: 10px;">-->
-                <!--    <div class="d-flex">-->
-                <!--        <form id='cart'></form>-->
-                <!--    </div>-->
-                <!--</div>-->
+
             </div>
         </div>
     </div>

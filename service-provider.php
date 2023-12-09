@@ -43,7 +43,7 @@ $jobads = $obj->GetJobsByAds();
                                         
                                         if ($currentDate <= $endDate) {
                                             $daysLeft = ceil(($endDate - $currentDate) / (60 * 60 * 24));
-                                            // echo "Your ad is running until " . date('Y-m-d', $endDate) . " ($daysLeft days left)";
+                                         
                                      if(empty($row['photos'])) {$post_img = 'assets/img/dummy-post.jpg';} else{$post_img = "admin/assets/img/services/".$row['photos'];}
 
 
@@ -59,9 +59,9 @@ $jobads = $obj->GetJobsByAds();
                              <?php  $user_id = $_SESSION['Userid']; 
                              if($user_idd == $_SESSION['Userid']){	
                              ?>
-                               <a class="spnsr-serv-pro" href="manage-post.php">Sponsored</a>
+                               <a class="spnsr-serv-pro" href="manage-post">Sponsored</a>
                              <?php } else {	?>
-                               <a href="create-service.php">Sponsored</a>
+                               <a href="create-service">Sponsored</a>
                              <?php } ?>
                            </div>
                          </div>
@@ -82,8 +82,7 @@ $jobads = $obj->GetJobsByAds();
                 <!--Carousel End -->
 
                 <div id="livesearch"></div>
-<!--<div class="loading-overlay" style="display: none;"><div class="overlay-content">Loading.....</div>-->
-<!--<div id="userData"></div>-->
+ 
                 <div id="searchdata"> </div>
                 <div id="servicedata">
                     <?php 
@@ -147,7 +146,7 @@ $jobads = $obj->GetJobsByAds();
                                         </a>
                                 <div class="all-cnt">
                                     <div class="inner">
-                                        <a href="user-view.php?viewuserid=<?=$userinfo['id'];?>">
+                                        <a href="user-view?viewuserid=<?=$userinfo['id'];?>">
                                             <div class="d-flex two-lb align-items-center heart-img-head">
                                                 <div class="img-heart-nm">
                                                     <img class="sm-img"

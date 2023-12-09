@@ -1,22 +1,16 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-// Include the TCPDF library (assuming you have it installed)
 require_once('tcpdf/tcpdf.php');
 include('admin/inc/function.php');
 require_once('wallett/assets/php/functions.php');
 
 $obj = new Instantjobs();
-// Connect to the database (replace with your credentials)
 $conn = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
 
-// Check connection
+
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Retrieve the selected year from the query string
 $selectedYear = $_GET['year'];
 $trans_id = $_GET['id'];
  
@@ -30,47 +24,33 @@ if (!$result) {
     die("Query failed: " . mysqli_error($conn));
 }
 
-// Extend the TCPDF class to create custom Header and Footer
 class MYPDF extends TCPDF {
 
-    private $user_id; // Property to store the user ID
+    private $user_id; 
 
     public function __construct($user_id) {
         parent::__construct();
         $this->user_id = $user_id;
         
-
     }
-
-    // Your other functions and properties here
-
+ 
     public function Header() {
-        // Fetch user details based on $this->user_id and set them to variables
-        // Example: Replace the following lines with actual database or data retrieval code
-      
-           
-        // Position at 15 mm from bottom
+
         $this->SetY(7);
-        // Set font 
+       
         $this->SetFont('helvetica', 'L', 12);
-        // Title
-        // $this->Cell(44, 8, 'Statement: Year '.$selectedYear, 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        // $this->Ln(); // Add a line break
-        // $this->Cell(50, 8, 'Name: {'.$ProfileName.'}', 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        // $this->Ln(); // Add a line break
-        // $this->Cell(78, 8, 'Email: {'.$UserEMail.'}', 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        // Logo
+
         $image_file = 'http://instantjobs.bluepearltech.com/assets/img/new-instant-logo.png';
         $this->Image($image_file, 138, 2, 50, '', 'png', '', 'T', false, 600, '', false, false, 0, false, false, false);
     }
 
-    // Page footer
+  
     public function Footer() {
-        // Position at 15 mm from bottom
+   
         $this->SetY(-15);
-        // Set font
+        
         $this->SetFont('helvetica', 'I', 8);
-        // Page number
+         
         $this->Cell(0, 10, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
     }
 }
@@ -98,21 +78,18 @@ $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 // set auto page breaks
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 
-// set image scale factor
+
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
-// set some language-dependent strings (optional)
+
 if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
     require_once(dirname(__FILE__).'/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
-// ---------------------------------------------------------
 
-// set font
 $pdf->SetFont('dejavusans', '', 10);
 
-// add a page
 $pdf->AddPage();
 
 while ($row = mysqli_fetch_assoc($result)) {
@@ -173,18 +150,8 @@ $m_id = $row['m_id'];
                  $currentDate = date("d F Y");
         }
 
-        
-        // $conn = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
-        
-        // $query = "SELECT * FROM users WHERE `id` = '$user_ids'";
-        // $user_information = mysqli_query($conn, $query);
-        //$user_information = $obj->GetUsersById($user_id);
-        // $user_information = mysqli_query($conn, $query);
-
-    // Check if the query executed successfully
     if ($user_information) {
-        // Fetch the user details as an associative array
-        // $row = mysqli_fetch_assoc($user_information);
+
         $ProfileName = $user_information['ProfileName'];
         $Address = $user_information['Address'];
         $IcName = $user_information['IC_name'];
@@ -194,7 +161,7 @@ $m_id = $row['m_id'];
      
 $html .= '  
     <div class="card px-0 card-ef">
-      <p class="text-left ">Reciept No:MY123456789</p>
+      <p class="text-left ">Receipt No:MY123456789</p>
       <p class="text-left  ">'.$currentDate.'</p>
       <br>
        <p class="font-weight-bold text-left">Bill from:</p>
@@ -237,14 +204,7 @@ $html .= '
 </div>';
 
 
-// output the HTML content
-
-      
  
-
-// create some HTML content
-     
-// }
 
   $pdf->writeHTML($html, true, false, true, false, '');
 

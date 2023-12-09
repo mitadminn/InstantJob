@@ -31,15 +31,13 @@
             $ssttax = $proposaldata['price']*6/100; 
             $totalprice = $servicetax + $proposaldata['price']+ $ssttax;                
                              
-    // $post_data = $obj->GetServiceById($serviceid);
+  
     
     $userid = $post_data['user_id'];
     $postuser = $obj->GetUserById($userid);
     
     // Reserve amount for project
-    // $obj->UpdateProposalDataStatus($post_id,$type);
-    // $postuser = $obj->ReserveAmount($user_id,$totalprice,$post_id,$type);
-     
+ 
      $isGoogleImage = strpos($postuser['ProfilePic'], 'https://lh3.googleusercontent.com/') === 0;
             if ($isGoogleImage) {
                   $userimg = $postuser['ProfilePic'];
@@ -78,24 +76,19 @@
                                   
                                 </div>
                          
-                        
-                                 <!--<a href="messageservice">-->
+ 
                                 <p class="pp2" alt="<?=$post_data['topic'];?>"><?=$post_data['topic'];?> </p>
                                 
                                 <div class="d-flex justify-content-between align-items-center amount_wrap">
-                                    <!--<div class="star">-->
-                                    <!--    <i class="fa-solid fa-star"></i>-->
-                                    <!--    <small>New Member</small>-->
-                                    <!--</div>-->
+ 
                                     <div class="wrapper_cash_total">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path>
                                         </svg>
-                                        <!--<img class="cash-img" src="assets/img/cash.svg" >   -->
+                                      
                                         <b style="color: green;">RM<?=$formattedPrice;?></b>
                                     </div>
                                 </div>
-                                <!--</a>-->
                                 
                             </div>
          </div>
@@ -158,13 +151,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
                 </div>
                 <p><?php echo $review['public_review'];?></p>
                 <?php //} ?>
-                
-                 
-
  
- 
- 
-
             </div>
         </div>
          
@@ -194,8 +181,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
             </div>
             <div>
                         <input type="hidden" name="communication_rating" id="communication-rating">
-
-                <!--<div id="test-communication" class="col-3 mr-auto display-4">0</div>-->
+ 
             </div>
         </div>
 
@@ -215,8 +201,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
             </div>
             <div>
                         <input type="hidden" name="service_delivered_rating" id="service-rating">
-
-                <!--<div id="test-service-delivered" class="col-3 mr-auto display-4">0</div>-->
+ 
             </div>
         </div>
 
@@ -236,7 +221,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
             </div>
             <div>
                 <input type="hidden" name="price_budget_rating" id="price-rating">
-                <!--<div id="test-price-budget" class="col-3 mr-auto display-4">0</div>-->
+ 
             </div>
         </div>
 
@@ -256,7 +241,7 @@ $roundedRating = round($averageRating, 1); // Round the average rating to one de
             </div>
             <div>
                 <input type="hidden" name="repeat_hire_rating" id="repeat-rating">
-                <!--<div id="test-repeat-hire" class="col-3 mr-auto display-4">0</div>-->
+ 
             </div>
         </div>
 
@@ -295,10 +280,7 @@ $(".starrate").on("click", function() {
         var stars = element.find("i");
 
         stars.slice(0, val).attr("class", "fas fa-fw fa-star");
-        // if (!full) {
-        //     stars.slice(val, val + 1).attr("class", "fas fa-fw fa-star-half-alt");
-        //     val++;
-        // }
+ 
         stars.slice(val, 5).attr("class", "far fa-fw fa-star");
 
         updateHiddenInput(inputName, val); // Update hidden input value
@@ -335,142 +317,10 @@ $(".starrate").on("click", function() {
 </script>
 
 
-                            <!--<form action="admin/inc/process.php?action=MakeReviews" method="post">-->
-                            <!--    <div class="make-reviews">-->
-                            <!--    <h5 class="font-weight-bold">How satisfied are you with the experience?</h5>-->
-                   
-                            <!--    <div class="d-flex flex-review-wrap">-->
-                            <!--        <p class="review-menu">Communication</p>-->
-                            <!--        <div class="revw-star-svg">-->
-                            <!--          <div id="starrate" class="starrate " data-val="0" data-max="5">-->
-                            <!--        		<span class="ctrl"></span>-->
-                            <!--                <span class="cont m-1">-->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star-half-alt"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                </span>-->
-                                            
-                            <!--             </div>-->
-                            <!--        </div>-->
-                            <!--        <div>-->
-                            <!--            <div id="test" class="col-3 mr-auto display-4">0</div>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                            <!--    <div class="d-flex flex-review-wrap">-->
-                            <!--        <p class="review-menu">Service Delivered</p>-->
-                            <!--       <div id="starrate" class="starrate " data-val="0" data-max="5">-->
-                            <!--        		<span class="ctrl"></span>-->
-                            <!--                <span class="cont m-1">-->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star-half-alt"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                </span>-->
-                                            
-                            <!--             </div>-->
-                            <!--        <div>-->
-                            <!--            <p>0</p>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                            <!--    <div class="d-flex flex-review-wrap">-->
-                            <!--        <p class="review-menu">Price Budget</p>-->
-                            <!--       <div id="starrate" class="starrate " data-val="0" data-max="5">-->
-                            <!--        		<span class="ctrl"></span>-->
-                            <!--                <span class="cont m-1">-->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star-half-alt"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                </span>-->
-                                            
-                            <!--             </div>-->
-                            <!--        <div>-->
-                            <!--            <p>0</p>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                            <!--    <div class="d-flex flex-review-wrap">-->
-                            <!--        <p class="review-menu">Repeat Hire Again</p>-->
-                            <!--       <div id="starrate" class="starrate " data-val="0" data-max="5">-->
-                            <!--        		<span class="ctrl"></span>-->
-                            <!--                <span class="cont m-1">-->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star"></i> -->
-                            <!--                <i class="fas fa-fw fa-star-half-alt"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                <i class="far fa-fw fa-star"></i> -->
-                            <!--                </span>-->
-                                            
-                            <!--             </div>-->
-                            <!--        <div>-->
-                            <!--            <p>0</p>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
-                                
-                            <!--    <div class="my-3 review-inp-wrap">-->
-                            <!--        <h5 class="font-weight-bold">Write a public review</h5>-->
-                            <!--        <input class="review-feed-inp" type="text" name="public_review" placeholder="Write something here..." />-->
-                            <!--    </div>-->
-                            <!--    <div class="my-3 review-inp-wrap">-->
-                            <!--        <h5 class="font-weight-bold">Waht do you think about the john, this feedback be anonymous</h5>-->
-                            <!--        <input class="review-feed-inp" type="text" name="to_user_review" placeholder="Write something here..." />-->
-                            <!--    </div>-->
-                            <!--    <button class="custom-btn bnt-fill-green rounded-pill w-100">Submit</button>-->
-                            <!--</div>-->
-                            <!--</form>-->
- 
+                             
     </div>
 </div>
 <!---------------------- middle one end -------------------------->
 <?php include('inc/footer.php'); ?>
-
-
-<!--<script>-->
-<!--    var valueHover = 0;-->
-<!--		function calcSliderPos(e,maxV) {-->
-<!--    			return (e.offsetX / e.target.clientWidth) *  parseInt(maxV,10);-->
-<!--			}-->
-			
-<!--		$(".starrate").on("click",function(){-->
-<!--			$(this).data('val',valueHover);-->
-<!--			$(this).addClass('saved')-->
-<!--			});-->
-			
-<!--		$(".starrate").on("mouseout",function(){-->
-<!--			upStars($(this).data('val'));-->
-<!--			});	-->
-
-			
-<!--		$(".starrate span.ctrl").on("mousemove",function(e) { -->
-<!--			var maxV = parseInt($(this).parent("div").data('max'))-->
-<!--			valueHover = Math.ceil(calcSliderPos(e,maxV)*2)/2;-->
-<!--			upStars(valueHover);-->
-<!--			});-->
-	
-
-<!--function upStars(val) {-->
-	
-<!--	var val = parseFloat(val);-->
-<!--	$("#test").html( val.toFixed(1) );-->
-	
-<!--	var full = Number.isInteger(val);-->
-<!--	val = parseInt(val);-->
-<!--	var stars = $("#starrate i");-->
-	
-<!--	stars.slice(0,val).attr("class" , "fas fa-fw fa-star" );-->
-<!--	if(!full)  { stars.slice(val,val+1).attr("class" , "fas fa-fw fa-star-half-alt" ); val++ }-->
-<!--	stars.slice(val,5).attr("class" , "far fa-fw fa-star" );-->
-<!--	 	}	-->
-	
-			
-<!--			$(document).ready(function() {-->
-<!--			$(".starrate span.ctrl").width($(".starrate span.cont").width());-->
-<!--			$(".starrate span.ctrl").height($(".starrate span.cont").height());-->
-<!--			});-->
-<!--</script>-->
-
 
  

@@ -95,13 +95,11 @@
         <!-----------------------------------message content end-------------------->
          <?php } elseif($_GET['tab'] == 'msg-job') { ?>
         <!-----------------------------------job status content start-------------------->
-        <div id="job" class="tab-pane active" style="">
+        <div id="job" class="tab-pane active"  >
               <?php 
                $data_found = false;
                 while($row = mysqli_fetch_array($msg_jobs)) {
-                //   echo '<pre>';
-                //   print_r($row);
-                //   echo '</pre>';
+
                     if($row['post_type'] == 'job') {
                     $postid = $row['post_id'];
                     $post_data = $obj->GetJobByPostId($postid);
@@ -138,7 +136,7 @@
                                         </a>
                                 <div class="all-cnt">
                                     <div class="inner">
-                                        <a href="user-view.php?viewuserid=<?=$userinfo['id'];?>">
+                                        <a href="user-view?viewuserid=<?=$userinfo['id'];?>">
                                             <div class="d-flex two-lb align-items-center heart-img-head">
                                                 <div class="img-heart-nm">
                                                 <img class="sm-img" src="<?=$userimg;?>" alt="<?=$userinfo['ProfilePic'];?>">
@@ -183,7 +181,7 @@
     </div>';} ?>
         </div>
          <?php } elseif($_GET['tab'] == 'msg-professional') { ?>
-        <div id="service" class="tab-pane active" style="">
+        <div id="service" class="tab-pane active"  >
             
             <?php 
              $data_found = false;
@@ -224,7 +222,7 @@
                                         </a>
                                 <div class="all-cnt">
                                     <div class="inner">
-                                        <a href="user-view.php?viewuserid=<?=$userinfo['id'];?>">
+                                        <a href="user-view?viewuserid=<?=$userinfo['id'];?>">
                                             <div class="d-flex two-lb align-items-center heart-img-head">
                                                 <div class="img-heart-nm">
                                                 <img class="sm-img" src="<?php echo $userimg; ?>" alt="">

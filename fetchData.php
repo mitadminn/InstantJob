@@ -7,9 +7,7 @@
 
 
 
-$connect = mysqli_connect("localhost","mit_instantjob","[PFC[mUGwBp4","mit_instantjobs");
-
-
+require_once('inc/db.php');
 if (isset($_POST["query"])) {
     
     $category = $_POST["category"];

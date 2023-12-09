@@ -2,8 +2,12 @@
     include('gconfig.php');
     
     if(!isset($_SESSION['access_token'])) {
-     //Create a URL to obtain user authorization
-     $google_login_btn = '<a href="'.$google_client->createAuthUrl().'"><img src="//www.tutsmake.com/wp-content/uploads/2019/12/google-login-image.png" /></a>';
+ 
+$localImagePath = '/path/to/your/server/google-login-image.png';
+file_put_contents($localImagePath, file_get_contents('https://www.tutsmake.com/wp-content/uploads/2019/12/google-login-image.png'));
+ 
+$google_login_btn = '<a href="' . $google_client->createAuthUrl() . '"><img src="' . $localImagePath . '" /></a>';
+
     } else {
     
       header("Location:profile.php");
