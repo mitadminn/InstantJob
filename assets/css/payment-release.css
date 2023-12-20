@@ -1,0 +1,42 @@
+
+
+
+nav.d-flex.fr-btn {padding-top: 7px;}
+.btn_plus_minus  {padding: 0px 8px; border-radius: 50%;background: #fff;color: #000;border: 1px solid #c1baba;   }
+.addonss i { position: absolute;
+    right: 0px;
+    top: 0px;
+}
+@media (min-width: 0) and (max-width: 567px){
+.manage-as-lo {     font-size: 11px;font-family: sans-serif;font-weight: 600; width: 390px;overflow: hidden;padding: 10px;}
+.backbtn {float: left; width: 92%;}
+.field_wrapper{padding: 0 10px;}
+.payment_methd h2{font-size: 24px;}
+.prof-heigh-wid { float: left;width: 80%;overflow: hidden;}
+.d-flex.hidn-objct {padding: 22px 10px;}
+i.fa-solid.fa-plus {top: unset !important;left: 92%;margin-top: 13px;position: absolute !important;}
+i.fa-solid.fa-minus {left: 92% !important;color: #808080;top: unset !important;margin-top: 15px !important;}
+.addonss i{    position: absolute !important;}
+}
+i.fa-solid.fa-plus {position: absolute;     top: -20px;
+}
+.summary-table-left   {  padding: 10px 0;}
+.summary-table-right   {  padding: 10px;}
+.summary-table-left span {float: left;width: 100%;text-align: left !important;}
+.summary-table-right span {float: left;width: 100%;text-align: right !important;}
+
+.payment_percnt button {
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #00c900;
+    color: #00c900;
+    font-weight: 500;
+    padding: 4px 10px !important;
+    width: 76px;
+}
+.payment_percnt {padding: 12px;border: 1px solid #cdcdcd;border-radius: 5px;}
+.pay_release{border-bottom: 1px solid #cdcdcd;}
+.cancel-btn {text-align: center;  }
+.cancel-btn button {background: none;color: #838080;padding: 0;}
+i.fa-solid.fa-circle-exclamation {color: #838080; font-size: 12px;}
+.paid button {background: #11b311;color: #fff;padding: 2px 15px;}

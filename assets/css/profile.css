@@ -1,0 +1,30 @@
+
+   .img-cir {display: flex;justify-content: space-between;} 
+   .dream {display: flex;     gap: 14px;}
+   .img-cir-profile {justify-content: initial;} 
+   .title_bio{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+@media (min-width:0) and (max-width:567px){
+    .skill_bobbies_ {flex-direction: row !important;
+}
+    .bck-white .col-lg-4 {width: 100% !important;}
+   .second-mid.col-lg-8.example{ height: 925px !important;}
+   .container-fluid{ padding-right: 5px;  padding-left: 5px; } 
+   body.background-container {background: #fff !important;}
+   .row.user-info_row {
+    display: flex !important;
+    flex-direction: column !important;
+        place-items: center !important;
+}
+}
+p.skills {
+    padding: 8px;
+    background: #F1F3F4;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #323232;
+}
+.skill_bobbies_{margin-left:2px; gap:10px}

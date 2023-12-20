@@ -1,0 +1,14 @@
+/*.row{margin-right:0px !important;}*/
+.col-lg-9 {padding: 0  32px;}	
+.li-rt.new-li-profl {margin-top: 35px !important;}
+nav.d-flex.fr-btn {padding-top: 7px;}
+.instant-rightbar {
+    padding: 0 20px 0 0 !important;
+    width: 162px !important;
+    /* padding: 0 20px; */
+}
+@media (min-width:0) and (max-width:567px){
+.second-mid.col-lg-8.example{height:720px !important;}
+.bck-white{padding: 0;}
+.col-lg-9 {padding: 0 !important;}
+}

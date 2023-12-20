@@ -1,0 +1,17 @@
+ 
+ 
+a.btn_confrm_topup {text-decoration: none;}
+.fa-plus:before{position: absolute;right: 12px;top: 17px;color: #000 !important;}
+.fa-credit-card-alt:before, .fa-credit-card:before {content: "\f09d";margin-left: 30px;}
+.cerdit_debit_cards{gap: 31px; }
+label.lst-plus {width: 100%;}
+section{background:#fff;padding: 32px;}
+.cnfrm-amount,.checkout_prize,.checkout_para{text-align:center;}
+
+.checkout_para { text-align: center; font-weight:500;}
+@media (min-width: 0) and (max-width: 567px){
+    .hidn-objct.sticky.msg-header {padding: 28px;align-items: center;}
+    i.fa-solid.fa-arrow-left {padding: 5px;color: #000;}
+    .prof-heigh-wid {float: left;width: unset;}
+    .checkout-top-title {text-align: center !important;margin-left: 85px !important; font-size:18px;}
+}

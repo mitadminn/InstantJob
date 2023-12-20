@@ -1,0 +1,22 @@
+
+
+.dream {
+     margin-left: 0 !important; 
+     margin-right: 0 !important; 
+}
+   .dream-star { padding-bottom: 3px;padding-left: 17px; float: left;} 
+    .main-img {float: left;}
+	label.upload__btn {
+    font-size: 30px;
+    border: 1px solid #D2D2D2;
+    padding: 16px; 
+    width: 77px;
+    height: 85px;
+    text-align: center; 
+    border-radius: 5px;
+    float: left;
+    
+}
+.upload__img-box {float: left;width: 10%;border-radius: 10px;margin-top: 8px; margin-bottom: 10px;}
+ 
+.profile-mid-content, .fl-sm {display: flex; }

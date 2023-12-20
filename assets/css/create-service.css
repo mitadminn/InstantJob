@@ -1,0 +1,40 @@
+
+     .select_budget{padding:0 15px;}
+ 
+	.dream {margin-left: 0 !important;      margin-right: 0 !important; }
+	.dream-star { padding-bottom: 3px;padding-left: 17px; float: left;} 
+	.main-img {float: left;}
+
+	.upload__img-box {float: left; margin-right:10px; margin-bottom:10px; }
+	.profile-mid-content, .fl-sm {display: flex; }
+	.field_wrapper {position: relative;    float: left;    width: 100%;    margin-top: 20px;}
+	button.btn.btn-success.btn-approve {float: left;
+    width: 30%;
+    margin: 0px auto;
+    margin-top: 22px;
+    border-radius: 5px;
+    border: none;}
+	input.addon1 { height:40px; width: 65%; border-right: unset;border-radius: unset;}
+	input.addon2 { height:40px;width: 35%;border-radius: unset;}
+ 	label.lst-plus {width: 100%;}
+	/*i.fa-solid.fa-minus {top: unset;right:5px;margin-top: 15px; color: #808080;}*/
+
+
+.addonss {margin-top: 12px;}
+.col-md-6 {padding: 0 !important;}
+
+.addonss {float: left; width: 100%; margin-top: 15px; position:relative;}
+@media (min-width:0) and (max-width:567px){
+    .col-md-6 {padding: 0 !important;}
+
+input.addon2 {height: 40px;}
+form.service-form{padding:0;}
+.col-lg-9 {width: 100%; padding:0;}
+.select_budget {
+    padding: 0 !important;
+}
+.col-lg-9.col-md-9 {padding: 0 !important; }
+.row {
+    flex-direction: column;
+}
+}

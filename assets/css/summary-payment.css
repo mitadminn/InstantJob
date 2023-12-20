@@ -1,0 +1,15 @@
+ 
+.img-cir-profile {display: flex;justify-content: space-between;}
+.col-lg-12 { padding: 0;}
+nav.d-flex.fr-btn {padding-top: 7px;}
+.btn_plus_minus  {padding: 0px 8px; border-radius: 50%;background: #fff;color: #000;border: 1px solid #c1baba;   }
+@media (min-width: 0) and (max-width: 567px){
+.field_wrapper{padding: 0 10px;}
+.payment_methd h2{font-size: 24px;}
+.prof-heigh-wid { float: left;width: 80%;overflow: hidden;}
+.d-flex.hidn-objct {padding: 22px 10px;}
+.summary-table-left   {  padding: 10px;}
+.summary-table-right   {  padding: 10px;}
+.summary-table-left span {float: left;width: 100%;text-align: left !important;}
+.summary-table-right span {float: left;width: 100%;text-align: right !important;}
+}

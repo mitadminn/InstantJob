@@ -1,0 +1,26 @@
+.header_searchwork{margin:0 0 0 -44px !important;justify-content: right !important;}
+.li-rt.side.nav.nav-tabs.msg-job {
+    display: grid;
+    border: none;
+}
+.active, .msg-tab{
+    border:#000;
+    background:#fff;
+    color:#707070;
+}
+.msg-tab:hover {
+ color: #fff !important; 
+     border: none !important ; 
+
+}
+@media (min-width: 0) and (max-width: 567px){
+.img-p {
+    height: 92px !important;
+}
+
+.active, #one-tab:hover {
+    color: #00C853 !important;
+    border: none;
+    border-bottom: unset !important;
+}
+}
