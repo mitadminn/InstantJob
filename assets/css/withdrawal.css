@@ -1,0 +1,16 @@
+
+section{background:#fff;}
+.cnfrm-amount,.checkout_prize,.checkout_para{text-align:center;}
+.add_coupen_section{text-align: center;}
+.checkout_para{padding: 20px 43px;text-align: center; font-weight:500;}
+input.form-control.bank_datail_input {margin-bottom: 5px;}
+/*.bank_datails_input{margin-bottom: 80px !important;}*/
+@media (min-width: 0) and (max-width: 567px){
+    .hidn-objct.sticky.msg-header {padding: 28px;align-items: center;}
+    i.fa-solid.fa-arrow-left {padding: 5px;color: #000;}
+    .prof-heigh-wid {float: left;width: unset;}
+    .checkout-top-title {text-align: center !important;margin-left: 85px !important; font-size:18px;}
+    .confirm_title { padding: 0 40px;display: grid;gap: 20px;text-align: center;}
+    .confirm_title p{font-size:12px;}
+    /*.payment_methods_title {padding: 0 20px; margin-top: 65px;}*/
+}

@@ -1,0 +1,27 @@
+ .header_searchwork{margin:0 0 0 -44px !important;justify-content: right !important;}
+ .col-md-6 {padding: 0 !important;}
+  /*.upload__img-box {float: left;width: 10%;border-radius: 10px;margin-top: 8px; margin-bottom: 10px; margin-right:8px;}*/
+  .dream {margin-left: 0 !important;      margin-right: 0 !important; }
+  .dream-star { padding-bottom: 3px;padding-left: 17px; float: left;} 
+  .main-img {float: left;}
+ 
+  .upload__img-box {float: left;     margin-right: 10px;margin-bottom: 10px; }
+  .profile-mid-content, .fl-sm {display: flex; }
+  .field_wrapper {position: relative;    float: left;    width: 100%;    margin-top: 20px;}
+  input.addon1 {width: 80%;}
+  input.addon2 {width: 20%;}
+  label.lst-plus {width: 60%;}
+  i.fa-solid.fa-plus {position: absolute; left: 56%; top: 5%;}
+  i.fa-solid.fa-minus {top: unset;    float: right;    position: absolute;    left: unset;top: 65px;}
+  .bio-img-portfolio {float: left; width: 100%;}
+  .select_budget{ padding: 0 15px !important;}
+  
+ @media (min-width: 0) and (max-width: 567px){
+     .select_budget {
+    padding: 0 !important;
+}
+/*.col-lg-9.col-md-9 {padding: 0 !important; height:170vh;}*/
+.row {
+    flex-direction: column;
+}
+ }

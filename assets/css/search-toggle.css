@@ -1,0 +1,32 @@
+
+.accordion{width: 100%; border: none;outline: none;text-align:left; padding: 15px 20px;font-size: 18px;color: #333;cursor: pointer;transition: background-color 0.2s linear;background: #323232;color: #fff;}
+.accordion:after {font-family: FontAwesome;content: "\f078";font-family: "fontawesome";font-size: 18px;float: right;}
+.search_services_cont input {margin-bottom: 17px;padding: 28px;}
+.accordion.is-open:after {content: "\f077";}
+.accordion-content {background-color: white;border-left: 1px solid whitesmoke;overflow: hidden;transition: max-height 0.2s ease-in-out; max-height: 0;}
+.label-contain{display: flex;justify-content: space-between;}
+.form-check{padding:0 !important;}
+#accordion_content{
+    display: flex;justify-content: space-evenly;align-items: center;
+}
+  .inputwrapper, .inputwrappe{
+   position: relative;
+  }
+ .inputwrapper::after {
+    content: attr(data-required);
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    font-size: 15px;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+ .inputwrappe::after {
+    content: attr(data-required);
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    font-size: 15px;
+    transform: translateY(-50%);
+    color: #ccc;
+}

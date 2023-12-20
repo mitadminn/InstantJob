@@ -1,0 +1,15 @@
+
+/*.row{margin-right:0px !important;}*/
+.col-lg-9.col-md-9.second-mid.example {
+    padding: 0 32px;
+}
+    @media (min-width: 0) and (max-width: 567px){
+    .col-lg-9 {padding: 0 !important;}
+    body.background-container {
+    background: #fff !important;
+}
+.row {
+    flex-direction: column;
+}
+    }
+    

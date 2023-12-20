@@ -1,0 +1,47 @@
+ 
+
+@media (min-width: 0) and (max-width: 567px){ 
+
+}
+/*input[name=area] {display: none}*/
+input[name=sort] {display: none}
+.donate-now {list-style-type: none; margin: 25px 0 0 0; padding: 0;}
+li {float: left;margin: 0 5px 0 0;}
+ 
+button.lbl:checked+label,
+.Checked+label {background: yellow;}
+ 
+ .btn-round:focus{
+cursor: pointer;
+background-color: #000;
+color: #fff;
+ border:2px solid #000;
+}
+/*.btn-round:active {cursor: pointer;*/
+/*background-color: #000 !important;*/
+/*color: #fff !important;*/
+/*    border:2px solid #000 !important;*/
+/*}*/
+.btn-round:hover{
+        border: 2px solid #323232;
+    color: #323232;
+    background: #fff;
+    cursor: pointer;
+}
+input{cursor: pointer;}
+.h4_title h4{margin:16px 0;}
+
+button.lbl.active {
+    background: var(--unnamed-color-323232) 0% 0% no-repeat padding-box;
+    background: #323232 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    opacity: 1;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+._edit{width:90px !important; color:#323232;}
+.sirvc_edit{width:100px !important; color:#323232;}

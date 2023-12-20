@@ -1,0 +1,30 @@
+#log{display:grid;}
+.message_title{padding: 12px 12px 12px 0;}
+.col-lg-9 {padding: 0 15px;}
+.li-rt.side.nav.nav-tabs.msg-job {display: grid;border: none;}
+
+.trio-icon {padding: 0;}
+a.job_status_btn {
+    display: flex;
+    align-items: self-end;
+}
+p.pp2.no-posts {
+    font-size: 16px;
+    text-align: left;
+    padding: 24px;
+    height: 100px;
+    font-family: 'Roboto';
+    color: #707070;
+    font-weight: 500;
+}
+@media (min-width: 0) and (max-width: 567px){
+body.background-container {background: #fff !important;}
+.img-p {overflow: hidden;padding: 10px !important;margin-bottom: 8px !important;}
+.row {margin-right: 0 !Important;flex-direction: column;}
+.content_w_btn{    gap: 13px !important;}
+.dropdown {display: none !important;}
+.tab-content {padding: 10px;}
+.col-lg-9 { padding:0 10px !important;}
+.active, #one-tab:hover {color: #00C853 !important;border: none;border-bottom: unset !important;}}
+.message-dicuss{padding: 0px 12px;font-size: 8px;height: 20px;background: #fff;color: #000;border: 1px solid #707070;}
+.instant-rightbar {width: 235px !important;padding-right: 8px;}
