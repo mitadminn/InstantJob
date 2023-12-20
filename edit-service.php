@@ -2,7 +2,9 @@
     $page = 'Create Service';
     include('inc/header.php');   
     
-    $id = $_GET['id'];
+
+// $trans_id = $_GET['id'];
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     $editservice = $obj->GetServceById($id);
         
           $value = $editservice['topic'];
@@ -105,7 +107,6 @@
                          while($rows = mysqli_fetch_array($post_imgs)){  
                         //  print_r($rows);
                          ?>
-                     
 
                       <div class='upload__img-box'>
                           <input type="hidden" multiple="" class="form-control upload__inputfile" name="editimage[]" value="<?=$rows['photos'];?>">

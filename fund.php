@@ -119,7 +119,7 @@
       </div>
    </div>
    <?php if ($balance < $t_amount) { ?>
-   <Section class="payment_bg p-0 h-100">
+   <section class="payment_bg p-0 h-100">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -303,10 +303,10 @@
             </li>
          </ul>
       </div>
-   </Section>
+   </section>
    <?php } else { 
                 ?>
-                <Section class="payment_bg p-0 h-100">
+                <section class="payment_bg p-0 h-100">
       <div class="checkout_titles">
          <a href="service-provider"> 
          <img class="logo_instant_jobs" src="assets/img/new-instant-logo.png" alt="">
@@ -420,7 +420,7 @@
             </li>
          </ul>
       </div>
-   </Section>
+   </section>
                 <?php } ?>
    
 </div>

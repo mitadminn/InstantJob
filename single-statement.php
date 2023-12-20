@@ -11,8 +11,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$selectedYear = $_GET['year'];
-$trans_id = $_GET['id'];
+ 
+$selectedYear = isset($_GET['year']) ? $_GET['year'] : '';
+// $trans_id = $_GET['id'];
+$trans_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
  
     
     $query = "SELECT * FROM Transaction WHERE `id` = '$trans_id' AND `to_user_id` = 'rsrv'";
@@ -40,7 +43,7 @@ class MYPDF extends TCPDF {
        
         $this->SetFont('helvetica', 'L', 12);
 
-        $image_file = 'http://instantjobs.bluepearltech.com/assets/img/new-instant-logo.png';
+        $image_file = 'assets/img/new-instant-logo.png';
         $this->Image($image_file, 138, 2, 50, '', 'png', '', 'T', false, 600, '', false, false, 0, false, false, false);
     }
 
@@ -161,7 +164,7 @@ $m_id = $row['m_id'];
      
 $html .= '  
     <div class="card px-0 card-ef">
-      <p class="text-left ">Receipt No:MY123456789</p>
+      <p class="text-left ">Receipt No:'.$ud.',</p>
       <p class="text-left  ">'.$currentDate.'</p>
       <br>
        <p class="font-weight-bold text-left">Bill from:</p>

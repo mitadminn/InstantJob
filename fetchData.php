@@ -1,11 +1,5 @@
 <?php
-// Database configuration 
-// $dbHost     = "localhost";
-// $dbUsername = "vinikuma_instant";
-// $dbPassword = "instant@123$";
-// $dbName     = "vinikuma_instantjob";
-
-
+ 
 
 require_once('inc/db.php');
 if (isset($_POST["query"])) {

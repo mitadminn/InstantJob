@@ -1,15 +1,18 @@
 <?php 
    $page = 'Payment funded';
    include('inc/header.php'); 
-   $plan_id = $_GET['id'];
-   $signle_plan = $obj->GetPaymentPlanById($plan_id);
+   
+   
+// Validate and sanitize input
+$plan_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$u_id = isset($_GET['lgn']) ? $_GET['lgn'] : '';
+$r_id = isset($_GET['dis_id']) ? $_GET['dis_id'] : '';
 
-   $actual_amnt = $signle_plan['plan_price'];
+$signle_plan = $obj->GetPaymentPlanById($plan_id);
+$actual_amnt = $signle_plan['plan_price'];
    
     
-   $u_id = $_GET['lgn'];
-   $r_id = $_GET['dis_id'];
-   
+    
    $post_id = $signle_plan['post_id'];
     if( $_GET['type'] == 'service'){
     $serviceid = $signle_plan['post_id'];
@@ -20,6 +23,7 @@
    }
     
 //   $userid = $_GET['dis_id'];
+if (isset($_SESSION['Userid'])) {
    $userid=$_SESSION['Userid'];
    $postuser = $obj->GetUserById($userid);
    $taxes = $obj->calculateTaxes($actual_amnt,$service, $sst);
@@ -37,7 +41,11 @@
    $bankdetails = $obj->GetBankDetailById();
    
    $couponscredit = $obj->CouponCreditByUser($user_id);
-   
+} else {
+    // Redirect unauthenticated users to the login page
+    header('Location:signin'); // Adjust file name as needed
+    exit();
+}
    
     ?>
 <?php include('inc/sidebar.php'); ?>     

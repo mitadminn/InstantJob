@@ -2,17 +2,24 @@
     include('auth.php'); 
     $page = 'Discussion';
     include('inc/header.php'); 
-    $from_user = $_GET['dis_id'];
-    $stid = $_GET['stid'];
-    $post_id = $_GET['stid'];
-    $msgid = $_GET['msgid'];
-    $type = $_GET['type'];
-    $to_user = $_GET['lgn'];
+   $from_user = filter_input(INPUT_GET, 'dis_id', FILTER_SANITIZE_NUMBER_INT);
+$stid = filter_input(INPUT_GET, 'stid', FILTER_SANITIZE_NUMBER_INT);
+$post_id = filter_input(INPUT_GET, 'stid', FILTER_SANITIZE_NUMBER_INT);
+$msgid = filter_input(INPUT_GET, 'msgid', FILTER_SANITIZE_NUMBER_INT);
+$type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_STRING);
+$to_user = filter_input(INPUT_GET, 'lgn', FILTER_SANITIZE_NUMBER_INT);
+
     $message_room = $obj->GetMessageByFromUser($from_user,$to_user);
     $st_change = $obj->UpdateMessageViewed($msgid);
     $proposaldata = $obj->GetProposalDataByPostId($post_id,$type);
    /* Wallet */ 
+   if (isset($_SESSION['Userid'])) {
     $user_id=$_SESSION['Userid'];
+   
+   } else {
+        // Handle case where payment plan is not found
+        $user_id='';
+    }
     $credit_balance = $obj->getCreditedBalance($user_id);
     $debit_balance = $obj->getDebitedBalance($user_id);
     $balance = $credit_balance['credit']-$debit_balance['debit'];
@@ -263,11 +270,11 @@ label.dropdown.dropdown-up {
                      <div id="<?=$post_data['id'];?>"  class="drop_msg_list post-msg-list">
                         <p class="p-1"><a class="font-weight-bold text-dark" onclick="ShortList(<?php echo $post_data['id']; ?>)" data-type="<?=$post_data['post_type'];?>">Shortlist</a></p>
                        <?php if($user_id == $post_data['user_id']) { ?>
-                         <p class="p-1" style="display:<?=$shodwhide_p;?>;"><a class="font-weight-bold text-dark" href="propose-quote-budget?stid=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>&msgid=<?php echo $post_data['id']; ?>">Propose Quote</a></p>
+                         <p class="p-1" style="display:<?=$shodwhide_p;?>;"><a class="font-weight-bold text-dark" href="propose-quote-budget?stid=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$type;?>&msgid=<?php echo $post_data['id']; ?>">Propose Quote</a></p>
                        <?php }else{ ?>
           
                       <?php } ?>
-                        <p class="p-1" style="display:<?=$shodwhide;?>;"><a class="font-weight-bold text-dark" href="payment-release?id=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">Payment Summary</a></p>
+                        <p class="p-1" style="display:<?=$shodwhide;?>;"><a class="font-weight-bold text-dark" href="payment-release?id=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$type;?>">Payment Summary</a></p>
                          <p class="p-1"><a class="font-weight-bold text-dark" href="#">Hide User</a></p>
                         <p class="p-1"><a class="font-weight-bold text-dark" href="#">Report User</a></p>
                      </div>
@@ -337,13 +344,13 @@ label.dropdown.dropdown-up {
                      <div id="<?=$post_data['id'];?>"  class="drop_msg_list post-msg-list">
                         <p class="p-1"><a class="font-weight-bold text-dark" onclick="ShortList(<?php echo $post_data['id']; ?>)" data-type="<?=$post_data['post_type'];?>">Shortlist</a></p>
                        <?php if($user_id != $post_data['user_id']) { ?>
-                                                <p class="p-1" style="display:<?=$shodwhide_p;?>;"><a class="font-weight-bold text-dark" href="propose-quote-budget?stid=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>&msgid=<?php echo $post_data['id']; ?>">Propose Quote</a></p>
+                                                <p class="p-1" style="display:<?=$shodwhide_p;?>;"><a class="font-weight-bold text-dark" href="propose-quote-budget?stid=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$type;?>&msgid=<?php echo $post_data['id']; ?>">Propose Quote</a></p>
 
                        <?php }else {?>
 
                        
                        <?php } ?>
-                                               <p class="p-1" style="display:<?=$shodwhide;?>;"><a class="font-weight-bold text-dark" href="payment-release?id=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$_GET['type'];?>">Payment Summary</a></p>
+                                               <p class="p-1" style="display:<?=$shodwhide;?>;"><a class="font-weight-bold text-dark" href="payment-release?id=<?=$stid;?>&lgn=<?=$to_user;?>&dis_id=<?=$from_user;?>&type=<?=$type;?>">Payment Summary</a></p>
 
                         <p class="p-1"><a class="font-weight-bold text-dark" href="#">Hide User</a></p>
                         <p class="p-1"><a class="font-weight-bold text-dark" href="#">Report User</a></p>
@@ -374,9 +381,9 @@ label.dropdown.dropdown-up {
                    </div>
                     <form   method="post" id="sendmessage" enctype="multipart/form-data" class="position-relative">
                          <div class="search_inp">
-                            <input type="hidden" id="sender_id" name="sender" class="form-control" value="<?=$_SESSION['Userid'];?>">
-                            <input type="hidden" id="reciever_id" name="reciever" class="form-control" value="<?=$from_user;?>">
-                            <input type="hidden" id="posttype" name="posttype" class="form-control" value="<?=$_GET['type'];?>">
+                            <input type="hidden" id="sender_id" name="sender" class="form-control" value="<?=$user_id;?>">
+                            <input type="hidden" id="receiver_id" name="receiver" class="form-control" value="<?=$from_user;?>">
+                            <input type="hidden" id="posttype" name="posttype" class="form-control" value="<?=$type;?>">
                             <input type="hidden" id="postid" name="post_id" class="form-control" value="<?=$stid;?>">
                             <input type="hidden" id="postid" name="message_type" class="form-control" value="">
                              <div class="progress">
@@ -425,7 +432,6 @@ label.dropdown.dropdown-up {
         </button>
       </div>
       <div class="modal-body">
-   
         <p class="mt-2"> Are you ready to start work and proceed?</p>
       </div>
       <div class="modal-footer">
@@ -455,10 +461,10 @@ label.dropdown.dropdown-up {
     // updating the view with notifications using ajax
 function load_userchat_notification(view = '')
 {
-    var reciever = <?=$_GET['dis_id'];?>;
-    var sender = <?=$_GET['lgn'];?>;
+    var reciever = <?=$from_user;?>;
+    var sender = <?=$to_user;?>;
     var post_id = '<?=$postid;?>';
-     var ptype = '<?=$_GET['type'];?>';
+     var ptype = '<?=$type;?>';
    
     
  $.ajax({
@@ -513,7 +519,7 @@ function send_message() {
  $('#sendmessage').on('submit', function(event) {
     event.preventDefault();
 
-    if ($('#sender_id').val() != '' && $('#reciever_id').val() != '' && $('#message').val() != '') {
+    if ($('#sender_id').val() != '' && $('#receiver_id').val() != '' && $('#message').val() != '') {
       send_message();
     } else {
       alert("Both fields are required");
@@ -532,7 +538,7 @@ function send_message() {
 
  
 <script>
-$(document).ready(function(){
+$(document).ready(function () {
     var isManuallyScrolling = false;
 
     function scrollToBottom() {
@@ -541,17 +547,17 @@ $(document).ready(function(){
     }
 
     function load_userchat_notification() {
-        var reciever = <?=$_GET['dis_id'];?>;
-        var sender = <?=$_GET['lgn'];?>;
+        var receiver = <?=$from_user;?>;
+        var sender = <?=$to_user;?>;
         var post_id = '<?=$postid;?>';
-        var ptype = '<?=$_GET['type'];?>';
+        var ptype = '<?=$type;?>';
 
         $.ajax({
             url: "admin/inc/process.php?action=GetUserChat",
             method: "POST",
-            data: { reciever: reciever, sender: sender, post_id: post_id, post_type: ptype },
+            data: { receiver: receiver, sender: sender, post_id: post_id, post_type: ptype },
             dataType: "json",
-            success: function(data) {
+            success: function (data) {
                 $('.allchat').html(data.notification);
                 if (!isManuallyScrolling) {
                     scrollToBottom();
@@ -565,90 +571,70 @@ $(document).ready(function(){
         scrollToBottom(); // Automatically scroll to the bottom after sending a message
     }
 
-    load_userchat_notification();
+    function send_message() {
+        // Show the progress bar while sending the message
+        var progressBar = document.getElementById('progressBar');
+        progressBar.style.width = '0%'; // Set initial width to 0%
+        progressBar.style.transition = 'width 0.3s'; // Add a transition for smoother progress bar updates
 
-    $("#chatContainer").on("scroll", function() {
-        var chatContainer = document.getElementById("chatContainer");
-        isManuallyScrolling = (chatContainer.scrollHeight - chatContainer.scrollTop !== chatContainer.clientHeight);
-    });
+        var form_data = new FormData($('#sendmessage')[0]);
 
-  function send_message() {
-    // Show the progress bar while sending the message
-    var progressBar = document.getElementById('progressBar');
-    progressBar.style.width = '0%'; // Set initial width to 0%
-    progressBar.style.transition = 'width 0.3s'; // Add a transition for smoother progress bar updates
-
-    var form_data = new FormData($('#sendmessage')[0]);
-
-    $.ajax({
-        url: "admin/inc/process.php?action=SendMessage",
-        method: "POST",
-        data: form_data,
-        contentType: false,
-        processData: false,
-        xhr: function() {
-            // Custom XMLHttpRequest to track upload progress
-            var xhr = new window.XMLHttpRequest();
-            xhr.upload.addEventListener("progress", function(evt) {
-                if (evt.lengthComputable) {
-                    var percentComplete = (evt.loaded / evt.total) * 100;
-                    // Update progress bar width only if the upload is not completed yet
-                    if (percentComplete < 100) {
-                        progressBar.style.width = percentComplete + "%"; // Update progress bar width
+        $.ajax({
+            url: "admin/inc/process.php?action=SendMessage",
+            method: "POST",
+            data: form_data,
+            contentType: false,
+            processData: false,
+            xhr: function () {
+                // Custom XMLHttpRequest to track upload progress
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener("progress", function (evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = (evt.loaded / evt.total) * 100;
+                        // Update progress bar width only if the upload is not completed yet
+                        if (percentComplete < 100) {
+                            progressBar.style.width = percentComplete + "%"; // Update progress bar width
+                        }
                     }
-                }
-            }, false);
-            return xhr;
-        },
-        success: function (data) {
-            $('#sendmessage')[0].reset();
-            // Reset progress bar after sending the message
-            progressBar.style.width = '100%'; // Set progress bar to 100% after successful upload
-            setTimeout(function() {
-                progressBar.style.width = '0%'; // Reset progress bar after a short delay (optional)
-            }, 55000); // Delay in milliseconds before resetting the progress bar
-            progressBar.style.display = 'none';
-            attachmentArea.style.display = 'none';
-            load_userchat_notification();
+                }, false);
+                return xhr;
+            },
+            success: function (data) {
+                $('#sendmessage')[0].reset();
+                // Reset progress bar after sending the message
+                progressBar.style.width = '100%'; // Set progress bar to 100% after successful upload
+                setTimeout(function () {
+                    progressBar.style.width = '0%'; // Reset progress bar after a short delay (optional)
+                }, 55000); // Delay in milliseconds before resetting the progress bar
+                progressBar.style.display = 'none';
+                attachmentArea.style.display = 'none';
+                load_userchat_notification();
+            }
+        });
+    }
+
+    // Listen for "Enter" key press in the message input field
+    $('#message').on('keydown', function (event) {
+        if (event.keyCode === 13) { // 13 is the key code for "Enter"
+            event.preventDefault();
+            var message = $.trim($(this).val()); // Get the trimmed value of the input field
+            if (message !== "") { // Check if the message is not empty
+                scrollAndSendMessage();
+            }
         }
     });
-}
- 
-    // Listen for "Enter" key press in the message input field
-$('#message').on('keydown', function(event) {
-    if (event.keyCode === 13) { // 13 is the key code for "Enter"
-        event.preventDefault();
-        var message = $.trim($(this).val()); // Get the trimmed value of the input field
-        if (message !== "") { // Check if the message is not empty
-            scrollAndSendMessage();
-        }
-    }
-});
 
-
-    setInterval(function() {
+    // Periodically check for new messages
+    setInterval(function () {
         load_userchat_notification();
-    }, 1000);
+    }, 5000);
 });
- 
-    //  drop down js of (message page)
-function toggleDropdownMsgg() {
-  var dropdownew = document.getElementById("myDropdownDrop");
-  dropdownew.classList.toggle("shown");
-}
 
-window.onclick = function(event) {
-  if (!event.target.matches('#myButtonDrop')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('shown')) {
-        openDropdown.classList.remove('shown');
-      }
-    }
-  }
-}
- 
+// Call load_userchat_notification once when the document is ready
+$(document).ready(function () {
+    load_userchat_notification();
+});
+
     //  drop down js of (message page)
     
     

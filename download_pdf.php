@@ -76,7 +76,7 @@ class MYPDF extends TCPDF {
         $this->Ln(); // Add a line break
         $this->Cell(78, 8, 'Email: {'.$UserEMail.'}', 0, false, 'C', 0, '', 0, false, 'M', 'M');
         // Logo
-        $image_file = 'http://instantjobs.bluepearltech.com/assets/img/new-instant-logo.png';
+        $image_file = 'assets/img/new-instant-logo.png';
         $this->Image($image_file, 138, 2, 50, '', 'png', '', 'T', false, 600, '', false, false, 0, false, false, false);
     }
 
