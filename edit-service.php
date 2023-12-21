@@ -168,23 +168,23 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
         </script>
         <!--character count discription-->
         <script>
-            // topic script
-            function charcount(str) {
-            var lng = str.length ;
-            document.getElementById("charcount").innerHTML = lng;
-            }
-            // discription script
-            function charcountupdate(String) {
-            var lngr = String.length;
-            document.getElementById("charcoun").innerHTML = lngr;
-            }
-            // Add on task script
-            function countupdate(Strings) {
-            var lngth = Strings.length;
-            document.getElementById("charcounter").innerHTML = lngth;
-            }
-                                     
-        </script>
+    // Generic character count function
+    function updateCharCount(inputString, targetElementId) {
+        var length = inputString.length;
+        document.getElementById(targetElementId).innerHTML = length;
+    }
+
+    // Example usage:
+    // Call updateCharCount with the input string and the target element's ID
+    // For the "charcount" element
+    updateCharCount("YourTopicString", "charcount");
+
+    // For the "charcoun" element
+    updateCharCount("YourDescriptionString", "charcoun");
+
+    // For the "charcounter" element
+    updateCharCount("YourAddOnTaskString", "charcounter");
+</script>
         <!--character count discription-->
     </div>
 </div>
