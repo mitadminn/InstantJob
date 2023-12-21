@@ -382,7 +382,7 @@ label.dropdown.dropdown-up {
                     <form   method="post" id="sendmessage" enctype="multipart/form-data" class="position-relative">
                          <div class="search_inp">
                             <input type="hidden" id="sender_id" name="sender" class="form-control" value="<?=$user_id;?>">
-                            <input type="hidden" id="receiver_id" name="receiver" class="form-control" value="<?=$from_user;?>">
+                            <input type="hidden" id="reciever_id" name="reciever" class="form-control" value="<?=$from_user;?>">
                             <input type="hidden" id="posttype" name="posttype" class="form-control" value="<?=$type;?>">
                             <input type="hidden" id="postid" name="post_id" class="form-control" value="<?=$stid;?>">
                             <input type="hidden" id="postid" name="message_type" class="form-control" value="">
@@ -519,7 +519,7 @@ function send_message() {
  $('#sendmessage').on('submit', function(event) {
     event.preventDefault();
 
-    if ($('#sender_id').val() != '' && $('#receiver_id').val() != '' && $('#message').val() != '') {
+    if ($('#sender_id').val() != '' && $('#reciever_id').val() != '' && $('#message').val() != '') {
       send_message();
     } else {
       alert("Both fields are required");
@@ -546,8 +546,8 @@ $(document).ready(function () {
         chatContainer.scrollTop = chatContainer.scrollHeight;
     }
 
-    function load_userchat_notification() {
-        var receiver = <?=$from_user;?>;
+    function loadUserChatNotification() {
+        var reciever = <?=$from_user;?>;
         var sender = <?=$to_user;?>;
         var post_id = '<?=$postid;?>';
         var ptype = '<?=$type;?>';
@@ -555,7 +555,7 @@ $(document).ready(function () {
         $.ajax({
             url: "admin/inc/process.php?action=GetUserChat",
             method: "POST",
-            data: { receiver: receiver, sender: sender, post_id: post_id, post_type: ptype },
+            data: { reciever: reciever, sender: sender, post_id: post_id, post_type: ptype },
             dataType: "json",
             success: function (data) {
                 $('.allchat').html(data.notification);
@@ -608,7 +608,7 @@ $(document).ready(function () {
                 }, 55000); // Delay in milliseconds before resetting the progress bar
                 progressBar.style.display = 'none';
                 attachmentArea.style.display = 'none';
-                load_userchat_notification();
+                loadUserChatNotification();
             }
         });
     }
@@ -626,13 +626,13 @@ $(document).ready(function () {
 
     // Periodically check for new messages
     setInterval(function () {
-        load_userchat_notification();
+        loadUserChatNotification();
     }, 5000);
 });
 
 // Call load_userchat_notification once when the document is ready
 $(document).ready(function () {
-    load_userchat_notification();
+    loadUserChatNotification();
 });
 
     //  drop down js of (message page)
